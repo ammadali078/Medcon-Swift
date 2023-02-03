@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GenericBottomSheetViewController" customModule="medcon_swift" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fD3-VQ-TQD">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contact Us" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iRC-MJ-eeQ">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="24"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T1p-Fw-ryy">
+                            <rect key="frame" x="20" y="68" width="374" height="134"/>
+                            <string key="text">Abbott Laboratories (Pakistan) LTD.
+City Office:
+
+8th Floor, Faysal House, ST-02, Sharah-e-Faisal, Karachi - 75350 Pakistan.
+
+Tel: (+92-21) 32799018-19</string>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="iRC-MJ-eeQ" firstAttribute="top" secondItem="fD3-VQ-TQD" secondAttribute="top" id="3g8-P1-2RL"/>
+                        <constraint firstItem="T1p-Fw-ryy" firstAttribute="top" secondItem="iRC-MJ-eeQ" secondAttribute="bottom" constant="44" id="95r-93-iUU"/>
+                        <constraint firstItem="T1p-Fw-ryy" firstAttribute="leading" secondItem="fD3-VQ-TQD" secondAttribute="leading" constant="20" id="ZTh-Fx-a4q"/>
+                        <constraint firstAttribute="trailing" secondItem="iRC-MJ-eeQ" secondAttribute="trailing" id="gk8-T9-jCA"/>
+                        <constraint firstItem="iRC-MJ-eeQ" firstAttribute="leading" secondItem="fD3-VQ-TQD" secondAttribute="leading" id="hf5-Nv-4Pf"/>
+                        <constraint firstAttribute="trailing" secondItem="T1p-Fw-ryy" secondAttribute="trailing" constant="20" id="zK4-fM-Jp9"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fD3-VQ-TQD" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Pbn-zH-rYt"/>
+                <constraint firstItem="fD3-VQ-TQD" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="TyW-SR-VVe"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="fD3-VQ-TQD" secondAttribute="bottom" id="geL-5e-4hY"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="fD3-VQ-TQD" secondAttribute="trailing" id="ra6-rd-84e"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="82"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "9B2BF01E-3873-4D2E-8FC8-0E2CBCE4ED91"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6278780D-1B41-4E87-BEC1-8D8C692C1E8B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "medcon-swift/Controllers/Home/DetailViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "289"
+            endingLineNumber = "289"
+            landmarkName = "btnMore(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "6278780D-1B41-4E87-BEC1-8D8C692C1E8B - 9fca19b9ce0ccac9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Alamofire.DataResponse&lt;Swift.String, Alamofire.AFError&gt;) -&gt; () in medcon_swift.DetailViewController.btnMore(Any) -&gt; ()"
+                  moduleName = "medcon-swift"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mappletechnologies/Downloads/medcon-swift/medcon-swift/Controllers/Home/DetailViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "289"
+                  endingLineNumber = "289"
+                  offsetFromSymbolStart = "673">
+               </Location>
+               <Location
+                  uuid = "6278780D-1B41-4E87-BEC1-8D8C692C1E8B - 9fca19b9ce0ccac9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Alamofire.DataResponse&lt;Swift.String, Alamofire.AFError&gt;) -&gt; () in medcon_swift.DetailViewController.btnMore(Any) -&gt; ()"
+                  moduleName = "medcon-swift"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mappletechnologies/Downloads/medcon-swift/medcon-swift/Controllers/Home/DetailViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "289"
+                  endingLineNumber = "289"
+                  offsetFromSymbolStart = "874">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
