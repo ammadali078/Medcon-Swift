@@ -17,15 +17,12 @@ import Alamofire
 import ObjectMapper
 
 class HomeViewController: BaseViewController, UICollectionViewDelegate,UICollectionViewDataSource{
-   
     
     let hud = JGProgressHUD()
     
     let vm = HomeViewModel()
     
     var ApiResult : [DataVideos] = []
-    
-    
     
     let baseUrl = "http://medconwebapi-v3.digitrends.pk"
     
@@ -49,12 +46,11 @@ class HomeViewController: BaseViewController, UICollectionViewDelegate,UICollect
     @IBOutlet weak var mslTwoTitle: UILabel!
     @IBOutlet weak var mslTwodetail: UILabel!
     @IBOutlet weak var mslTwoContainerHeight: NSLayoutConstraint!
-    
     @IBOutlet weak var EmslCollectionView: UICollectionView!
     @IBOutlet weak var eMslMainView: UIView!
     @IBOutlet weak var textLabel1: UILabel!
     @IBOutlet weak var textLabel2: UILabel!
-    
+    @IBOutlet weak var comingSoonBanner: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -70,7 +66,6 @@ class HomeViewController: BaseViewController, UICollectionViewDelegate,UICollect
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
         
         eMslMainView.layer.cornerRadius = 8
         eMslMainView.layer.masksToBounds = true
@@ -97,15 +92,15 @@ class HomeViewController: BaseViewController, UICollectionViewDelegate,UICollect
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         let VideoUrl = ApiResult[indexPath.row].videoUrl ?? ""
-       
-               if let url = URL(string: baseUrl + VideoUrl) {
-                 let player = AVPlayer(url:  url)
-                 let playerViewController = AVPlayerViewController()
-                 playerViewController.player = player
-                 present(playerViewController, animated: true) {
-                    player.play()
-                 }
-              }
+        
+        if let url = URL(string: baseUrl + VideoUrl) {
+            let player = AVPlayer(url:  url)
+            let playerViewController = AVPlayerViewController()
+            playerViewController.player = player
+            present(playerViewController, animated: true) {
+                player.play()
+            }
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -121,7 +116,6 @@ class HomeViewController: BaseViewController, UICollectionViewDelegate,UICollect
         let imageUrl = ApiResult[indexPath.row].imageUrl ?? ""
         let VideoUrl = ApiResult[indexPath.row].videoUrl ?? ""
         
-        
         let title = ApiResult[indexPath.row].title
         
         if title == "" {
@@ -136,74 +130,68 @@ class HomeViewController: BaseViewController, UICollectionViewDelegate,UICollect
         let data = try? Data(contentsOf: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check / try-catch
         cell.eMSLImageView.image = UIImage(data: data!)
         
-        
         return cell
     }
-   
+    
     func getPlann(){
         
         AF.request(Constants.VideoApi, method: .get, parameters: nil, encoding: URLEncoding(destination: .queryString), headers: nil)
             .responseString(completionHandler: {(response) in
                 // On Response
+                
+                //On Dialog Close
+                if (response.error != nil) {
+                    CommonUtils.showMsgDialog(showingPopupOn: self, withTitle: "", withMessage: (response.error?.localizedDescription)!)
+                    return
+                }
+                
+                let dollsModel = Mapper<DollsModel>().map(JSONString: response.value!) //JSON to model
+                
+                if dollsModel != nil {
                     
-                    //On Dialog Close
-                    if (response.error != nil) {
-                        CommonUtils.showMsgDialog(showingPopupOn: self, withTitle: "", withMessage: (response.error?.localizedDescription)!)
-                        return
-                    }
-                    
-                    let dollsModel = Mapper<DollsModel>().map(JSONString: response.value!) //JSON to model
-                    
-                    if dollsModel != nil {
+                    if (dollsModel?.success)! {
+                        var filter : [DataVideos] = []
+                        if let data = dollsModel?.data?.first(where: {$0.categoryName == self.vm.selectedSpeciality.titleString}) {
+                            filter = data.videos ?? []
+                        }
                         
-                        if (dollsModel?.success)! {
-                            var filter : [DataVideos] = []
-                            if let data = dollsModel?.data?.first(where: {$0.categoryName == self.vm.selectedSpeciality.titleString}) {
-                                filter = data.videos ?? []
-                            }
+                        let TypeID = filter.filter{($0.typeId == 4)}
+                        
+                        if TypeID.count == 0 {
                             
-                            let TypeID = filter.filter{($0.typeId == 4)}
+                            self.textLabel1.isHidden = false
+                            self.textLabel2.isHidden = false
                             
-                            if TypeID.count == 0 {
-                                
-                                self.textLabel1.isHidden = false
-                                self.textLabel2.isHidden = false
-                                
-                                self.textLabel1.text = "VIDEO LIBRARY"
-                                self.textLabel2.text = "COMING SOON"
-                                
-                                self.ApiResult = TypeID
+                            self.textLabel1.text = "VIDEO LIBRARY"
+                            self.textLabel2.text = "COMING SOON"
+                            
+                            self.ApiResult = TypeID
                             
                             self.EmslCollectionView.reloadData()
-                                
-                            }else {
-                                
-                                self.textLabel1.isHidden = true
-                                self.textLabel2.isHidden = true
-                               
-                                    self.ApiResult = TypeID
-                                
-                                self.EmslCollectionView.reloadData()
-                            }
                             
-                           
-                        
-                        } else {
-                            CommonUtils.showMsgDialog(showingPopupOn: self, withTitle: "", withMessage: (dollsModel?.message!)!)
+                        }else {
+                            
+                            self.textLabel1.isHidden = true
+                            self.textLabel2.isHidden = true
+                            
+                            self.ApiResult = TypeID
+                            
+                            self.EmslCollectionView.reloadData()
                         }
+                        
+                        
+                        
                     } else {
-                        CommonUtils.showMsgDialog(showingPopupOn: self, withTitle: "", withMessage: "Failed to connect to server, Please check your internet connection")
+                        CommonUtils.showMsgDialog(showingPopupOn: self, withTitle: "", withMessage: (dollsModel?.message!)!)
                     }
+                } else {
+                    CommonUtils.showMsgDialog(showingPopupOn: self, withTitle: "", withMessage: "Failed to connect to server, Please check your internet connection")
+                }
                 
             })
-        
-        
-        
     }
     
     private func setupUI() {
-        
-        
         
         specialityTitle.text = vm.selectedSpeciality.titleString2
         specialityIcon.image = UIImage(named: vm.selectedSpeciality.iconName)
@@ -226,12 +214,11 @@ class HomeViewController: BaseViewController, UICollectionViewDelegate,UICollect
     override func openSheet() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [weak self] in
             let controller =  GenericBottomSheetViewController.loadFromNib()
-
+            
             let sheetController = SheetViewController(controller: controller, sizes: [.fixed(300)])
-
+            
             self?.present(sheetController, animated: true, completion: nil)
         }
-        
     }
     
     @IBAction func bottonOptionChangd(_ sender: UIButton) {
@@ -257,12 +244,19 @@ class HomeViewController: BaseViewController, UICollectionViewDelegate,UICollect
             optionChanged(option: .General)
         }
     }
-     
+    
     @IBAction func onDrugsClick(_ sender: Any) {
         
         let secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "DrugManualScreen") as! DrugManualViewController
         self.navigationController?.pushViewController(secondViewController, animated: true)
         
+    }
+    @IBAction func onPAMClick(_ sender: Any) {
+        
+        CommonUtils.showMsgDialog(showingPopupOn: self, withTitle: "MedCon", withMessage: "")
+        
+//        let vc = self.storyboard?.instantiateViewController(withIdentifier: "PAMScene") as! PAMViewController
+//        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     @IBAction func onDolsClick(_ sender: Any) {
@@ -301,19 +295,14 @@ class HomeViewController: BaseViewController, UICollectionViewDelegate,UICollect
             return
         }else {
             guard let journal = vm.journalResponseData else { return }
-            if let data = journal.data.first(where: {$0.categoryName == vm.selectedSpeciality.titleString}) {
+            if let data = journal.data.first(where: {$0.categoryID == vm.selectedSpeciality.GetID}) {
                 let filteredData = data.newsJournal.filter({ $0.type == "MSL" })
                 let j = filteredData[(sender as AnyObject).tag]
                 gotoArticleDetailPage(journal: j)
             }
         }
         
-       
-       
-
-        
     }
-    
     
     
     @IBAction func viewVideoListView(_ sender: UIButton) {
@@ -346,9 +335,9 @@ class HomeViewController: BaseViewController, UICollectionViewDelegate,UICollect
         }
         
         let controller = LightboxController(images: images)
-
+        
         controller.dynamicBackground = true
-
+        
         present(controller, animated: true, completion: nil)
         
     }
@@ -356,10 +345,6 @@ class HomeViewController: BaseViewController, UICollectionViewDelegate,UICollect
     func getArticles() -> JournalResponse? {
         guard let journal = vm.journalResponseData else { return nil }
         return journal
-//        if let data = journal.data.first(where: {$0.categoryName == vm.selectedSpeciality.titleString}) {
-//            return data.newsJournal
-//        }
-//        return nil
     }
     
     func getArticlesMsl() -> JournalResponse? {
@@ -391,16 +376,16 @@ class HomeViewController: BaseViewController, UICollectionViewDelegate,UICollect
     
     private func gotoArticleDetailPage(journal: NewsJournal) {
         let articleDetailViewController: AticleDetailViewController = UIStoryboard(storyboard: .home).instantiateVC()
-//        let ali = journal
+        //        let ali = journal
         articleDetailViewController.dataSource = journal
         articleDetailViewController.selectedSpeciality = vm.selectedSpeciality
         navigationController?.pushViewController(articleDetailViewController, animated: true)
-
+        
     }
     
     @objc func buttonVideoTapped(sender : UIButton) {
         guard let video = vm.videoLibraryResponseData else { return }
-        if let data = video.data.first(where: {$0.categoryName == vm.selectedSpeciality.titleString}) {
+        if let data = video.data.first(where: {$0.categoryID == vm.selectedSpeciality.GetID}) {
             let video = data.videos[sender.tag]
             playHomeVideo(video: video)
         }
@@ -408,7 +393,7 @@ class HomeViewController: BaseViewController, UICollectionViewDelegate,UICollect
     
     @objc func buttonArticleTapped(sender : UIButton) {
         guard let journal = vm.journalResponseData else { return }
-        if let data = journal.data.first(where: {$0.categoryName == vm.selectedSpeciality.titleString}) {
+        if let data = journal.data.first(where: {$0.categoryID == vm.selectedSpeciality.GetID}) {
             let filteredData = data.newsJournal.filter({ $0.type != "MSL" })
             let j = filteredData[sender.tag]
             gotoArticleDetailPage(journal: j)
@@ -420,23 +405,23 @@ extension HomeViewController: iCarouselDataSource, iCarouselDelegate {
     func numberOfItems(in carousel: iCarousel) -> Int {
         if carousel == journalCarouselView {
             guard let journal = vm.journalResponseData else { return 0 }
-            var data = journal.data.first(where: {$0.categoryName == vm.selectedSpeciality.titleString})
-                
+            var data = journal.data.first(where: {$0.categoryID == vm.selectedSpeciality.GetID})
+            
             let filteredData = data?.newsJournal.filter({ $0.type != "MSL" })
-                
+            
             if filteredData?.count ?? 0 > 3{
                 return 3
             }else{
                 return filteredData?.count ?? 0
             }
-                
-                // ammad
-                //http://medconwebapi-v3.digitrends.pk/api/NewAndJournals/Index?Type=All
+            
+            // ammad
+            //http://medconwebapi-v3.digitrends.pk/api/NewAndJournals/Index?Type=All
             
         }
         else if carousel == videosCarouselView {
             guard let journal = vm.videoLibraryResponseData else { return 0 }
-             var data = journal.data.first(where: {$0.categoryName == vm.selectedSpeciality.titleString})
+            var data = journal.data.first(where: {$0.categoryID == vm.selectedSpeciality.GetID})
             let filterVideo = data?.videos.filter({ $0.typeID != 4 })
             
             if filterVideo?.count ?? 0 > 3 {
@@ -444,10 +429,6 @@ extension HomeViewController: iCarouselDataSource, iCarouselDelegate {
             }else {
                 return filterVideo?.count ?? 0
             }
-            
-//            {
-//                return data.videos.count > 3 ? 3 : data.videos.count
-//            }
         }
         return 0
     }
@@ -456,7 +437,7 @@ extension HomeViewController: iCarouselDataSource, iCarouselDelegate {
         let screenSize: CGRect = UIScreen.main.bounds
         if carousel == journalCarouselView {
             guard let journal = vm.journalResponseData else { return UIView() }
-            if let data = journal.data.first(where: {$0.categoryName == vm.selectedSpeciality.titleString}) {
+            if let data = journal.data.first(where: {$0.categoryID == vm.selectedSpeciality.GetID}) {
                 let filteredData = data.newsJournal.filter({ $0.type != "MSL" })
                 let vu = UIView.init(frame: CGRect(x: 16, y: 0, width: screenSize.width - (filteredData.count > 1 ? 64 :32), height: 160))
                 let journalView = getJournalArticleView(journal: filteredData[index], index: index)
@@ -465,13 +446,12 @@ extension HomeViewController: iCarouselDataSource, iCarouselDelegate {
                 journalView.snp.makeConstraints { make in
                     make.left.right.top.bottom.equalToSuperview()
                 }
-                
                 return vu
             }
         }
         else if carousel == videosCarouselView {
             guard let video = vm.videoLibraryResponseData else { return UIView() }
-            if let data = video.data.first(where: {$0.categoryName == vm.selectedSpeciality.titleString}) {
+            if let data = video.data.first(where: {$0.categoryID == vm.selectedSpeciality.GetID}) {
                 let filteredVideo = data.videos.filter({ $0.typeID != 4})
                 let vu = UIView.init(frame: CGRect(x: 8, y: 0, width: screenSize.width - (filteredVideo.count > 1 ? 64 :32), height: 160))
                 let videoView = getVideoView(video: filteredVideo[index], index: index)
@@ -480,7 +460,6 @@ extension HomeViewController: iCarouselDataSource, iCarouselDelegate {
                 videoView.snp.makeConstraints { make in
                     make.left.right.top.bottom.equalToSuperview()
                 }
-                
                 return vu
             }
         }
@@ -506,7 +485,8 @@ extension HomeViewController: HomeWebServiceDelegate {
     
     func successJournalsMsl() {
         guard let journal = vm.journalMslResponseData else { return }
-        if let data = journal.data.first(where: {$0.categoryName == vm.selectedSpeciality.titleString}) {
+        if let data = journal.data.first(where: {$0.categoryID == vm.selectedSpeciality.GetID}) {
+            comingSoonBanner.isHidden = true
             if let url = URL.init(string: data.newsJournal.first?.imageFullUrl ?? "") {
                 
                 mslOneImageView.af.setImage(withURL: url)
@@ -517,12 +497,14 @@ extension HomeViewController: HomeWebServiceDelegate {
                 mslCornerContainerView.isHidden = false
             }
             else {
-                
-                mslOneImageView.image = UIImage(named: "Doll");
-                mslOneTitle.text = "Articles Coming Soon"
+                mslTwoContainerHeight.constant = 100
+                comingSoonBanner.isHidden = false
+                //                mslOneImageView.image = UIImage(named: "Article-banner");
+                comingSoonBanner.image = UIImage(named: "Article-banner");
+                //                mslOneTitle.text = "Articles Coming Soon"
                 mslOnedetail.text = ""
                 
-//                mslCornerContainerView.isHidden = true
+                //                mslCornerContainerView.isHidden = true
             }
             if data.newsJournal.count > 1, let url = URL.init(string: data.newsJournal[1].imageFullUrl) {
                 mslTwoContainerView.isHidden = false
@@ -530,10 +512,9 @@ extension HomeViewController: HomeWebServiceDelegate {
                 mslTwoImageView.af.setImage(withURL: url)
                 mslTwoTitle.text = data.newsJournal[1].newsJournalDescription
                 mslTwodetail.text = data.newsJournal[1].title
-            }
-            else {
+            } else{
                 mslTwoContainerView.isHidden = true
-                mslTwoContainerHeight.constant = 0
+                mslTwoContainerHeight.constant = 100
             }
         }
     }
@@ -579,16 +560,16 @@ extension HomeViewController {
         image.snp.makeConstraints({ make in
             make.left.top.equalToSuperview().offset(8)
             make.bottom.equalToSuperview().offset(-8)
-//            make.top.equalToSuperview().offset(30)
+            //            make.top.equalToSuperview().offset(30)
             make.width.equalTo(150)
-//            make.height.equalTo(100)
+            //            make.height.equalTo(100)
         })
         
         let ArticaleView = UIView()
-//        ArticaleView.numberOfLines = 0
+        //        ArticaleView.numberOfLines = 0
         ArticaleView.backgroundColor = vm.selectedSpeciality.titleBackgroundColor.withAlphaComponent(0.3)
         ArticaleView.layer.cornerRadius = 12
-//        ArticaleView.font = AppDefaultTheme.shared.getFont(withName: .ItemDescriptionFont)
+        //        ArticaleView.font = AppDefaultTheme.shared.getFont(withName: .ItemDescriptionFont)
         vu.addSubview(ArticaleView)
         ArticaleView.snp.makeConstraints { make in
             make.right.equalToSuperview().offset(-3)
@@ -602,7 +583,6 @@ extension HomeViewController {
         ArticaleLabel.numberOfLines = 0
         ArticaleLabel.text = "Article"
         ArticaleLabel.textColor = vm.selectedSpeciality.titleBackgroundColor
-//        ArticaleLabel.backgroundColor = vm.selectedSpeciality.titleBackgroundColor
         ArticaleLabel.font = AppDefaultTheme.shared.getFont(withName: .ItemDescriptionFont)
         vu.addSubview(ArticaleLabel)
         ArticaleLabel.snp.makeConstraints { make in
@@ -610,7 +590,6 @@ extension HomeViewController {
             make.top.equalToSuperview().offset(9.5)
             
         }
-       
         
         let headingLabel = UILabel()
         headingLabel.numberOfLines = 2
@@ -635,10 +614,7 @@ extension HomeViewController {
             make.bottom.equalToSuperview().offset(-8)
         }
         
-     
-        
         vu.backgroundColor = .white
-        
         let actionButton = UIButton()
         actionButton.tag = index
         actionButton.addTarget(self, action: #selector(buttonArticleTapped), for: .touchUpInside)
@@ -682,7 +658,6 @@ extension HomeViewController {
                 make.centerY.equalToSuperview()
             }
             
-            
             let albumTitle = UILabel()
             albumTitle.text = album.albumName
             vu.addSubview(albumTitle)
@@ -720,6 +695,7 @@ extension HomeViewController {
         if let url = URL.init(string: video.imageFullUrl ) {
             image.af.setImage(withURL: url)
         }
+        
         vu.addSubview(image)
         image.snp.makeConstraints({ make in
             make.left.top.equalToSuperview()
@@ -737,8 +713,8 @@ extension HomeViewController {
             make.bottom.equalToSuperview()
             make.left.right.equalToSuperview()
         }
-        vu.backgroundColor = .white
         
+        vu.backgroundColor = .white
         let actionButton = UIButton()
         actionButton.tag = index
         actionButton.addTarget(self, action: #selector(buttonVideoTapped), for: .touchUpInside)

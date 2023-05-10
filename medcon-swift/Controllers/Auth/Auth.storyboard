@@ -59,10 +59,10 @@
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aWf-GY-PcL">
-                                <rect key="frame" x="0.0" y="533" width="414" height="297"/>
+                                <rect key="frame" x="0.0" y="531.5" width="414" height="298.5"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vQy-1h-bLP">
-                                        <rect key="frame" x="10" y="218" width="394" height="78.5"/>
+                                        <rect key="frame" x="10" y="218" width="394" height="80"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6W1-b4-gUu">
                                                 <rect key="frame" x="20" y="8" width="111" height="20"/>
@@ -89,26 +89,26 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZoE-yD-jsB">
-                                                <rect key="frame" x="20" y="43" width="354" height="32"/>
+                                                <rect key="frame" x="20" y="43" width="354" height="33.5"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="If you are a Healthcare Professional, please register on ">
                                                         <attributes>
                                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                            <font key="NSFont" metaFont="system" size="11"/>
+                                                            <font key="NSFont" metaFont="smallSystem"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
                                                     </fragment>
                                                     <fragment content="MedCon">
                                                         <attributes>
                                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                            <font key="NSFont" size="17" name=".SFNS-Regular"/>
+                                                            <font key="NSFont" metaFont="system" size="17"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
                                                     </fragment>
                                                     <fragment content=" with the help of Abbott’s Sales Representative.">
                                                         <attributes>
                                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                            <font key="NSFont" metaFont="system" size="11"/>
+                                                            <font key="NSFont" metaFont="smallSystem"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
                                                     </fragment>
@@ -200,7 +200,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bP2-Ai-jgI">
-                                <rect key="frame" x="75" y="485" width="264.5" height="48"/>
+                                <rect key="frame" x="75" y="483.5" width="264.5" height="48"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="medcon-text" translatesAutoresizingMaskIntoConstraints="NO" id="pEO-ek-T1u">
                                         <rect key="frame" x="119.5" y="0.0" width="145" height="48"/>

@@ -11,7 +11,7 @@ import Alamofire
 import ObjectMapper
 
 class DetailViewController: UIViewController,UISearchBarDelegate{
-  
+    
     @IBOutlet weak var DetailTableViewCell: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
     
@@ -19,7 +19,6 @@ class DetailViewController: UIViewController,UISearchBarDelegate{
     var OpenType = "0";
     var selectedData: JsonData? = nil
     var index = 0 ;
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,7 +55,6 @@ class DetailViewController: UIViewController,UISearchBarDelegate{
         
         let btn = CommonUtils.getJsonFromUserDefaults(forKey: Constants.btn)
         
-        
         if btn == "2" {
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "BrandDetailscene") as! BrandDetailViewController
             self.navigationController?.pushViewController(vc, animated: true)
@@ -65,7 +63,7 @@ class DetailViewController: UIViewController,UISearchBarDelegate{
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "AvailableFormsViewScene") as! AvailableFormsViewController
             self.navigationController?.pushViewController(vc, animated: true)
         }
-       
+        
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
@@ -74,247 +72,212 @@ class DetailViewController: UIViewController,UISearchBarDelegate{
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         let predicateString = searchBar.text
-        
         detailListDataSource.filteredData(searchText: predicateString!)
         self.DetailTableViewCell.reloadData()
         
-        
-//        detailListDataSource.fi
-        
     }
-    
     
     func Genricbrand(){
         
-            var  parms = Dictionary<String, Any>()
-                
-            parms["token"] = "85677466274605";
-            parms["page"] = 1;
-       
-            
-            AF.request(Constants.BrandApi, method: .get, parameters: parms, encoding: URLEncoding(destination: .queryString), headers: nil)
-                .responseString(completionHandler: {(response) in
-                    // On Response
-                        
-                        //On Dialog Close
-                        if (response.error != nil) {
-                            CommonUtils.showMsgDialog(showingPopupOn: self, withTitle: "", withMessage: (response.error?.localizedDescription)!)
-                            return
-                        }
-                        
-                        let genBranModel = Mapper<GenBranModel>().map(JSONString: response.value!) //JSON to model
-                        
-                        if genBranModel != nil {
-                            
-                            if genBranModel?.status == "success" {
-                                
-//                                self.doctorListDataSource.setItems(items: doctorsWithSelection, openType: self.OpenType)
-//                                self.doctorListCollectionView.reloadData()
-                                
-                                let List = genBranModel?.data?.data ?? []
-                                
-                                self.detailListDataSource.setItems(items: List, openType: self.OpenType)
-                                self.DetailTableViewCell.reloadData()
-                                
-                                
-                            } else {
-                                CommonUtils.showMsgDialog(showingPopupOn: self, withTitle: "", withMessage: "inValid")
-                            }
-                        } else {
-                            CommonUtils.showMsgDialog(showingPopupOn: self, withTitle: "", withMessage: "Failed to connect to server, Please check your internet connection")
-                        }
-                   
-                })
+        var  parms = Dictionary<String, Any>()
         
-            }
+        parms["token"] = "85677466274605";
+        parms["page"] = 1;
+        
+        AF.request(Constants.BrandApi, method: .get, parameters: parms, encoding: URLEncoding(destination: .queryString), headers: nil)
+            .responseString(completionHandler: {(response) in
+                // On Response
+                
+                //On Dialog Close
+                if (response.error != nil) {
+                    CommonUtils.showMsgDialog(showingPopupOn: self, withTitle: "", withMessage: (response.error?.localizedDescription)!)
+                    return
+                }
+                
+                let genBranModel = Mapper<GenBranModel>().map(JSONString: response.value!) //JSON to model
+                
+                if genBranModel != nil {
+                    
+                    if genBranModel?.status == "success" {
+                        
+                        let List = genBranModel?.data?.data ?? []
+                        
+                        self.detailListDataSource.setItems(items: List, openType: self.OpenType)
+                        self.DetailTableViewCell.reloadData()
+                        
+                    } else {
+                        CommonUtils.showMsgDialog(showingPopupOn: self, withTitle: "", withMessage: "inValid")
+                    }
+                } else {
+                    CommonUtils.showMsgDialog(showingPopupOn: self, withTitle: "", withMessage: "Failed to connect to server, Please check your internet connection")
+                }
+            })
+    }
     
     func facturerIndex(){
         
-            var  parms = Dictionary<String, String>()
-                
-            parms["token"] = "85677466274605";
-            
-            AF.request(Constants.FecturerApi, method: .get, parameters: parms, encoding: URLEncoding(destination: .queryString), headers: nil)
-                .responseString(completionHandler: {(response) in
-                    // On Response
-                        
-                        //On Dialog Close
-                        if (response.error != nil) {
-                            CommonUtils.showMsgDialog(showingPopupOn: self, withTitle: "", withMessage: (response.error?.localizedDescription)!)
-                            return
-                        }
-                        
-                        let genBranModel = Mapper<GenBranModel>().map(JSONString: response.value!) //JSON to model
-                        
-                        if genBranModel != nil {
-                            
-                            if genBranModel?.status == "success" {
-                                
-//                                self.doctorListDataSource.setItems(items: doctorsWithSelection, openType: self.OpenType)
-//                                self.doctorListCollectionView.reloadData()
-                                
-                                let List = genBranModel?.data?.data ?? []
-                                
-                                self.detailListDataSource.setItems(items: List, openType: self.OpenType)
-                                self.DetailTableViewCell.reloadData()
-                                
-                                
-                            } else {
-                                CommonUtils.showMsgDialog(showingPopupOn: self, withTitle: "", withMessage: "inValid")
-                            }
-                        } else {
-                            CommonUtils.showMsgDialog(showingPopupOn: self, withTitle: "", withMessage: "Failed to connect to server, Please check your internet connection")
-                        }
-                   
-                })
+        var  parms = Dictionary<String, String>()
         
-            }
+        parms["token"] = "85677466274605";
+        
+        AF.request(Constants.FecturerApi, method: .get, parameters: parms, encoding: URLEncoding(destination: .queryString), headers: nil)
+            .responseString(completionHandler: {(response) in
+                // On Response
+                
+                //On Dialog Close
+                if (response.error != nil) {
+                    CommonUtils.showMsgDialog(showingPopupOn: self, withTitle: "", withMessage: (response.error?.localizedDescription)!)
+                    return
+                }
+                
+                let genBranModel = Mapper<GenBranModel>().map(JSONString: response.value!) //JSON to model
+                
+                if genBranModel != nil {
+                    
+                    if genBranModel?.status == "success" {
+                        
+                        let List = genBranModel?.data?.data ?? []
+                        
+                        self.detailListDataSource.setItems(items: List, openType: self.OpenType)
+                        self.DetailTableViewCell.reloadData()
+                        
+                    } else {
+                        CommonUtils.showMsgDialog(showingPopupOn: self, withTitle: "", withMessage: "inValid")
+                    }
+                } else {
+                    CommonUtils.showMsgDialog(showingPopupOn: self, withTitle: "", withMessage: "Failed to connect to server, Please check your internet connection")
+                }
+                
+            })
+        
+    }
     
     func brandsAvailable(){
         
-            var  parms = Dictionary<String, String>()
-                
-            parms["token"] = "85677466274605";
-            
-            AF.request(Constants.AvailableApi, method: .get, parameters: parms, encoding: URLEncoding(destination: .queryString), headers: nil)
-                .responseString(completionHandler: {(response) in
-                    // On Response
-                        
-                        //On Dialog Close
-                        if (response.error != nil) {
-                            CommonUtils.showMsgDialog(showingPopupOn: self, withTitle: "", withMessage: (response.error?.localizedDescription)!)
-                            return
-                        }
-                        
-                        let genBranModel = Mapper<GenBranModel>().map(JSONString: response.value!) //JSON to model
-                        
-                        if genBranModel != nil {
-                            
-                            if genBranModel?.status == "success" {
-                                
-//                                self.doctorListDataSource.setItems(items: doctorsWithSelection, openType: self.OpenType)
-//                                self.doctorListCollectionView.reloadData()
-                                
-                                let List = genBranModel?.data?.data ?? []
-                                
-                                let filter = List.filter {($0.name != "-")}
-                                
-                                self.detailListDataSource.setItems(items: filter, openType: self.OpenType)
-                                self.DetailTableViewCell.reloadData()
-                                
-                                
-                            } else {
-                                CommonUtils.showMsgDialog(showingPopupOn: self, withTitle: "", withMessage: "inValid")
-                            }
-                        } else {
-                            CommonUtils.showMsgDialog(showingPopupOn: self, withTitle: "", withMessage: "Failed to connect to server, Please check your internet connection")
-                        }
-                   
-                })
+        var  parms = Dictionary<String, String>()
         
-            }
-     
+        parms["token"] = "85677466274605";
+        
+        AF.request(Constants.AvailableApi, method: .get, parameters: parms, encoding: URLEncoding(destination: .queryString), headers: nil)
+            .responseString(completionHandler: {(response) in
+                // On Response
+                
+                //On Dialog Close
+                if (response.error != nil) {
+                    CommonUtils.showMsgDialog(showingPopupOn: self, withTitle: "", withMessage: (response.error?.localizedDescription)!)
+                    return
+                }
+                
+                let genBranModel = Mapper<GenBranModel>().map(JSONString: response.value!) //JSON to model
+                
+                if genBranModel != nil {
+                    
+                    if genBranModel?.status == "success" {
+                        
+                        let List = genBranModel?.data?.data ?? []
+                        
+                        let filter = List.filter {($0.name != "-")}
+                        
+                        self.detailListDataSource.setItems(items: filter, openType: self.OpenType)
+                        self.DetailTableViewCell.reloadData()
+                        
+                        
+                    } else {
+                        CommonUtils.showMsgDialog(showingPopupOn: self, withTitle: "", withMessage: "inValid")
+                    }
+                } else {
+                    CommonUtils.showMsgDialog(showingPopupOn: self, withTitle: "", withMessage: "Failed to connect to server, Please check your internet connection")
+                }
+            })
+    }
     
     func DrugInteractionApi(){
         
-            var  parms = Dictionary<String, String>()
-                
-            parms["token"] = "85677466274605";
-            
-            AF.request(Constants.DrugInterApi, method: .get, parameters: parms, encoding: URLEncoding(destination: .queryString), headers: nil)
-                .responseString(completionHandler: {(response) in
-                    // On Response
-                        
-                        //On Dialog Close
-                        if (response.error != nil) {
-                            CommonUtils.showMsgDialog(showingPopupOn: self, withTitle: "", withMessage: (response.error?.localizedDescription)!)
-                            return
-                        }
-                        
-                        let genBranModel = Mapper<GenBranModel>().map(JSONString: response.value!) //JSON to model
-                        
-                        if genBranModel != nil {
-                            
-                            if genBranModel?.status == "success" {
-                                
-//                                self.doctorListDataSource.setItems(items: doctorsWithSelection, openType: self.OpenType)
-//                                self.doctorListCollectionView.reloadData()
-                                
-                                let List = genBranModel?.data?.data ?? []
-                                
-                                let filter = List.filter {($0.name != "-")}
-                                
-                                self.detailListDataSource.setItems(items: filter, openType: self.OpenType)
-                                self.DetailTableViewCell.reloadData()
-                                
-                                
-                            } else {
-                                CommonUtils.showMsgDialog(showingPopupOn: self, withTitle: "", withMessage: "inValid")
-                            }
-                        } else {
-                            CommonUtils.showMsgDialog(showingPopupOn: self, withTitle: "", withMessage: "Failed to connect to server, Please check your internet connection")
-                        }
-                   
-                })
+        var  parms = Dictionary<String, String>()
         
-            }
-     
-   
+        parms["token"] = "85677466274605";
+        
+        AF.request(Constants.DrugInterApi, method: .get, parameters: parms, encoding: URLEncoding(destination: .queryString), headers: nil)
+            .responseString(completionHandler: {(response) in
+                // On Response
+                
+                //On Dialog Close
+                if (response.error != nil) {
+                    CommonUtils.showMsgDialog(showingPopupOn: self, withTitle: "", withMessage: (response.error?.localizedDescription)!)
+                    return
+                }
+                
+                let genBranModel = Mapper<GenBranModel>().map(JSONString: response.value!) //JSON to model
+                
+                if genBranModel != nil {
+                    
+                    if genBranModel?.status == "success" {
+                        
+                        let List = genBranModel?.data?.data ?? []
+                        
+                        let filter = List.filter {($0.name != "-")}
+                        
+                        self.detailListDataSource.setItems(items: filter, openType: self.OpenType)
+                        self.DetailTableViewCell.reloadData()
+                        
+                        
+                    } else {
+                        CommonUtils.showMsgDialog(showingPopupOn: self, withTitle: "", withMessage: "inValid")
+                    }
+                } else {
+                    CommonUtils.showMsgDialog(showingPopupOn: self, withTitle: "", withMessage: "Failed to connect to server, Please check your internet connection")
+                }
+            })
+    }
     
     @IBAction func btnMore(_ sender: Any) {
-        
         
         let select = CommonUtils.getJsonFromUserDefaults(forKey: Constants.btn)
         
         if select == "1"{
             
-            
             let indexPage = Int(CommonUtils.getJsonFromUserDefaults(forKey: Constants.genPage)) ?? 0
             
             let index = indexPage + 1
             
-            
-            
             var  parms = Dictionary<String, Any>()
-                
+            
             parms["token"] = "85677466274605";
             parms["page"] = index;
             
             AF.request(Constants.BrandApi, method: .get, parameters: parms, encoding: URLEncoding(destination: .queryString), headers: nil)
                 .responseString(completionHandler: {(response) in
                     // On Response
+                    
+                    //On Dialog Close
+                    if (response.error != nil) {
+                        CommonUtils.showMsgDialog(showingPopupOn: self, withTitle: "", withMessage: (response.error?.localizedDescription)!)
+                        return
+                    }
+                    
+                    let genBranModel = Mapper<GenBranModel>().map(JSONString: response.value!) //JSON to model
+                    
+                    if genBranModel != nil {
                         
-                        //On Dialog Close
-                        if (response.error != nil) {
-                            CommonUtils.showMsgDialog(showingPopupOn: self, withTitle: "", withMessage: (response.error?.localizedDescription)!)
-                            return
-                        }
-                        
-                        let genBranModel = Mapper<GenBranModel>().map(JSONString: response.value!) //JSON to model
-                        
-                        if genBranModel != nil {
+                        if genBranModel?.status == "success" {
                             
-                            if genBranModel?.status == "success" {
-                                
-                                let List = genBranModel?.data?.data ?? []
-                                
-                                self.detailListDataSource.setItems(items: List, openType: self.OpenType)
-                                self.DetailTableViewCell.reloadData()
-                               
-                                
-                                CommonUtils.saveJsonToUserDefaults(forKey: Constants.genPage, withJson: genBranModel?.request?.page ?? "0")
-                                
-                                
-                            } else {
-                                CommonUtils.showMsgDialog(showingPopupOn: self, withTitle: "", withMessage: "inValid")
-                            }
+                            let List = genBranModel?.data?.data ?? []
+                            
+                            self.detailListDataSource.setItems(items: List, openType: self.OpenType)
+                            self.DetailTableViewCell.reloadData()
+                            
+                            
+                            CommonUtils.saveJsonToUserDefaults(forKey: Constants.genPage, withJson: genBranModel?.request?.page ?? "0")
+                            
+                            
                         } else {
-                            CommonUtils.showMsgDialog(showingPopupOn: self, withTitle: "", withMessage: "Failed to connect to server, Please check your internet connection")
+                            CommonUtils.showMsgDialog(showingPopupOn: self, withTitle: "", withMessage: "inValid")
                         }
-                   
+                    } else {
+                        CommonUtils.showMsgDialog(showingPopupOn: self, withTitle: "", withMessage: "Failed to connect to server, Please check your internet connection")
+                    }
+                    
                 })
-            
-            
             
         }else if select == "2"{
             
@@ -322,45 +285,41 @@ class DetailViewController: UIViewController,UISearchBarDelegate{
             
             let index = indexPage + 1
             
-            
             var  parms = Dictionary<String, Any>()
-                
+            
             parms["token"] = "85677466274605";
             parms["page"] = index;
             
             AF.request(Constants.FecturerApi, method: .get, parameters: parms, encoding: URLEncoding(destination: .queryString), headers: nil)
                 .responseString(completionHandler: {(response) in
                     // On Response
+                    
+                    //On Dialog Close
+                    if (response.error != nil) {
+                        CommonUtils.showMsgDialog(showingPopupOn: self, withTitle: "", withMessage: (response.error?.localizedDescription)!)
+                        return
+                    }
+                    
+                    let genBranModel = Mapper<GenBranModel>().map(JSONString: response.value!) //JSON to model
+                    
+                    if genBranModel != nil {
                         
-                        //On Dialog Close
-                        if (response.error != nil) {
-                            CommonUtils.showMsgDialog(showingPopupOn: self, withTitle: "", withMessage: (response.error?.localizedDescription)!)
-                            return
-                        }
-                        
-                        let genBranModel = Mapper<GenBranModel>().map(JSONString: response.value!) //JSON to model
-                        
-                        if genBranModel != nil {
+                        if genBranModel?.status == "success" {
                             
-                            if genBranModel?.status == "success" {
-                                
-//                                self.doctorListDataSource.setItems(items: doctorsWithSelection, openType: self.OpenType)
-//                                self.doctorListCollectionView.reloadData()
-                                
-                                let List = genBranModel?.data?.data ?? []
-                                
-                                self.detailListDataSource.setItems(items: List, openType: self.OpenType)
-                                self.DetailTableViewCell.reloadData()
-                                
-                                CommonUtils.saveJsonToUserDefaults(forKey: Constants.genPage, withJson: genBranModel?.request?.page ?? "0")
-                                
-                            } else {
-                                CommonUtils.showMsgDialog(showingPopupOn: self, withTitle: "", withMessage: "inValid")
-                            }
+                            let List = genBranModel?.data?.data ?? []
+                            
+                            self.detailListDataSource.setItems(items: List, openType: self.OpenType)
+                            self.DetailTableViewCell.reloadData()
+                            
+                            CommonUtils.saveJsonToUserDefaults(forKey: Constants.genPage, withJson: genBranModel?.request?.page ?? "0")
+                            
                         } else {
-                            CommonUtils.showMsgDialog(showingPopupOn: self, withTitle: "", withMessage: "Failed to connect to server, Please check your internet connection")
+                            CommonUtils.showMsgDialog(showingPopupOn: self, withTitle: "", withMessage: "inValid")
                         }
-                   
+                    } else {
+                        CommonUtils.showMsgDialog(showingPopupOn: self, withTitle: "", withMessage: "Failed to connect to server, Please check your internet connection")
+                    }
+                    
                 })
             
             
@@ -370,48 +329,44 @@ class DetailViewController: UIViewController,UISearchBarDelegate{
             
             let index = indexPage + 1
             
-            
             var  parms = Dictionary<String, Any>()
-                
+            
             parms["token"] = "85677466274605";
             parms["page"] = index;
             
             AF.request(Constants.AvailableApi, method: .get, parameters: parms, encoding: URLEncoding(destination: .queryString), headers: nil)
                 .responseString(completionHandler: {(response) in
                     // On Response
+                    
+                    //On Dialog Close
+                    if (response.error != nil) {
+                        CommonUtils.showMsgDialog(showingPopupOn: self, withTitle: "", withMessage: (response.error?.localizedDescription)!)
+                        return
+                    }
+                    
+                    let genBranModel = Mapper<GenBranModel>().map(JSONString: response.value!) //JSON to model
+                    
+                    if genBranModel != nil {
                         
-                        //On Dialog Close
-                        if (response.error != nil) {
-                            CommonUtils.showMsgDialog(showingPopupOn: self, withTitle: "", withMessage: (response.error?.localizedDescription)!)
-                            return
-                        }
-                        
-                        let genBranModel = Mapper<GenBranModel>().map(JSONString: response.value!) //JSON to model
-                        
-                        if genBranModel != nil {
+                        if genBranModel?.status == "success" {
                             
-                            if genBranModel?.status == "success" {
-                                
-//                                self.doctorListDataSource.setItems(items: doctorsWithSelection, openType: self.OpenType)
-//                                self.doctorListCollectionView.reloadData()
-                                
-                                let List = genBranModel?.data?.data ?? []
-                                
-                                let filter = List.filter {($0.name != "-")}
-                                
-                                self.detailListDataSource.setItems(items: filter, openType: self.OpenType)
-                                self.DetailTableViewCell.reloadData()
-                                
-                                CommonUtils.saveJsonToUserDefaults(forKey: Constants.genPage, withJson: genBranModel?.request?.page ?? "0")
-                                
-                                
-                            } else {
-                                CommonUtils.showMsgDialog(showingPopupOn: self, withTitle: "", withMessage: "inValid")
-                            }
+                            let List = genBranModel?.data?.data ?? []
+                            
+                            let filter = List.filter {($0.name != "-")}
+                            
+                            self.detailListDataSource.setItems(items: filter, openType: self.OpenType)
+                            self.DetailTableViewCell.reloadData()
+                            
+                            CommonUtils.saveJsonToUserDefaults(forKey: Constants.genPage, withJson: genBranModel?.request?.page ?? "0")
+                            
+                            
                         } else {
-                            CommonUtils.showMsgDialog(showingPopupOn: self, withTitle: "", withMessage: "Failed to connect to server, Please check your internet connection")
+                            CommonUtils.showMsgDialog(showingPopupOn: self, withTitle: "", withMessage: "inValid")
                         }
-                   
+                    } else {
+                        CommonUtils.showMsgDialog(showingPopupOn: self, withTitle: "", withMessage: "Failed to connect to server, Please check your internet connection")
+                    }
+                    
                 })
             
         }else {
@@ -420,55 +375,44 @@ class DetailViewController: UIViewController,UISearchBarDelegate{
             
             let index = indexPage + 1
             
-            
             var  parms = Dictionary<String, Any>()
-                
+            
             parms["token"] = "85677466274605";
             parms["page"] = index;
             
             AF.request(Constants.DrugInterApi, method: .get, parameters: parms, encoding: URLEncoding(destination: .queryString), headers: nil)
                 .responseString(completionHandler: {(response) in
                     // On Response
+                    
+                    //On Dialog Close
+                    if (response.error != nil) {
+                        CommonUtils.showMsgDialog(showingPopupOn: self, withTitle: "", withMessage: (response.error?.localizedDescription)!)
+                        return
+                    }
+                    
+                    let genBranModel = Mapper<GenBranModel>().map(JSONString: response.value!) //JSON to model
+                    
+                    if genBranModel != nil {
                         
-                        //On Dialog Close
-                        if (response.error != nil) {
-                            CommonUtils.showMsgDialog(showingPopupOn: self, withTitle: "", withMessage: (response.error?.localizedDescription)!)
-                            return
-                        }
-                        
-                        let genBranModel = Mapper<GenBranModel>().map(JSONString: response.value!) //JSON to model
-                        
-                        if genBranModel != nil {
+                        if genBranModel?.status == "success" {
                             
-                            if genBranModel?.status == "success" {
-                                
-//                                self.doctorListDataSource.setItems(items: doctorsWithSelection, openType: self.OpenType)
-//                                self.doctorListCollectionView.reloadData()
-                                
-                                let List = genBranModel?.data?.data ?? []
-                                
-                                let filter = List.filter {($0.name != "-")}
-                                
-                                self.detailListDataSource.setItems(items: filter, openType: self.OpenType)
-                                self.DetailTableViewCell.reloadData()
-                                
-                                CommonUtils.saveJsonToUserDefaults(forKey: Constants.genPage, withJson: genBranModel?.request?.page ?? "0")
-                                
-                                
-                            } else {
-                                CommonUtils.showMsgDialog(showingPopupOn: self, withTitle: "", withMessage: "inValid")
-                            }
+                            let List = genBranModel?.data?.data ?? []
+                            
+                            let filter = List.filter {($0.name != "-")}
+                            
+                            self.detailListDataSource.setItems(items: filter, openType: self.OpenType)
+                            self.DetailTableViewCell.reloadData()
+                            
+                            CommonUtils.saveJsonToUserDefaults(forKey: Constants.genPage, withJson: genBranModel?.request?.page ?? "0")
+                            
+                            
                         } else {
-                            CommonUtils.showMsgDialog(showingPopupOn: self, withTitle: "", withMessage: "Failed to connect to server, Please check your internet connection")
+                            CommonUtils.showMsgDialog(showingPopupOn: self, withTitle: "", withMessage: "inValid")
                         }
-                   
+                    } else {
+                        CommonUtils.showMsgDialog(showingPopupOn: self, withTitle: "", withMessage: "Failed to connect to server, Please check your internet connection")
+                    }
                 })
-            
-            
-            
         }
-        
     }
-   
-    
 }

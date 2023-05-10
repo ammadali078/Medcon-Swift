@@ -24,6 +24,7 @@ class Constants {
     static let CalendarPostApi = BaseUrl + "WebApi/CreateMonthPlan"
     static let CopyMonthPlan = BaseUrl + "WebApi/CopyMonthPlan"
     static let DayPlanApi = BaseUrl + "WebApi/GetDayPlan"
+    static let ammad = "ammad"
     
     static let VideoApi = "http://medconwebapi-v3.digitrends.pk/api/VideoLibrary/Index"
     static let DoctorListApi = BaseUrl + "WebApi/GetDoctorList"
@@ -34,6 +35,8 @@ class Constants {
     static let AddLeaveApi = BaseUrl + "WebApi/AddLeave"
     static let SkipDoctorApi = BaseUrl + "WebApi/GetSkippedDoctorList"
     static let BrandApi = "https://drugportal.a2hosted.com/api/brands"
+    static let PAMArtApi = "http://medcon-webapi-beta.digitrends.pk/api/PatientAwareness/Index"
+    static let PopularApi = "http://medcon-webapi-beta.digitrends.pk/api/PatientAwareness/MostPopular"
     static let FecturerApi = "https://drugportal.a2hosted.com/api/manufacturers"
     static let AvailableApi = "https://drugportal.a2hosted.com/api/brands-index"
     static let DrugInterApi = "https://drugportal.a2hosted.com/api/drug-interactions"

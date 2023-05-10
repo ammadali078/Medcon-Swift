@@ -8,7 +8,7 @@
 import UIKit
 
 class OnboardingViewController: UIViewController {
-
+    
     
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var stackViewIndicator: UIStackView!
@@ -20,12 +20,15 @@ class OnboardingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setupUI()
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        scrollView.contentSize = .init(width: stackViewPages.frame.width, height: scrollView.frame.height)
+        
+            scrollView.contentSize = .init(width: stackViewPages.frame.width, height: scrollView.frame.height)
+        
     }
     
     private func setupUI() {
@@ -82,10 +85,10 @@ class OnboardingViewController: UIViewController {
     }
     
     @objc private func buttonActions(button: UIButton) {
-//        if button == buttonPrimary {
-//        }
-//        else if button == buttonPrimary, currentPageIndex < (pages.count - 1) {
-//        }
+        //        if button == buttonPrimary {
+        //        }
+        //        else if button == buttonPrimary, currentPageIndex < (pages.count - 1) {
+        //        }
     }
     
     private func moveToNext() {
@@ -104,5 +107,5 @@ extension OnboardingViewController: UIScrollViewDelegate {
         indicatorView?.selectedIndex = pageIndex
         currentPageIndex = pageIndex
     }
-
+    
 }

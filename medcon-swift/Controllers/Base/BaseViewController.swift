@@ -134,6 +134,11 @@ class BaseViewController: UIViewController, SideMenuDelegate {
     
     func sideMenuOptionTapped(option: SpecialityTag) {
         if (option == .LOGOUT) {
+            
+           let token = "0"
+            
+            CommonUtils.saveJsonToUserDefaults(forKey: Constants.ammad, withJson: token)
+            
             guard let delegate = self.view.window?.windowScene?.delegate as? SceneDelegate else { return }
             delegate.logOutUser()
         }

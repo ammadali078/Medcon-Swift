@@ -114,19 +114,40 @@ extension SpecialityTag: SpecialityType {
         case .Miscellaneous:
             return "Miscellaneous"
         case .Pain:
-            return "Pain"
+            return "PAIN"
         case .CNS:
-            return "CNS"
+            return "CNS "
         case .Gastroenterology:
-            return "Gastroenterology"
+            return "GASTROENTEROLOGY"
         case .General:
-            return "General Healthcare"
+            return "GENERAL HEALTHCARE"
         case .Pediatrics:
-            return "Pediatrics"
+            return "PEDIATRICS"
         case .Respiratory:
-            return "Respiratory"
+            return "RESPIRATORY"
         case .WomenMenHealth, .LOGOUT, .ContactUs:
-            return "Women & Men Health"
+            return "WOMEN & MEN HEALTH"
+        }
+    }
+    
+    var GetID: Int {
+        switch self {
+        case .Miscellaneous:
+            return 22
+        case .Pain:
+            return 9
+        case .CNS:
+            return 2
+        case .Gastroenterology:
+            return 3
+        case .General:
+            return 4
+        case .Pediatrics:
+            return 5
+        case .Respiratory:
+            return 6
+        case .WomenMenHealth, .LOGOUT, .ContactUs:
+            return 7
         }
     }
     

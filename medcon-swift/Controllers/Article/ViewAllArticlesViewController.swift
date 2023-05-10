@@ -67,13 +67,13 @@ class ViewAllArticlesViewController: BaseViewController {
         
         if ArtID == "1" {
             
-            if let data = journal.data.first(where: {$0.categoryName == selectedSpeciality.titleString}) {
+            if let data = journal.data.first(where: {$0.categoryID == selectedSpeciality.GetID}) {
                 let filteredData = data.newsJournal.filter({ $0.type != "MSL" })
                 return filteredData
             }
             
         }else {
-            if let data = journal.data.first(where: {$0.categoryName == selectedSpeciality.titleString}) {
+            if let data = journal.data.first(where: {$0.categoryID == selectedSpeciality.GetID}) {
                 let filteredData = data.newsJournal.filter({ $0.type == "MSL" })
                 return filteredData
             }
@@ -86,7 +86,7 @@ class ViewAllArticlesViewController: BaseViewController {
     
     func getVideos() -> [VideoTableViewCellDataSource]? {
         guard let videos = dataSourceVideo else { return nil }
-        if let data = videos.data.first(where: {$0.categoryName == selectedSpeciality.titleString}) {
+        if let data = videos.data.first(where: {$0.categoryID == selectedSpeciality.GetID}) {
             let filterVideos = data.videos.filter({ $0.typeID != 4})
             
             return filterVideos

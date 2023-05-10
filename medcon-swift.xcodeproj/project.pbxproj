@@ -86,7 +86,16 @@
 		ED62632028CA2041002B1F3E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED62631F28CA2041002B1F3E /* DetailViewController.swift */; };
 		ED62632328CA20BE002B1F3E /* DetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED62632228CA20BE002B1F3E /* DetailTableViewCell.swift */; };
 		EDF917E728CA6A8C0046110A /* AvailableFormsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF917E628CA6A8C0046110A /* AvailableFormsCollectionViewCell.swift */; };
+		FA0EC3662A03F8D800654599 /* PAMAticleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0EC3652A03F8D800654599 /* PAMAticleDetailViewController.swift */; };
 		FA67FA7E29154F1000E4FFD3 /* AvailableFormListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA67FA7D29154F1000E4FFD3 /* AvailableFormListCell.swift */; };
+		FA6F176F29E9387900AA1098 /* PAMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6F176E29E9387900AA1098 /* PAMViewController.swift */; };
+		FA6F177129E93B8200AA1098 /* PAMCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6F177029E93B8200AA1098 /* PAMCollectionCell.swift */; };
+		FA6F177329E946FB00AA1098 /* PAMModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6F177229E946FB00AA1098 /* PAMModel.swift */; };
+		FA7DA3AD29EE8981005EB605 /* MostPopularModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7DA3AC29EE8981005EB605 /* MostPopularModel.swift */; };
+		FA7DA3AF29EE8B70005EB605 /* PopularCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7DA3AE29EE8B70005EB605 /* PopularCollectionCell.swift */; };
+		FA7DA3B129EE9E47005EB605 /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7DA3B029EE9E47005EB605 /* ActivityViewController.swift */; };
+		FA95DA6F29F94F29004CAE7D /* PAMViewAllController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA95DA6E29F94F29004CAE7D /* PAMViewAllController.swift */; };
+		FA95DA7129F95002004CAE7D /* AllArticlePAMCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA95DA7029F95002004CAE7D /* AllArticlePAMCell.swift */; };
 		FAA819EE28D0EEAB005D17AD /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA819ED28D0EEAB005D17AD /* Constant.swift */; };
 		FAA819F028D0EECB005D17AD /* CommonUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA819EF28D0EECB005D17AD /* CommonUtils.swift */; };
 		FAA819F728D10163005D17AD /* GenBranModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA819F628D10163005D17AD /* GenBranModel.swift */; };
@@ -185,7 +194,16 @@
 		ED62631F28CA2041002B1F3E /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		ED62632228CA20BE002B1F3E /* DetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewCell.swift; sourceTree = "<group>"; };
 		EDF917E628CA6A8C0046110A /* AvailableFormsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableFormsCollectionViewCell.swift; sourceTree = "<group>"; };
+		FA0EC3652A03F8D800654599 /* PAMAticleDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PAMAticleDetailViewController.swift; sourceTree = "<group>"; };
 		FA67FA7D29154F1000E4FFD3 /* AvailableFormListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableFormListCell.swift; sourceTree = "<group>"; };
+		FA6F176E29E9387900AA1098 /* PAMViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PAMViewController.swift; sourceTree = "<group>"; };
+		FA6F177029E93B8200AA1098 /* PAMCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PAMCollectionCell.swift; sourceTree = "<group>"; };
+		FA6F177229E946FB00AA1098 /* PAMModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PAMModel.swift; sourceTree = "<group>"; };
+		FA7DA3AC29EE8981005EB605 /* MostPopularModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostPopularModel.swift; sourceTree = "<group>"; };
+		FA7DA3AE29EE8B70005EB605 /* PopularCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularCollectionCell.swift; sourceTree = "<group>"; };
+		FA7DA3B029EE9E47005EB605 /* ActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
+		FA95DA6E29F94F29004CAE7D /* PAMViewAllController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PAMViewAllController.swift; sourceTree = "<group>"; };
+		FA95DA7029F95002004CAE7D /* AllArticlePAMCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllArticlePAMCell.swift; sourceTree = "<group>"; };
 		FAA819ED28D0EEAB005D17AD /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		FAA819EF28D0EECB005D17AD /* CommonUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonUtils.swift; sourceTree = "<group>"; };
 		FAA819F628D10163005D17AD /* GenBranModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenBranModel.swift; sourceTree = "<group>"; };
@@ -484,7 +502,13 @@
 				ED32E67529018B3C005D4D0B /* DolsViewController.swift */,
 				ED32E67829018BB4005D4D0B /* DolsTableViewCell.swift */,
 				FAF36B032911755400CF0AA9 /* EmslCollectionViewCell.swift */,
+				FA6F177029E93B8200AA1098 /* PAMCollectionCell.swift */,
 				FA67FA7D29154F1000E4FFD3 /* AvailableFormListCell.swift */,
+				FA6F176E29E9387900AA1098 /* PAMViewController.swift */,
+				FA95DA6E29F94F29004CAE7D /* PAMViewAllController.swift */,
+				FA95DA7029F95002004CAE7D /* AllArticlePAMCell.swift */,
+				FA7DA3AE29EE8B70005EB605 /* PopularCollectionCell.swift */,
+				FA0EC3652A03F8D800654599 /* PAMAticleDetailViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -493,6 +517,7 @@
 			isa = PBXGroup;
 			children = (
 				B1C2994627B81B7D00BA07F2 /* BaseViewController.swift */,
+				FA7DA3B029EE9E47005EB605 /* ActivityViewController.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -589,6 +614,8 @@
 				FAF492E628D39622000053DB /* AvailableModel.swift */,
 				FAF492EC28D4F4FA000053DB /* BrandDetailModel.swift */,
 				ED32E6C0290C2D4D005D4D0B /* DollsModel.swift */,
+				FA6F177229E946FB00AA1098 /* PAMModel.swift */,
+				FA7DA3AC29EE8981005EB605 /* MostPopularModel.swift */,
 			);
 			path = SwiftModels;
 			sourceTree = "<group>";
@@ -750,6 +777,8 @@
 				EDF917E728CA6A8C0046110A /* AvailableFormsCollectionViewCell.swift in Sources */,
 				ED62631D28CA11D9002B1F3E /* DrugManualViewController.swift in Sources */,
 				FAF492ED28D4F4FA000053DB /* BrandDetailModel.swift in Sources */,
+				FA6F177329E946FB00AA1098 /* PAMModel.swift in Sources */,
+				FA7DA3AD29EE8981005EB605 /* MostPopularModel.swift in Sources */,
 				B195148F26812B9F006A3EC2 /* OboardingCarouselModel.swift in Sources */,
 				ED32E67629018B3C005D4D0B /* DolsViewController.swift in Sources */,
 				B1C2994727B81B7D00BA07F2 /* BaseViewController.swift in Sources */,
@@ -769,12 +798,18 @@
 				B1C2994F27B82EAF00BA07F2 /* VideoLibraryResponse.swift in Sources */,
 				B1C2994C27B82DC300BA07F2 /* JournalResponse.swift in Sources */,
 				B19514A1268130C6006A3EC2 /* StoryboardName.swift in Sources */,
+				FA7DA3AF29EE8B70005EB605 /* PopularCollectionCell.swift in Sources */,
 				FA67FA7E29154F1000E4FFD3 /* AvailableFormListCell.swift in Sources */,
+				FA95DA7129F95002004CAE7D /* AllArticlePAMCell.swift in Sources */,
 				ED62632328CA20BE002B1F3E /* DetailTableViewCell.swift in Sources */,
 				B19514B226813406006A3EC2 /* OnboardingPageView.swift in Sources */,
 				B15437FE27E24F3800D35E7B /* SpecialityTag.swift in Sources */,
+				FA6F176F29E9387900AA1098 /* PAMViewController.swift in Sources */,
+				FA95DA6F29F94F29004CAE7D /* PAMViewAllController.swift in Sources */,
+				FA6F177129E93B8200AA1098 /* PAMCollectionCell.swift in Sources */,
 				B1C2996A27C5F08B00BA07F2 /* ViewAllArticlesViewController.swift in Sources */,
 				FAF492E528D36990000053DB /* AvailableFormsViewController.swift in Sources */,
+				FA7DA3B129EE9E47005EB605 /* ActivityViewController.swift in Sources */,
 				B10089B527ECF0E400CB5B82 /* SendEmailResponse.swift in Sources */,
 				B1C2996727C2AACD00BA07F2 /* SideMenuViewController.swift in Sources */,
 				FAF492EB28D4CF7B000053DB /* BrandDetailCell.swift in Sources */,
@@ -782,6 +817,7 @@
 				B18203E927B6D27E0016B8E1 /* AppUserManager.swift in Sources */,
 				FAA819EE28D0EEAB005D17AD /* Constant.swift in Sources */,
 				B1C299B027D4CF9F00BA07F2 /* iCarousel.m in Sources */,
+				FA0EC3662A03F8D800654599 /* PAMAticleDetailViewController.swift in Sources */,
 				B18203D727B587B10016B8E1 /* AuthSignInViewController.swift in Sources */,
 				ED62632028CA2041002B1F3E /* DetailViewController.swift in Sources */,
 				ED32E67929018BB4005D4D0B /* DolsTableViewCell.swift in Sources */,
