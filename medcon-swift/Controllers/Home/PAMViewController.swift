@@ -21,7 +21,6 @@ class PAMViewController: UIViewController{
     var indicator: UIActivityIndicatorView!
     var activitiyViewController: ActivityViewController!
     var selectedData: MostPopularResult? = nil
-    var selectedCell: PatientAwareness? = nil
     
     
     override func viewDidLoad() {
@@ -32,12 +31,8 @@ class PAMViewController: UIViewController{
         popularDataSource = PopularCollectionCell()
         popularCollectionViewOutlet.dataSource = popularDataSource
         
-//        popularDataSource.onStartClick = {MostPopularResult in
-//            self.onStartClick(MostPopularResult: MostPopularResult)
-//        }
-        
-        PAMListDataSource.onCellClick = {PatientAwareness in
-            self.onStartClick(PatientAwareness: PatientAwareness)
+        popularDataSource.onStartClick = {MostPopularResult in
+            self.onStartClick(MostPopularResult: MostPopularResult)
         }
         
         self.GetArticle()
@@ -51,36 +46,24 @@ class PAMViewController: UIViewController{
         navigationController?.pushViewController(mainViewController, animated: true)
     }
     
-//    func onStartClick(MostPopularResult: MostPopularResult)  {
+    func onStartClick(MostPopularResult: MostPopularResult)  {
         
-//        self.selectedData = MostPopularResult
-//        let selectedImg = selectedData?.imageURL
-//        let selectedTitle = selectedData?.title
+        self.selectedData = MostPopularResult
+//        let selectedID = selectedData?.id
+//
+//        CommonUtils.saveJsonToUserDefaults(forKey: Constants.selId, withJson:  String(selectedID ?? 0))
 //
 //        let btn = CommonUtils.getJsonFromUserDefaults(forKey: Constants.btn)
 //
+//        if btn == "2" {
 //            let vc = self.storyboard?.instantiateViewController(withIdentifier: "BrandDetailscene") as! BrandDetailViewController
 //            self.navigationController?.pushViewController(vc, animated: true)
-
-//    }
-    
-    func onStartClick(PatientAwareness: PatientAwareness)  {
+//
+//        }else {
+//            let vc = self.storyboard?.instantiateViewController(withIdentifier: "AvailableFormsViewScene") as! AvailableFormsViewController
+//            self.navigationController?.pushViewController(vc, animated: true)
+//        }
         
-        self.selectedCell = PatientAwareness
-//        let selectedID = selectedCell?.id
-        let selectedImg = selectedCell?.imageUrl
-        let selectedTitle = selectedCell?.title
-        let selectedDec = selectedCell?.html
-        
-//        CommonUtils.saveJsonToUserDefaults(forKey: Constants.cellID, withJson: "\(String(describing: selectedID))")
-        CommonUtils.saveJsonToUserDefaults(forKey: Constants.selImg, withJson: selectedImg ?? "")
-        
-        CommonUtils.saveJsonToUserDefaults(forKey: Constants.selTitle, withJson: selectedTitle ?? "")
-        CommonUtils.saveJsonToUserDefaults(forKey: Constants.selDes, withJson: selectedDec ?? "")
-        
-            let vc = self.storyboard?.instantiateViewController(withIdentifier: "PAMAticleDetailViewScreen") as! PAMAticleDetailViewController
-            self.navigationController?.pushViewController(vc, animated: true)
-
     }
     
     func GetArticle(){
@@ -89,7 +72,7 @@ class PAMViewController: UIViewController{
         
         parms["page"] = 1;
         
-        AF.request(Constants.PAMArtApi, method: .get, parameters: nil, encoding: URLEncoding(destination: .queryString), headers: nil)
+        AF.request(Constants.PAMArtApi, method: .get, parameters: parms, encoding: URLEncoding(destination: .queryString), headers: nil)
             .responseString(completionHandler: {(response) in
                 // On Response
                 

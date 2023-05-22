@@ -12,7 +12,6 @@ class AllArticlePAMCell: NSObject,UICollectionViewDelegate,UICollectionViewDataS
     
     var dataList: [PatientAwareness] = []
     var filteredList : [PatientAwareness] = []
-    var onCellClick: ((PatientAwareness) -> Void)? = nil
     
     var openType = "0"
     let baseUrl = "http://medcon-beta.digitrends.pk"
@@ -23,11 +22,6 @@ class AllArticlePAMCell: NSObject,UICollectionViewDelegate,UICollectionViewDataS
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AllArticlePAMCell", for: indexPath) as! AllArticlePAMViewCell
-        
-        let index = indexPath.row
-        let Json = filteredList[index]
-        cell.PatientAwareness = Json
-        cell.onCellClick = onCellClick
         
         cell.backView.layer.cornerRadius = 8
         cell.backView.layer.masksToBounds = true
@@ -45,6 +39,7 @@ class AllArticlePAMCell: NSObject,UICollectionViewDelegate,UICollectionViewDataS
 
             cell.articleImageView.image = UIImage(data: data!)
      
+       
         cell.articleHeadingLabel.text = filteredList[indexPath.item].title
         
         cell.articleTextLabel.attributedText = filteredList[indexPath.item].html?.htmlToAttributedString
@@ -70,11 +65,10 @@ class AllArticlePAMViewCell: UICollectionViewCell {
     @IBOutlet weak var articleTextLabel: UILabel!
     
     @IBOutlet weak var backView: UIView!
-    var PatientAwareness: PatientAwareness? = nil
-    var onCellClick: ((PatientAwareness) -> Void)? = nil
     
     @IBAction func onArticleClick(_ sender: Any) {
-        onCellClick!(PatientAwareness!)
+        
+        
     }
     
 }

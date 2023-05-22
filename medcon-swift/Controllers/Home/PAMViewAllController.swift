@@ -14,7 +14,7 @@ class PAMViewAllController: UIViewController{
     
     @IBOutlet weak var viewAllCollectionView: UICollectionView!
     
-    var selectedCell: PatientAwareness? = nil
+    
     var allArticleListDataSource: AllArticlePAMCell!
     var OpenType = "0";
     
@@ -24,29 +24,6 @@ class PAMViewAllController: UIViewController{
         viewAllCollectionView.dataSource = allArticleListDataSource
         self.allPAMArtice()
         
-        allArticleListDataSource.onCellClick = {PatientAwareness in
-            self.onStartClick(PatientAwareness: PatientAwareness)
-        }
-        
-    }
-    
-    func onStartClick(PatientAwareness: PatientAwareness)  {
-        
-        self.selectedCell = PatientAwareness
-//        let selectedID = selectedCell?.id
-        let selectedImg = selectedCell?.imageUrl
-        let selectedTitle = selectedCell?.title
-        let selectedDec = selectedCell?.html
-        
-//        CommonUtils.saveJsonToUserDefaults(forKey: Constants.cellID, withJson: "\(String(describing: selectedID))")
-        CommonUtils.saveJsonToUserDefaults(forKey: Constants.selImg, withJson: selectedImg ?? "")
-        
-        CommonUtils.saveJsonToUserDefaults(forKey: Constants.selTitle, withJson: selectedTitle ?? "")
-        CommonUtils.saveJsonToUserDefaults(forKey: Constants.selDes, withJson: selectedDec ?? "")
-        
-            let vc = self.storyboard?.instantiateViewController(withIdentifier: "PAMAticleDetailViewScreen") as! PAMAticleDetailViewController
-            self.navigationController?.pushViewController(vc, animated: true)
-
     }
     
     func allPAMArtice() {

@@ -13,7 +13,6 @@ class PAMCollectionCell: NSObject,UICollectionViewDelegate,UICollectionViewDataS
     
     var dataList: [PatientAwareness] = []
     var filteredList : [PatientAwareness] = []
-    var onCellClick: ((PatientAwareness) -> Void)? = nil
     
     var openType = "0"
     let baseUrl = "http://medcon-beta.digitrends.pk"
@@ -24,11 +23,6 @@ class PAMCollectionCell: NSObject,UICollectionViewDelegate,UICollectionViewDataS
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PAMCollectionCell", for: indexPath) as! PAMCollectionViewCell
-            
-            let index = indexPath.row
-            let Json = filteredList[index]
-            cell.PatientAwareness = Json
-            cell.onCellClick = onCellClick
           
             cell.backViewOutlet.layer.cornerRadius = 8
             cell.backViewOutlet.layer.masksToBounds = true
@@ -64,12 +58,13 @@ class PAMCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var articleImageView: UIImageView!
     @IBOutlet weak var articleLabelView: UILabel!
     @IBOutlet weak var articleLabelView2: UILabel!
+    
     @IBOutlet weak var backViewOutlet: UIView!
-    var PatientAwareness: PatientAwareness? = nil
-    var onCellClick: ((PatientAwareness) -> Void)? = nil
     
     @IBAction func onClickCell(_ sender: Any) {
-        onCellClick!(PatientAwareness!)
+        
+        
+        
     }
     
 }

@@ -31,11 +31,13 @@ class PopularCollectionCell: NSObject,UICollectionViewDelegate,UICollectionViewD
         cell.popularImageView.layer.cornerRadius = 8
         cell.popularImageView.layer.masksToBounds = true
         
+        
         let baseUrl = "http://medcon-beta.digitrends.pk"
         
         let imageUrl = filteredList[indexPath.row].imageURL ?? ""
         
         var urlString = imageUrl.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
+
 
         let url = URL(string: baseUrl + urlString)
 
@@ -64,7 +66,7 @@ class PopularCollectionViewCell: UICollectionViewCell {
     var onStartClick: ((MostPopularResult) -> Void)? = nil
     
     @IBAction func onClickBtn(_ sender: Any) {
-//        onStartClick!(MostPopularResult!)
+        onStartClick!(MostPopularResult!)
     }
     
     

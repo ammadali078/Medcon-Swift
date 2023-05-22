@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 class Constants {
 //        static let BaseUrl = "http://192.168.100.101/"
     static let BaseLogin = "http://sante.digitrends.pk/"
@@ -38,8 +37,6 @@ class Constants {
     static let BrandApi = "https://drugportal.a2hosted.com/api/brands"
     static let PAMArtApi = "http://medcon-webapi-beta.digitrends.pk/api/PatientAwareness/Index"
     static let PopularApi = "http://medcon-webapi-beta.digitrends.pk/api/PatientAwareness/MostPopular"
-    
-    static let getARTDetail = "http://medcon-webapi-beta.digitrends.pk/api/PatientAwareness/PatientAwarnessArticleById"
     static let FecturerApi = "https://drugportal.a2hosted.com/api/manufacturers"
     static let AvailableApi = "https://drugportal.a2hosted.com/api/brands-index"
     static let DrugInterApi = "https://drugportal.a2hosted.com/api/drug-interactions"
@@ -116,10 +113,6 @@ class Constants {
     static let LastLoginResponse = "LastLoginResponse"
     static let DOCTOR_RESULT = "DOCTOR_RESULT"
     static let SelectedPlan = "SelectedPlan"
-//    static let cellID = "cellID"
-    static let selImg = "selImg"
-    static let selTitle = "selTitle"
-    static let selDes = "selDes"
     static let SELECTED_MORNING_ATTENDANCE_TIME = "SELECTED_MORNING_ATTENDANCE_TIME"
     static let SELECTED_MORNING_ATTENDANCE_LOCATION = "SELECTED_MORNING_ATTENDANCE_LOCATION"
     static let SELECTED_EVENING_ATTENDANCE_TIME = "SELECTED_EVENING_ATTENDANCE_TIME"
