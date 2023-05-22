@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -57,7 +57,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="1635"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pOP-TN-GIN">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1635"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1629.5"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zcY-TZ-13S">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="325"/>
@@ -69,13 +69,13 @@
                                                         </constraints>
                                                     </imageView>
                                                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RUNNING STOMACH IS NEVER AFRAID OF THE DARK" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kIe-Bf-OJK">
-                                                        <rect key="frame" x="20" y="82" width="374" height="129"/>
+                                                        <rect key="frame" x="20" y="94" width="374" height="105"/>
                                                         <fontDescription key="fontDescription" name="BrandonGrotesque-Black" family="Brandon Grotesque" pointSize="30"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UTv-1I-ZiK">
-                                                        <rect key="frame" x="-25" y="275" width="281" height="50"/>
+                                                        <rect key="frame" x="-25" y="275" width="290.5" height="50"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gastro-icon" translatesAutoresizingMaskIntoConstraints="NO" id="nhP-Yk-mX0">
                                                                 <rect key="frame" x="40" y="5" width="40" height="40"/>
@@ -85,7 +85,7 @@
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GASTROENTEROLOGY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6wA-MN-YXT">
-                                                                <rect key="frame" x="92" y="8" width="163" height="34"/>
+                                                                <rect key="frame" x="92" y="8" width="172.5" height="34"/>
                                                                 <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="16"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
@@ -171,19 +171,19 @@
                                                 <rect key="frame" x="0.0" y="553" width="414" height="328"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LEARN FROM THE EXPERTS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sKC-LK-cgk">
-                                                        <rect key="frame" x="26" y="8" width="362" height="23"/>
+                                                        <rect key="frame" x="26" y="8" width="362" height="19"/>
                                                         <fontDescription key="fontDescription" name="BrandonGrotesque-Black" family="Brandon Grotesque" pointSize="16"/>
                                                         <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Browse through the vast collection of interesting medical lectures of the KOLs" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jsw-gs-R9r">
-                                                        <rect key="frame" x="26" y="39" width="362" height="28.5"/>
+                                                        <rect key="frame" x="26" y="35" width="362" height="28"/>
                                                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
                                                         <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lx1-HA-cQP" customClass="iCarousel">
-                                                        <rect key="frame" x="0.0" y="67.5" width="414" height="200"/>
+                                                        <rect key="frame" x="0.0" y="63" width="414" height="200"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="200" id="wRb-ab-YaA"/>
@@ -194,7 +194,7 @@
                                                         </connections>
                                                     </view>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xfv-dN-eZt">
-                                                        <rect key="frame" x="16" y="267.5" width="382" height="44.5"/>
+                                                        <rect key="frame" x="16" y="263" width="382" height="49"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="BrandonGrotesque-Black" family="Brandon Grotesque" pointSize="12"/>
                                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -234,26 +234,26 @@
                                                 <rect key="frame" x="0.0" y="881" width="414" height="285"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VIEW GALLERY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OVx-cr-QNN">
-                                                        <rect key="frame" x="26" y="8" width="362" height="26"/>
+                                                        <rect key="frame" x="26" y="8" width="362" height="21"/>
                                                         <fontDescription key="fontDescription" name="BrandonGrotesque-Black" family="Brandon Grotesque" pointSize="18"/>
                                                         <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pictures from the latest Abbott's events" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tf0-Vn-5kK">
-                                                        <rect key="frame" x="26" y="34" width="362" height="14"/>
+                                                        <rect key="frame" x="26" y="29" width="362" height="14"/>
                                                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
                                                         <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U2G-3M-F7N">
-                                                        <rect key="frame" x="26" y="74.5" width="362" height="150"/>
+                                                        <rect key="frame" x="26" y="69.5" width="362" height="150"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="150" id="wO4-Cd-brh"/>
                                                         </constraints>
                                                     </view>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vmq-hd-FwH">
-                                                        <rect key="frame" x="16" y="240.5" width="382" height="44.5"/>
+                                                        <rect key="frame" x="16" y="235.5" width="382" height="49.5"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="BrandonGrotesque-Black" family="Brandon Grotesque" pointSize="14"/>
                                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -290,25 +290,25 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Khd-j2-8As">
-                                                <rect key="frame" x="0.0" y="881" width="414" height="336.5"/>
+                                                <rect key="frame" x="0.0" y="881" width="414" height="331"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s1q-vz-CaM">
-                                                        <rect key="frame" x="16" y="8" width="382" height="248.5"/>
+                                                        <rect key="frame" x="16" y="8" width="382" height="243"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E-MSL (Article)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FLj-TH-f9g">
-                                                                <rect key="frame" x="12" y="8" width="358" height="26"/>
+                                                                <rect key="frame" x="12" y="8" width="358" height="21"/>
                                                                 <fontDescription key="fontDescription" name="BrandonGrotesque-Black" family="Brandon Grotesque" pointSize="18"/>
                                                                 <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Presenting the best from Abbott's MSL" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l5v-O0-ImW">
-                                                                <rect key="frame" x="12" y="34" width="358" height="14.5"/>
+                                                                <rect key="frame" x="12" y="29" width="358" height="14"/>
                                                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
                                                                 <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gHw-0r-B3Z">
-                                                                <rect key="frame" x="0.0" y="48.5" width="382" height="100"/>
+                                                                <rect key="frame" x="0.0" y="43" width="382" height="100"/>
                                                                 <subviews>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kt9-g1-ncG">
                                                                         <rect key="frame" x="10" y="10" width="123" height="80"/>
@@ -365,7 +365,7 @@ RACECADOTRIL AND DIARRHEA</string>
                                                                 </constraints>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ggk-QQ-7Ne">
-                                                                <rect key="frame" x="0.0" y="148.5" width="382" height="100"/>
+                                                                <rect key="frame" x="0.0" y="143" width="382" height="100"/>
                                                                 <subviews>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="U3w-7N-sVC">
                                                                         <rect key="frame" x="10" y="10" width="123" height="80"/>
@@ -406,7 +406,7 @@ RACECADOTRIL AND DIARRHEA</string>
                                                                 </constraints>
                                                             </view>
                                                             <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Article-banner" translatesAutoresizingMaskIntoConstraints="NO" id="qC9-NL-o6v">
-                                                                <rect key="frame" x="0.0" y="60" width="382" height="181"/>
+                                                                <rect key="frame" x="0.0" y="54.5" width="382" height="181"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="181" id="HL2-IJ-IxQ"/>
                                                                     <constraint firstAttribute="width" constant="382" id="ojH-pR-YQU"/>
@@ -435,7 +435,7 @@ RACECADOTRIL AND DIARRHEA</string>
                                                         </constraints>
                                                     </view>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Wg-qr-wsv">
-                                                        <rect key="frame" x="16" y="272.5" width="382" height="44"/>
+                                                        <rect key="frame" x="16" y="267" width="382" height="44"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="44" id="raf-I4-GBn"/>
@@ -468,25 +468,25 @@ RACECADOTRIL AND DIARRHEA</string>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="diW-KX-tA4">
-                                                <rect key="frame" x="0.0" y="1218" width="414" height="345"/>
+                                                <rect key="frame" x="0.0" y="1212.5" width="414" height="345"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ehl-wZ-nIo">
-                                                        <rect key="frame" x="16" y="0.0" width="382" height="297"/>
+                                                        <rect key="frame" x="16" y="0.0" width="382" height="301"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E-MSL (Videos)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kdv-XB-qYS">
-                                                                <rect key="frame" x="12" y="8" width="358" height="26"/>
+                                                                <rect key="frame" x="12" y="8" width="358" height="21"/>
                                                                 <fontDescription key="fontDescription" name="BrandonGrotesque-Black" family="Brandon Grotesque" pointSize="18"/>
                                                                 <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Presenting the best from Abbott's MSL" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8K7-eE-OFm">
-                                                                <rect key="frame" x="12" y="37" width="358" height="14.5"/>
+                                                                <rect key="frame" x="12" y="32" width="358" height="14"/>
                                                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
                                                                 <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="qpr-3A-hAH">
-                                                                <rect key="frame" x="0.0" y="69" width="382" height="220"/>
+                                                                <rect key="frame" x="0.0" y="63.5" width="382" height="229.5"/>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Boh-as-5CA">
                                                                     <size key="itemSize" width="382" height="203"/>
@@ -496,7 +496,7 @@ RACECADOTRIL AND DIARRHEA</string>
                                                                 </collectionViewFlowLayout>
                                                                 <cells>
                                                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" reuseIdentifier="EmslCollectionCell" id="fkf-Hz-EH4" customClass="EmslCollectionViewCell" customModule="medcon_swift" customModuleProvider="target">
-                                                                        <rect key="frame" x="0.0" y="8.5" width="382" height="203"/>
+                                                                        <rect key="frame" x="0.0" y="13.5" width="382" height="203"/>
                                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="mdT-y2-Igi">
                                                                             <rect key="frame" x="0.0" y="0.0" width="382" height="203"/>
@@ -536,7 +536,7 @@ RACECADOTRIL AND DIARRHEA</string>
                                                                 </connections>
                                                             </collectionView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VIDEO LIBRARY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rZI-J0-QPO">
-                                                                <rect key="frame" x="12" y="143" width="358" height="34"/>
+                                                                <rect key="frame" x="12" y="137.5" width="358" height="34"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="34" id="YqJ-LI-olc"/>
                                                                     <constraint firstAttribute="width" constant="358" id="x9G-73-iIa"/>
@@ -546,7 +546,7 @@ RACECADOTRIL AND DIARRHEA</string>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="COMING SOON" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9nV-Lc-4MS">
-                                                                <rect key="frame" x="12" y="165" width="358" height="34"/>
+                                                                <rect key="frame" x="12" y="159.5" width="358" height="34"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="358" id="Fh9-IB-jAr"/>
                                                                     <constraint firstAttribute="height" constant="34" id="qsP-C0-27Y"/>
@@ -577,7 +577,7 @@ RACECADOTRIL AND DIARRHEA</string>
                                                         </constraints>
                                                     </view>
                                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SwO-EB-7AD">
-                                                        <rect key="frame" x="16" y="305" width="382" height="34"/>
+                                                        <rect key="frame" x="16" y="309" width="382" height="30"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="BrandonGrotesque-Black" family="Brandon Grotesque" pointSize="15"/>
                                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -663,7 +663,7 @@ RACECADOTRIL AND DIARRHEA</string>
                                                                 </constraints>
                                                             </imageView>
                                                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PAIN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7la-UI-bnW">
-                                                                <rect key="frame" x="0.0" y="44" width="70" height="11.5"/>
+                                                                <rect key="frame" x="0.0" y="44" width="70" height="9.5"/>
                                                                 <fontDescription key="fontDescription" name="BrandonGrotesque-Black" family="Brandon Grotesque" pointSize="8"/>
                                                                 <color key="textColor" red="0.81176470588235294" green="0.18431372549019609" blue="0.58431372549019611" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -701,7 +701,7 @@ RACECADOTRIL AND DIARRHEA</string>
                                                                 </constraints>
                                                             </imageView>
                                                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PEDIATRIC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eht-TO-lQT">
-                                                                <rect key="frame" x="0.0" y="44" width="70" height="11.5"/>
+                                                                <rect key="frame" x="0.0" y="44" width="70" height="9.5"/>
                                                                 <fontDescription key="fontDescription" name="BrandonGrotesque-Black" family="Brandon Grotesque" pointSize="8"/>
                                                                 <color key="textColor" red="1" green="0.41176470588235292" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -739,7 +739,7 @@ RACECADOTRIL AND DIARRHEA</string>
                                                                 </constraints>
                                                             </imageView>
                                                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CNS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oJf-xg-VUx">
-                                                                <rect key="frame" x="0.0" y="44" width="70" height="11.5"/>
+                                                                <rect key="frame" x="0.0" y="44" width="70" height="9.5"/>
                                                                 <fontDescription key="fontDescription" name="BrandonGrotesque-Black" family="Brandon Grotesque" pointSize="8"/>
                                                                 <color key="textColor" red="0.2627450980392157" green="0.60784313725490191" blue="0.84705882352941175" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -777,7 +777,7 @@ RACECADOTRIL AND DIARRHEA</string>
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PAM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uFc-zX-gsm">
-                                                                <rect key="frame" x="0.0" y="44" width="72" height="11.5"/>
+                                                                <rect key="frame" x="0.0" y="44" width="72" height="9.5"/>
                                                                 <fontDescription key="fontDescription" name="BrandonGrotesque-Black" family="Brandon Grotesque" pointSize="8"/>
                                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
@@ -815,7 +815,7 @@ RACECADOTRIL AND DIARRHEA</string>
                                                                 </constraints>
                                                             </imageView>
                                                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MEN &amp; WOMEN'S HEALTH" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="voD-3F-s0b">
-                                                                <rect key="frame" x="0.0" y="44" width="72" height="9"/>
+                                                                <rect key="frame" x="0.0" y="44" width="72" height="7"/>
                                                                 <fontDescription key="fontDescription" name="BrandonGrotesque-Black" family="Brandon Grotesque" pointSize="6"/>
                                                                 <color key="textColor" red="0.80392156862745101" green="0.54117647058823526" blue="0.71764705882352942" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -854,7 +854,7 @@ RACECADOTRIL AND DIARRHEA</string>
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HOME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="goK-xf-x6w">
-                                                                <rect key="frame" x="0.0" y="45" width="72" height="11.5"/>
+                                                                <rect key="frame" x="0.0" y="45" width="72" height="9.5"/>
                                                                 <fontDescription key="fontDescription" name="BrandonGrotesque-Black" family="Brandon Grotesque" pointSize="8"/>
                                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
@@ -892,7 +892,7 @@ RACECADOTRIL AND DIARRHEA</string>
                                                                 </constraints>
                                                             </imageView>
                                                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GENERAL HEALTHCARE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MbE-pY-XU1">
-                                                                <rect key="frame" x="0.0" y="44" width="72" height="9"/>
+                                                                <rect key="frame" x="0.0" y="44" width="72" height="7"/>
                                                                 <fontDescription key="fontDescription" name="BrandonGrotesque-Black" family="Brandon Grotesque" pointSize="6"/>
                                                                 <color key="textColor" red="0.090196078431372548" green="0.54117647058823526" blue="0.67450980392156867" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -930,7 +930,7 @@ RACECADOTRIL AND DIARRHEA</string>
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DRUG MANUAL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lla-ZL-EEi">
-                                                                <rect key="frame" x="0.0" y="44" width="77" height="11.5"/>
+                                                                <rect key="frame" x="0.0" y="44" width="77" height="9.5"/>
                                                                 <fontDescription key="fontDescription" name="BrandonGrotesque-Black" family="Brandon Grotesque" pointSize="8"/>
                                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
@@ -966,7 +966,7 @@ RACECADOTRIL AND DIARRHEA</string>
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DOLs" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LUf-y7-CFZ">
-                                                                <rect key="frame" x="6" y="46" width="73" height="11.5"/>
+                                                                <rect key="frame" x="6" y="46" width="73" height="9.5"/>
                                                                 <fontDescription key="fontDescription" name="BrandonGrotesque-Black" family="Brandon Grotesque" pointSize="8"/>
                                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
@@ -1060,7 +1060,7 @@ RACECADOTRIL AND DIARRHEA</string>
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HOME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ba-jz-UmV">
-                                                        <rect key="frame" x="0.0" y="45" width="72" height="11.5"/>
+                                                        <rect key="frame" x="0.0" y="45" width="72" height="9.5"/>
                                                         <fontDescription key="fontDescription" name="BrandonGrotesque-Black" family="Brandon Grotesque" pointSize="8"/>
                                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -1098,7 +1098,7 @@ RACECADOTRIL AND DIARRHEA</string>
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DRUG MANUAL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Exm-1b-u6f">
-                                                        <rect key="frame" x="5" y="44" width="58" height="11.5"/>
+                                                        <rect key="frame" x="5" y="44" width="58" height="9.5"/>
                                                         <fontDescription key="fontDescription" name="BrandonGrotesque-Black" family="Brandon Grotesque" pointSize="8"/>
                                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -1135,7 +1135,7 @@ RACECADOTRIL AND DIARRHEA</string>
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DOLs" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qv2-0t-NhG">
-                                                        <rect key="frame" x="0.0" y="45" width="79" height="11.5"/>
+                                                        <rect key="frame" x="0.0" y="45" width="79" height="9.5"/>
                                                         <fontDescription key="fontDescription" name="BrandonGrotesque-Black" family="Brandon Grotesque" pointSize="8"/>
                                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -1175,7 +1175,7 @@ RACECADOTRIL AND DIARRHEA</string>
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PAM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="82y-nI-2KU">
-                                                        <rect key="frame" x="0.0" y="44" width="72" height="11.5"/>
+                                                        <rect key="frame" x="0.0" y="44" width="72" height="9.5"/>
                                                         <fontDescription key="fontDescription" name="BrandonGrotesque-Black" family="Brandon Grotesque" pointSize="8"/>
                                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -1296,7 +1296,7 @@ RACECADOTRIL AND DIARRHEA</string>
                             </constraints>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="General Healthcare" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fX4-Qy-x31">
-                            <rect key="frame" x="0.0" y="44" width="72" height="10.5"/>
+                            <rect key="frame" x="0.0" y="44" width="72" height="8.3333333333333357"/>
                             <fontDescription key="fontDescription" name="BrandonGrotesque-Black" family="Brandon Grotesque" pointSize="7"/>
                             <color key="textColor" red="0.090196078430000007" green="0.54117647059999996" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
@@ -1359,7 +1359,7 @@ RACECADOTRIL AND DIARRHEA</string>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5mN-W8-Y7h">
-                                            <rect key="frame" x="-25" y="275" width="281" height="50"/>
+                                            <rect key="frame" x="-25" y="275" width="290.5" height="50"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gastro-icon" translatesAutoresizingMaskIntoConstraints="NO" id="9Z8-i6-l44">
                                                     <rect key="frame" x="40" y="5" width="40" height="40"/>
@@ -1369,7 +1369,7 @@ RACECADOTRIL AND DIARRHEA</string>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GASTROENTEROLOGY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0eg-Ca-EIL">
-                                                    <rect key="frame" x="92" y="8" width="163" height="34"/>
+                                                    <rect key="frame" x="92" y="8" width="172.5" height="34"/>
                                                     <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="16"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -1407,7 +1407,7 @@ RACECADOTRIL AND DIARRHEA</string>
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ArticleTableViewCell" rowHeight="150" id="mn6-E9-bkl" customClass="ArticleTableViewCell" customModule="medcon_swift" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="369.5" width="320" height="150"/>
+                                        <rect key="frame" x="0.0" y="375" width="320" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mn6-E9-bkl" id="IEJ-6c-0DB">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
@@ -1499,7 +1499,7 @@ RACECADOTRIL AND DIARRHEA</string>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="VideoTableViewCell" rowHeight="322" id="KWB-G5-5tx" customClass="VideoTableViewCell" customModule="medcon_swift" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="519.5" width="320" height="322"/>
+                                        <rect key="frame" x="0.0" y="525" width="320" height="322"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KWB-G5-5tx" id="GxG-Gy-gn9">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="322"/>
@@ -1516,7 +1516,7 @@ RACECADOTRIL AND DIARRHEA</string>
                                                             <color key="backgroundColor" white="0.0" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </view>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xps-b3-A3h">
-                                                            <rect key="frame" x="20" y="275.5" width="264" height="14.5"/>
+                                                            <rect key="frame" x="20" y="276" width="264" height="14"/>
                                                             <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="12"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
@@ -1581,7 +1581,7 @@ RACECADOTRIL AND DIARRHEA</string>
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PAIN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yCm-DY-A7C">
-                                                                <rect key="frame" x="0.0" y="44" width="70" height="11.5"/>
+                                                                <rect key="frame" x="0.0" y="44" width="70" height="9.5"/>
                                                                 <fontDescription key="fontDescription" name="BrandonGrotesque-Black" family="Brandon Grotesque" pointSize="8"/>
                                                                 <color key="textColor" red="0.81176470590000005" green="0.1843137255" blue="0.58431372550000005" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -1619,7 +1619,7 @@ RACECADOTRIL AND DIARRHEA</string>
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PEDIATRIC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OL3-LX-uIn">
-                                                                <rect key="frame" x="0.0" y="44" width="70" height="11.5"/>
+                                                                <rect key="frame" x="0.0" y="44" width="70" height="9.5"/>
                                                                 <fontDescription key="fontDescription" name="BrandonGrotesque-Black" family="Brandon Grotesque" pointSize="8"/>
                                                                 <color key="textColor" red="1" green="0.41176470590000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -1657,7 +1657,7 @@ RACECADOTRIL AND DIARRHEA</string>
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CNS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D5i-vb-2ym">
-                                                                <rect key="frame" x="0.0" y="44" width="70" height="11.5"/>
+                                                                <rect key="frame" x="0.0" y="44" width="70" height="9.5"/>
                                                                 <fontDescription key="fontDescription" name="BrandonGrotesque-Black" family="Brandon Grotesque" pointSize="8"/>
                                                                 <color key="textColor" red="0.26274509800000001" green="0.60784313729999995" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -1695,7 +1695,7 @@ RACECADOTRIL AND DIARRHEA</string>
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RESPIRATORY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B5K-Pp-mOj">
-                                                                <rect key="frame" x="0.0" y="44" width="72" height="11.5"/>
+                                                                <rect key="frame" x="0.0" y="44" width="72" height="9.5"/>
                                                                 <fontDescription key="fontDescription" name="BrandonGrotesque-Black" family="Brandon Grotesque" pointSize="8"/>
                                                                 <color key="textColor" red="0.1058823529" green="0.29803921570000003" blue="0.57254901960000004" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -1733,7 +1733,7 @@ RACECADOTRIL AND DIARRHEA</string>
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WOMEN'S HEALTH" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QPM-Rm-cFq">
-                                                                <rect key="frame" x="0.0" y="44" width="72" height="10.5"/>
+                                                                <rect key="frame" x="0.0" y="44" width="72" height="8.5"/>
                                                                 <fontDescription key="fontDescription" name="BrandonGrotesque-Black" family="Brandon Grotesque" pointSize="7"/>
                                                                 <color key="textColor" red="0.80392156859999997" green="0.54117647059999996" blue="0.71764705880000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -1771,7 +1771,7 @@ RACECADOTRIL AND DIARRHEA</string>
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gastroenterology" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qrd-kg-nOe">
-                                                                <rect key="frame" x="0.0" y="44" width="72" height="10.5"/>
+                                                                <rect key="frame" x="0.0" y="44" width="72" height="8.5"/>
                                                                 <fontDescription key="fontDescription" name="BrandonGrotesque-Black" family="Brandon Grotesque" pointSize="7"/>
                                                                 <color key="textColor" red="0.80392156859999997" green="0.54117647059999996" blue="0.71764705880000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -1809,7 +1809,7 @@ RACECADOTRIL AND DIARRHEA</string>
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="General Healthcare" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fMl-vC-3z3">
-                                                                <rect key="frame" x="0.0" y="44" width="72" height="10.5"/>
+                                                                <rect key="frame" x="0.0" y="44" width="72" height="8.5"/>
                                                                 <fontDescription key="fontDescription" name="BrandonGrotesque-Black" family="Brandon Grotesque" pointSize="7"/>
                                                                 <color key="textColor" red="0.80392156859999997" green="0.54117647059999996" blue="0.71764705880000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -1956,7 +1956,7 @@ RACECADOTRIL AND DIARRHEA</string>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="31M-14-dze">
-                                                        <rect key="frame" x="-25" y="275" width="281" height="50"/>
+                                                        <rect key="frame" x="-25" y="275" width="290.5" height="50"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gastro-icon" translatesAutoresizingMaskIntoConstraints="NO" id="df5-1H-3jU">
                                                                 <rect key="frame" x="40" y="5" width="40" height="40"/>
@@ -1966,7 +1966,7 @@ RACECADOTRIL AND DIARRHEA</string>
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GASTROENTEROLOGY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gqg-Qh-e0L">
-                                                                <rect key="frame" x="92" y="8" width="163" height="34"/>
+                                                                <rect key="frame" x="92" y="8" width="172.5" height="34"/>
                                                                 <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="16"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
@@ -2004,7 +2004,7 @@ RACECADOTRIL AND DIARRHEA</string>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vo5-rP-dfN">
-                                                <rect key="frame" x="16" y="378" width="343" height="539"/>
+                                                <rect key="frame" x="16" y="378" width="343" height="554"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="o6V-4m-cMK">
                                                         <rect key="frame" x="16" y="36" width="311" height="150"/>
@@ -2013,13 +2013,13 @@ RACECADOTRIL AND DIARRHEA</string>
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CONSTIPATION: BEYOND THE OLD PARADIGMS" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qlw-UN-6FG">
-                                                        <rect key="frame" x="16" y="203" width="311" height="16.5"/>
+                                                        <rect key="frame" x="16" y="203" width="311" height="33"/>
                                                         <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="14"/>
                                                         <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J73-oh-Cho">
-                                                        <rect key="frame" x="16" y="292.5" width="311" height="127"/>
+                                                        <rect key="frame" x="16" y="309" width="311" height="126"/>
                                                         <string key="text">Constipation is a common problem in children. Although most children respond to conventional treatment, symptoms persist in a minority. For children with refractory constipation, anorectal and colonic manometry testing can identify a rectal evacuation disorder or colonic motility disorder and guide subsequent management. Novel medications used in adults with constipation are beginning to be used in children, with promising results. Biofeedback therapy and anal sphincter botulinum toxin injection can be considered for children with a rectal evacuation disorder. Surgical management of constipation includes the use of antegrade continence enemas, sacral nerve stimulation, and colonic resection.
 
 PAK1219522</string>
@@ -2028,27 +2028,27 @@ PAK1219522</string>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="irc-ie-jIe">
-                                                        <rect key="frame" x="16" y="358.5" width="311" height="1"/>
+                                                        <rect key="frame" x="16" y="374" width="311" height="1"/>
                                                         <color key="backgroundColor" white="0.66666666669999997" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="1" id="Dmy-Db-vVE"/>
                                                         </constraints>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p11-2a-uiL">
-                                                        <rect key="frame" x="16" y="435.5" width="311" height="11"/>
+                                                        <rect key="frame" x="16" y="451" width="311" height="10.5"/>
                                                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="9"/>
                                                         <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gqg-Hq-E7Z">
-                                                        <rect key="frame" x="16" y="454.5" width="311" height="1"/>
+                                                        <rect key="frame" x="16" y="469.5" width="311" height="1"/>
                                                         <color key="backgroundColor" white="0.66666666669999997" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="1" id="AUe-gR-pPt"/>
                                                         </constraints>
                                                     </view>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8HY-Pc-iOy">
-                                                        <rect key="frame" x="16" y="471.5" width="311" height="47"/>
+                                                        <rect key="frame" x="16" y="486.5" width="311" height="47"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="47" id="x0N-MK-0l7"/>
                                                         </constraints>
@@ -2090,7 +2090,7 @@ PAK1219522</string>
                                                         </constraints>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Abstract" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l32-QZ-DLw">
-                                                        <rect key="frame" x="16" y="244" width="311" height="23"/>
+                                                        <rect key="frame" x="16" y="260.5" width="311" height="23"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -2618,7 +2618,7 @@ PAK1219522</string>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="detailTableCell" rowHeight="84" id="Yxt-2R-Yoj" customClass="DetailTableViewCell" customModule="medcon_swift" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="44.5" width="320" height="84"/>
+                                                <rect key="frame" x="0.0" y="50" width="320" height="84"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Yxt-2R-Yoj" id="8Mh-7f-NPa">
                                                     <rect key="frame" x="0.0" y="0.0" width="320" height="84"/>
@@ -2740,10 +2740,10 @@ PAK1219522</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kiD-BJ-3Zn">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
                                 <subviews>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="za3-gf-Amm">
-                                        <rect key="frame" x="8" y="61" width="359" height="32"/>
+                                        <rect key="frame" x="8" y="61" width="304" height="32"/>
                                         <color key="backgroundColor" systemColor="linkColor"/>
                                         <segments>
                                             <segment title="DETAIL"/>
@@ -2763,7 +2763,7 @@ PAK1219522</string>
                                 </constraints>
                             </view>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Djn-KI-jjW">
-                                <rect key="frame" x="0.0" y="100" width="375" height="276"/>
+                                <rect key="frame" x="0.0" y="100" width="320" height="276"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="276" id="8VE-Ci-tW0"/>
@@ -2774,7 +2774,7 @@ PAK1219522</string>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VHm-dS-zfv">
-                                <rect key="frame" x="0.0" y="319" width="375" height="216"/>
+                                <rect key="frame" x="0.0" y="319" width="320" height="216"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="216" id="Jr9-AV-5XS"/>
@@ -2785,18 +2785,18 @@ PAK1219522</string>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="OMf-Cm-700">
-                                <rect key="frame" x="0.0" y="113" width="375" height="455"/>
+                                <rect key="frame" x="0.0" y="113" width="320" height="455"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AvailableFormTableCell" rowHeight="256" id="Lel-p1-Teb" customClass="AvailableFormListCell" customModule="medcon_swift" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="375" height="256"/>
+                                        <rect key="frame" x="0.0" y="50" width="320" height="256"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Lel-p1-Teb" id="ELT-VL-DwD">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="256"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="256"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="12" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zIw-ov-S5l">
-                                                    <rect key="frame" x="16" y="11" width="343" height="234"/>
+                                                    <rect key="frame" x="16" y="11" width="288" height="234"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="343" id="84J-Uw-thL"/>
                                                         <constraint firstAttribute="height" constant="234" id="WRe-ED-wr1"/>
@@ -2821,7 +2821,7 @@ PAK1219522</string>
                                 </prototypes>
                             </tableView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="CbV-06-KM1">
-                                <rect key="frame" x="0.0" y="100" width="375" height="468"/>
+                                <rect key="frame" x="0.0" y="100" width="320" height="468"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="90H-EZ-ZVH">
                                     <size key="itemSize" width="382" height="298"/>
@@ -2831,7 +2831,7 @@ PAK1219522</string>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AvailableFormCell" id="f8z-O7-1Du" customClass="AvailableFormViewCell" customModule="medcon_swift" customModuleProvider="target">
-                                        <rect key="frame" x="-3.5" y="0.0" width="382" height="298"/>
+                                        <rect key="frame" x="-31" y="0.0" width="382" height="298"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Dcm-Zs-Z2S">
                                             <rect key="frame" x="0.0" y="0.0" width="382" height="298"/>
@@ -3262,7 +3262,7 @@ PAK1219522</string>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BrandDetailCell" rowHeight="243" id="saZ-qi-evu" customClass="BrandDetailViewCell" customModule="medcon_swift" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="320" height="243"/>
+                                        <rect key="frame" x="0.0" y="50" width="320" height="243"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="saZ-qi-evu" id="TlH-F6-WfN">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="243"/>
@@ -3524,10 +3524,10 @@ PAK1219522</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IWf-EH-pST">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="76"/>
+                                <rect key="frame" x="0.0" y="0.0" width="2093.5" height="76"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PAKISTAN DRUG MANUAL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eP2-bh-On4">
-                                        <rect key="frame" x="28" y="32" width="263" height="20"/>
+                                        <rect key="frame" x="28" y="32" width="2036.5" height="20"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -3544,29 +3544,29 @@ PAK1219522</string>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3mO-fT-hPd">
-                                <rect key="frame" x="0.0" y="76" width="320" height="492"/>
+                                <rect key="frame" x="0.0" y="76" width="2093.5" height="492"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About Us" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ici-Ib-oz7">
-                                        <rect key="frame" x="8" y="128" width="304" height="23"/>
+                                        <rect key="frame" x="8" y="128" width="2077.5" height="23"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V9z-8B-5xA">
-                                        <rect key="frame" x="8" y="154" width="304" height="115"/>
+                                        <rect key="frame" x="8" y="154" width="2077.5" height="14.5"/>
                                         <string key="text">Pakistan Drug Manual is serving medical professionals for the past 25 years and now the manual is mobile-optimized. Pakistan Drug Manual includes key information on the selection, prescribing, dispensing and administration of medicines. This drug manual is a detailed guide divided in by generic, brands, and therapeutic index of each medicine available in Pakistan. </string>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KEY FEATURES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OXz-MA-AZh">
-                                        <rect key="frame" x="8" y="274" width="304" height="23"/>
+                                        <rect key="frame" x="8" y="173.5" width="2077.5" height="23"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DYu-Cs-wjH">
-                                        <rect key="frame" x="8" y="302" width="304" height="172"/>
+                                        <rect key="frame" x="8" y="201.5" width="2077.5" height="158"/>
                                         <string key="text">•	Generic vs brand comparison of drugs 
 •	Clinical pharmacology of medicines 
 •	Indications and contraindications  
@@ -3578,14 +3578,14 @@ PAK1219522</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tLi-tc-TMP">
-                                        <rect key="frame" x="8" y="479" width="304" height="43"/>
+                                        <rect key="frame" x="8" y="364.5" width="2077.5" height="14.5"/>
                                         <string key="text">Our aim is providing precise, updated drug information to healthcare professionals with related publications and researches for rapid referencing. </string>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pak-Drug-Manual" translatesAutoresizingMaskIntoConstraints="NO" id="rXu-iT-qFA">
-                                        <rect key="frame" x="16" y="8" width="288" height="110"/>
+                                        <rect key="frame" x="16" y="8" width="2061.5" height="110"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -3689,7 +3689,7 @@ PAK1219522</string>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="dolsCell" rowHeight="247" id="JAW-Fp-Hdg" customClass="DolsTableViewCell" customModule="medcon_swift" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="375" height="247"/>
+                                        <rect key="frame" x="0.0" y="50" width="375" height="247"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JAW-Fp-Hdg" id="1eG-sa-KRH">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="247"/>
@@ -3782,7 +3782,7 @@ PAK1219522</string>
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PATIENT AWARENESS FROM EVERY POSSIBLE  PERSPECTIVE" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7sH-G4-Avu">
-                                                        <rect key="frame" x="20" y="93" width="335" height="77.5"/>
+                                                        <rect key="frame" x="20" y="100.5" width="335" height="63"/>
                                                         <fontDescription key="fontDescription" name="BrandonGrotesque-Black" family="Brandon Grotesque" pointSize="18"/>
                                                         <color key="textColor" red="0.27843137254901962" green="0.32941176470588235" blue="0.40392156862745099" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -4148,22 +4148,22 @@ transforming</string>
                                                                     <rect key="frame" x="0.0" y="0.0" width="402" height="166"/>
                                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                     <constraints>
-                                                                        <constraint firstAttribute="height" constant="166" id="dYe-F4-j6o"/>
-                                                                        <constraint firstAttribute="width" constant="402" id="lEK-9J-bSh"/>
+                                                                        <constraint firstAttribute="height" constant="166" id="4QM-4p-RqN"/>
+                                                                        <constraint firstAttribute="width" constant="402" id="fBe-nF-1hN"/>
                                                                     </constraints>
                                                                 </view>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Women" translatesAutoresizingMaskIntoConstraints="NO" id="gbU-mA-rkO">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="164" height="166"/>
+                                                                    <rect key="frame" x="0.0" y="7" width="164" height="153"/>
                                                                     <constraints>
-                                                                        <constraint firstAttribute="width" constant="164" id="KVc-OO-5jQ"/>
-                                                                        <constraint firstAttribute="height" constant="166" id="Vp4-9E-vJs"/>
+                                                                        <constraint firstAttribute="height" constant="153" id="I6p-vi-nxE"/>
+                                                                        <constraint firstAttribute="width" constant="164" id="akk-ap-NfX"/>
                                                                     </constraints>
                                                                 </imageView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Eating Healthy During  Pregnancy" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="687-oo-npl">
                                                                     <rect key="frame" x="180" y="19" width="211" height="33"/>
                                                                     <constraints>
-                                                                        <constraint firstAttribute="width" constant="211" id="gh0-Pb-fNl"/>
-                                                                        <constraint firstAttribute="height" constant="33" id="zkm-Ju-96c"/>
+                                                                        <constraint firstAttribute="width" constant="211" id="8MK-7U-9XD"/>
+                                                                        <constraint firstAttribute="height" constant="33" id="jVf-P7-7gm"/>
                                                                     </constraints>
                                                                     <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="14"/>
                                                                     <nil key="textColor"/>
@@ -4172,8 +4172,8 @@ transforming</string>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fe5-qj-N7M">
                                                                     <rect key="frame" x="180" y="65" width="211" height="85"/>
                                                                     <constraints>
-                                                                        <constraint firstAttribute="width" constant="211" id="56J-6p-dRd"/>
-                                                                        <constraint firstAttribute="height" constant="85" id="y3K-8l-BoE"/>
+                                                                        <constraint firstAttribute="height" constant="85" id="8yo-jt-zFZ"/>
+                                                                        <constraint firstAttribute="width" constant="211" id="gDj-mb-5PP"/>
                                                                     </constraints>
                                                                     <string key="text">Constipation is a common problem in children. Although most children respond to conventional treatment, symptoms persist in a...</string>
                                                                     <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="11"/>
@@ -4183,8 +4183,8 @@ transforming</string>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZGL-yx-VnZ">
                                                                     <rect key="frame" x="8" y="8" width="394" height="150"/>
                                                                     <constraints>
-                                                                        <constraint firstAttribute="height" constant="150" id="Wz8-LL-9Y9"/>
-                                                                        <constraint firstAttribute="width" constant="394" id="XCG-1n-Slw"/>
+                                                                        <constraint firstAttribute="height" constant="150" id="Km6-kl-2oT"/>
+                                                                        <constraint firstAttribute="width" constant="394" id="N1e-Ww-9Rb"/>
                                                                     </constraints>
                                                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                     <buttonConfiguration key="configuration" style="plain"/>
@@ -4194,22 +4194,21 @@ transforming</string>
                                                                 </button>
                                                             </subviews>
                                                             <constraints>
-                                                                <constraint firstItem="687-oo-npl" firstAttribute="top" secondItem="Hlv-qg-DGY" secondAttribute="top" constant="19" id="89i-6P-3c3"/>
-                                                                <constraint firstItem="fe5-qj-N7M" firstAttribute="leading" secondItem="gbU-mA-rkO" secondAttribute="trailing" constant="16" id="Dy5-gh-A6m"/>
-                                                                <constraint firstAttribute="bottom" secondItem="Sg8-rF-0Kv" secondAttribute="bottom" id="Fpz-8E-HAt"/>
-                                                                <constraint firstItem="gbU-mA-rkO" firstAttribute="top" secondItem="Hlv-qg-DGY" secondAttribute="top" id="Gfh-3w-Cjt"/>
-                                                                <constraint firstItem="gbU-mA-rkO" firstAttribute="leading" secondItem="Hlv-qg-DGY" secondAttribute="leading" id="JZf-hL-IWT"/>
-                                                                <constraint firstAttribute="trailing" secondItem="ZGL-yx-VnZ" secondAttribute="trailing" id="KXl-cv-jDn"/>
-                                                                <constraint firstItem="fe5-qj-N7M" firstAttribute="top" secondItem="687-oo-npl" secondAttribute="bottom" constant="13" id="MEg-Yw-KH6"/>
-                                                                <constraint firstItem="687-oo-npl" firstAttribute="leading" secondItem="gbU-mA-rkO" secondAttribute="trailing" constant="16" id="RKD-ed-QpP"/>
-                                                                <constraint firstItem="Sg8-rF-0Kv" firstAttribute="leading" secondItem="Hlv-qg-DGY" secondAttribute="leading" id="Urv-gY-4Q0"/>
-                                                                <constraint firstItem="ZGL-yx-VnZ" firstAttribute="leading" secondItem="Hlv-qg-DGY" secondAttribute="leading" constant="8" id="VYf-4Z-o2f"/>
-                                                                <constraint firstItem="Sg8-rF-0Kv" firstAttribute="top" secondItem="Hlv-qg-DGY" secondAttribute="top" id="VyK-ZK-zcF"/>
-                                                                <constraint firstAttribute="bottom" secondItem="ZGL-yx-VnZ" secondAttribute="bottom" constant="8" id="Wb7-hy-gR1"/>
-                                                                <constraint firstAttribute="trailing" secondItem="Sg8-rF-0Kv" secondAttribute="trailing" id="grs-Qb-4cJ"/>
-                                                                <constraint firstItem="ZGL-yx-VnZ" firstAttribute="top" secondItem="Hlv-qg-DGY" secondAttribute="top" constant="8" id="nBs-4s-zne"/>
-                                                                <constraint firstAttribute="trailing" secondItem="fe5-qj-N7M" secondAttribute="trailing" constant="11" id="vfg-7q-eip"/>
-                                                                <constraint firstAttribute="trailing" secondItem="687-oo-npl" secondAttribute="trailing" constant="11" id="wsQ-5T-wBv"/>
+                                                                <constraint firstItem="ZGL-yx-VnZ" firstAttribute="leading" secondItem="Hlv-qg-DGY" secondAttribute="leading" constant="8" id="105-l8-fFl"/>
+                                                                <constraint firstItem="Sg8-rF-0Kv" firstAttribute="leading" secondItem="Hlv-qg-DGY" secondAttribute="leading" id="4cl-tB-rBd"/>
+                                                                <constraint firstItem="fe5-qj-N7M" firstAttribute="top" secondItem="687-oo-npl" secondAttribute="bottom" constant="13" id="7AA-T5-bR5"/>
+                                                                <constraint firstAttribute="trailing" secondItem="687-oo-npl" secondAttribute="trailing" constant="11" id="7O0-Dv-2cL"/>
+                                                                <constraint firstItem="687-oo-npl" firstAttribute="top" secondItem="Hlv-qg-DGY" secondAttribute="top" constant="19" id="7av-eq-B61"/>
+                                                                <constraint firstItem="gbU-mA-rkO" firstAttribute="top" secondItem="Hlv-qg-DGY" secondAttribute="top" constant="7" id="8oe-I4-Uf9"/>
+                                                                <constraint firstAttribute="trailing" secondItem="fe5-qj-N7M" secondAttribute="trailing" constant="11" id="8uD-Fz-YYv"/>
+                                                                <constraint firstItem="687-oo-npl" firstAttribute="leading" secondItem="gbU-mA-rkO" secondAttribute="trailing" constant="16" id="Fwa-oZ-xFv"/>
+                                                                <constraint firstAttribute="bottom" secondItem="Sg8-rF-0Kv" secondAttribute="bottom" id="IHI-T4-nee"/>
+                                                                <constraint firstItem="Sg8-rF-0Kv" firstAttribute="top" secondItem="Hlv-qg-DGY" secondAttribute="top" id="aCv-bq-De0"/>
+                                                                <constraint firstItem="gbU-mA-rkO" firstAttribute="leading" secondItem="Hlv-qg-DGY" secondAttribute="leading" id="bkG-rl-sLC"/>
+                                                                <constraint firstAttribute="trailing" secondItem="Sg8-rF-0Kv" secondAttribute="trailing" id="dHN-uF-3nZ"/>
+                                                                <constraint firstAttribute="trailing" secondItem="ZGL-yx-VnZ" secondAttribute="trailing" id="jEK-Lo-2LQ"/>
+                                                                <constraint firstItem="ZGL-yx-VnZ" firstAttribute="top" secondItem="Hlv-qg-DGY" secondAttribute="top" constant="8" id="rGs-mz-GsN"/>
+                                                                <constraint firstItem="fe5-qj-N7M" firstAttribute="leading" secondItem="gbU-mA-rkO" secondAttribute="trailing" constant="16" id="vZZ-8C-bqj"/>
                                                             </constraints>
                                                         </collectionViewCellContentView>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -4226,16 +4225,15 @@ transforming</string>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="vbE-sV-2Mk" firstAttribute="top" secondItem="KEZ-1G-KfU" secondAttribute="bottom" constant="16" id="IQ2-4h-SSo"/>
-                                            <constraint firstItem="vbE-sV-2Mk" firstAttribute="width" secondItem="AUH-kx-wvO" secondAttribute="width" id="K9c-vA-sbU"/>
+                                            <constraint firstItem="vbE-sV-2Mk" firstAttribute="height" secondItem="KEZ-1G-KfU" secondAttribute="height" multiplier="2.41085" id="6d3-dL-i32"/>
+                                            <constraint firstItem="vbE-sV-2Mk" firstAttribute="top" secondItem="KEZ-1G-KfU" secondAttribute="bottom" constant="16" id="B55-YA-Pc0"/>
                                             <constraint firstItem="KEZ-1G-KfU" firstAttribute="top" secondItem="AUH-kx-wvO" secondAttribute="top" id="Os6-2J-kwM"/>
-                                            <constraint firstItem="vbE-sV-2Mk" firstAttribute="height" secondItem="AUH-kx-wvO" secondAttribute="height" multiplier="0.694196" id="asf-Zx-D4Q"/>
+                                            <constraint firstItem="vbE-sV-2Mk" firstAttribute="width" secondItem="KEZ-1G-KfU" secondAttribute="width" id="TYC-mr-2md"/>
+                                            <constraint firstAttribute="trailing" secondItem="vbE-sV-2Mk" secondAttribute="trailing" id="eFa-Bc-Oy9"/>
                                             <constraint firstAttribute="trailing" secondItem="KEZ-1G-KfU" secondAttribute="trailing" id="eWD-BI-Kdw"/>
-                                            <constraint firstAttribute="bottom" secondItem="vbE-sV-2Mk" secondAttribute="bottom" id="fXX-Ae-dVN"/>
-                                            <constraint firstItem="vbE-sV-2Mk" firstAttribute="leading" secondItem="AUH-kx-wvO" secondAttribute="leading" id="hEi-6u-fHC"/>
+                                            <constraint firstItem="vbE-sV-2Mk" firstAttribute="leading" secondItem="AUH-kx-wvO" secondAttribute="leading" id="iiA-gK-nJv"/>
                                             <constraint firstItem="KEZ-1G-KfU" firstAttribute="leading" secondItem="AUH-kx-wvO" secondAttribute="leading" id="mAJ-H5-rab"/>
                                             <constraint firstAttribute="height" constant="896" id="sxN-07-Woi"/>
-                                            <constraint firstAttribute="trailing" secondItem="vbE-sV-2Mk" secondAttribute="trailing" id="zng-6v-iQg"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -4276,7 +4274,7 @@ transforming</string>
         <!--Aticle Detail View Controller-->
         <scene sceneID="dhq-pb-ul2">
             <objects>
-                <viewController storyboardIdentifier="PAMAticleDetailViewController" id="l6n-qk-5xf" customClass="PAMAticleDetailViewController" customModule="medcon_swift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PAMAticleDetailViewScreen" id="l6n-qk-5xf" customClass="PAMAticleDetailViewController" customModule="medcon_swift" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ex7-5x-cvi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="860"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -4300,13 +4298,13 @@ transforming</string>
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PATIENT AWARENESS FROM EVERY POSSIBLE  PERSPECTIVE" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ish-wh-wQu">
-                                                        <rect key="frame" x="20" y="94" width="335" height="77.5"/>
+                                                        <rect key="frame" x="20" y="101.5" width="335" height="63"/>
                                                         <fontDescription key="fontDescription" name="BrandonGrotesque-Black" family="Brandon Grotesque" pointSize="18"/>
                                                         <color key="textColor" red="0.27843137254901962" green="0.32941176470588235" blue="0.40392156862745099" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AVP-ex-cEO">
-                                                        <rect key="frame" x="-25" y="210" width="281" height="50"/>
+                                                        <rect key="frame" x="-25" y="210" width="290.5" height="50"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gastro-icon" translatesAutoresizingMaskIntoConstraints="NO" id="nCu-ql-VqS">
                                                                 <rect key="frame" x="40" y="5" width="40" height="40"/>
@@ -4316,7 +4314,7 @@ transforming</string>
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GASTROENTEROLOGY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jd1-cF-eEG">
-                                                                <rect key="frame" x="92" y="8" width="163" height="34"/>
+                                                                <rect key="frame" x="92" y="8" width="172.5" height="34"/>
                                                                 <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="16"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
@@ -4354,22 +4352,22 @@ transforming</string>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8nf-yQ-M4l">
-                                                <rect key="frame" x="16" y="278" width="343" height="539"/>
+                                                <rect key="frame" x="16" y="278" width="343" height="554"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NPM-rT-5P0">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NPM-rT-5P0">
                                                         <rect key="frame" x="16" y="36" width="311" height="150"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="150" id="Iv9-Ah-bmB"/>
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CONSTIPATION: BEYOND THE OLD PARADIGMS" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YNb-nT-UpY">
-                                                        <rect key="frame" x="16" y="203" width="311" height="16.5"/>
+                                                        <rect key="frame" x="16" y="203" width="311" height="33"/>
                                                         <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="14"/>
                                                         <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rcr-0c-TZg">
-                                                        <rect key="frame" x="16" y="292.5" width="311" height="127"/>
+                                                        <rect key="frame" x="16" y="309" width="311" height="126"/>
                                                         <string key="text">Constipation is a common problem in children. Although most children respond to conventional treatment, symptoms persist in a minority. For children with refractory constipation, anorectal and colonic manometry testing can identify a rectal evacuation disorder or colonic motility disorder and guide subsequent management. Novel medications used in adults with constipation are beginning to be used in children, with promising results. Biofeedback therapy and anal sphincter botulinum toxin injection can be considered for children with a rectal evacuation disorder. Surgical management of constipation includes the use of antegrade continence enemas, sacral nerve stimulation, and colonic resection.
 
 PAK1219522</string>
@@ -4378,27 +4376,27 @@ PAK1219522</string>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="adl-xd-Hs6">
-                                                        <rect key="frame" x="16" y="358.5" width="311" height="1"/>
+                                                        <rect key="frame" x="16" y="374" width="311" height="1"/>
                                                         <color key="backgroundColor" white="0.66666666669999997" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="1" id="aji-Ca-Scc"/>
                                                         </constraints>
                                                     </view>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="viO-Kz-Icn">
-                                                        <rect key="frame" x="16" y="435.5" width="311" height="11"/>
+                                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="viO-Kz-Icn">
+                                                        <rect key="frame" x="16" y="451" width="311" height="10.5"/>
                                                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="9"/>
                                                         <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lon-LW-pdY">
-                                                        <rect key="frame" x="16" y="454.5" width="311" height="1"/>
+                                                        <rect key="frame" x="16" y="469.5" width="311" height="1"/>
                                                         <color key="backgroundColor" white="0.66666666669999997" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="1" id="VTO-ZY-DMU"/>
                                                         </constraints>
                                                     </view>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x98-eH-SM3">
-                                                        <rect key="frame" x="16" y="471.5" width="311" height="47"/>
+                                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x98-eH-SM3">
+                                                        <rect key="frame" x="16" y="486.5" width="311" height="47"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="47" id="Iea-ZN-cNJ"/>
                                                         </constraints>
@@ -4437,7 +4435,7 @@ PAK1219522</string>
                                                         </constraints>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Abstract" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wzq-eN-Ly5">
-                                                        <rect key="frame" x="16" y="244" width="311" height="23"/>
+                                                        <rect key="frame" x="16" y="260.5" width="311" height="23"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -4524,11 +4522,7 @@ PAK1219522</string>
                         <outlet property="articleAdditionalDes" destination="viO-Kz-Icn" id="27p-yU-6un"/>
                         <outlet property="articleDescription" destination="Rcr-0c-TZg" id="QS0-zQ-ML5"/>
                         <outlet property="articleDetailImageView" destination="NPM-rT-5P0" id="B5W-IJ-hQq"/>
-                        <outlet property="articleLabel" destination="nf4-jB-yaP" id="XK8-cS-c59"/>
                         <outlet property="articleTitle" destination="YNb-nT-UpY" id="akd-HL-xJJ"/>
-                        <outlet property="articleView" destination="9Ku-ye-EHJ" id="Ctg-el-y0O"/>
-                        <outlet property="specialityIcon" destination="nCu-ql-VqS" id="Ep0-V1-VWi"/>
-                        <outlet property="specialityTitle" destination="Jd1-cF-eEG" id="dLR-pb-hvI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mJR-lL-91l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -4561,7 +4555,7 @@ PAK1219522</string>
         <image name="spe-three" width="50" height="50"/>
         <image name="spe-two" width="50" height="50"/>
         <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
