@@ -253,7 +253,7 @@ class HomeViewController: BaseViewController, UICollectionViewDelegate,UICollect
     }
     @IBAction func onPAMClick(_ sender: Any) {
         
-        CommonUtils.showMsgDialog(showingPopupOn: self, withTitle: "MedCon", withMessage: "")
+        CommonUtils.showMsgDialog(showingPopupOn: self, withTitle: "MedCon", withMessage: "Coming Soon")
         
 //        let vc = self.storyboard?.instantiateViewController(withIdentifier: "PAMScene") as! PAMViewController
 //        self.navigationController?.pushViewController(vc, animated: true)

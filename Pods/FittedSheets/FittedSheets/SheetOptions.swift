@@ -32,6 +32,9 @@ public struct SheetOptions {
     public var transitionVelocity: CGFloat = 0.8
     public var transitionOverflowType: TransitionOverflowType = .automatic
     
+    /// Default value 500, greater value will require more velocity to dismiss. Lesser values will do opposite.
+    public var pullDismissThreshod: CGFloat = 500.0
+    
     /// Allow the sheet to become full screen if pulled all the way to the top and not larger than the maximum size specified in sizes. Defaults to false.
     public var useFullScreenMode = true
     public var shrinkPresentingViewController = true
@@ -57,6 +60,11 @@ public struct SheetOptions {
     
     @available(*, unavailable, message: "cornerRadius is now a property on SheetViewController")
     public var cornerRadius: CGFloat = 0
+
+    public var isRubberBandEnabled: Bool = false
+    
+    /// Experimental flag that attempts to shrink the nested presentations more each time a new sheet is presented. This must be set before any sheet is presented.
+    public static var shrinkingNestedPresentingViewControllers = false
     
     public init() { }
     public init(pullBarHeight: CGFloat? = nil,
@@ -67,7 +75,8 @@ public struct SheetOptions {
                 shrinkPresentingViewController: Bool? = nil,
                 useInlineMode: Bool? = nil,
                 horizontalPadding: CGFloat? = nil,
-                maxWidth: CGFloat? = nil) {
+                maxWidth: CGFloat? = nil,
+                isRubberBandEnabled: Bool? = nil) {
         let defaultOptions = SheetOptions.default
         self.pullBarHeight = pullBarHeight ?? defaultOptions.pullBarHeight
         self.presentingViewCornerRadius = presentingViewCornerRadius ?? defaultOptions.presentingViewCornerRadius
@@ -79,6 +88,7 @@ public struct SheetOptions {
         self.horizontalPadding = horizontalPadding ?? defaultOptions.horizontalPadding
         let maxWidth = maxWidth ?? defaultOptions.maxWidth
         self.maxWidth = maxWidth == 0 ? nil : maxWidth
+        self.isRubberBandEnabled = isRubberBandEnabled ?? false
     }
     
     @available(*, unavailable, message: "cornerRadius, minimumSpaceAbovePullBar, gripSize and gripColor are now properties on SheetViewController. Use them instead.")
