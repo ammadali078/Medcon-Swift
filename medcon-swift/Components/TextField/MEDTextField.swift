@@ -9,7 +9,7 @@ import UIKit
 
 class MEDTextField: UITextField {
     
-    let padding = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
+    let padding = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 20)
     var errorLabel = UILabel()
     
     required init?(coder aDecorder: NSCoder) {

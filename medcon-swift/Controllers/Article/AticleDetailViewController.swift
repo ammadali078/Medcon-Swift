@@ -40,11 +40,10 @@ class AticleDetailViewController: BaseViewController {
         articleView.backgroundColor = selectedSpeciality.titleBackgroundColor.withAlphaComponent(0.3)
         articleLabel.textColor = selectedSpeciality.titleBackgroundColor
         
-        
     }
     
     private func setupUI() {
-        specialityTitle.text = selectedSpeciality.titleString
+        specialityTitle.text = selectedSpeciality.titleString2
         specialityIcon.image = UIImage(named: selectedSpeciality.iconName)
         specialityBanner.image = UIImage(named: selectedSpeciality.bannerName)
         specialityBannerTitle.text = selectedSpeciality.bannerTitleString

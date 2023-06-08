@@ -39,9 +39,9 @@ class AuthSignUpViewController: UIViewController {
     
     private func setupValidations() {
         validator.registerField(emailField, errorLabel: emailField.errorLabel, rules: [RequiredRule(), EmailRule()])
-//        validator.registerField(fulNameField, errorLabel: fulNameField.errorLabel, rules: [RequiredRule()])
         validator.registerField(uniqueCode, errorLabel: uniqueCode.errorLabel, rules: [RequiredRule(), RegexRule(regex: "^\\d*$", message: "Enter a valid Unique Code")])
         validator.registerField(passwordField, errorLabel: passwordField.errorLabel, rules: [RequiredRule(), PasswordRule(), MinLengthRule(length: 8)])
+       
         validator.registerField(confirmPasswordField, errorLabel: confirmPasswordField.errorLabel, rules: [RequiredRule(), PasswordRule(), MinLengthRule(length: 8), ConfirmationRule(confirmField: passwordField, message: "Confirm password doesn't match")])
 //        validator.registerField(city, errorLabel: city.errorLabel, rules: [RequiredRule()])
     }
@@ -59,6 +59,10 @@ class AuthSignUpViewController: UIViewController {
         dropDown.selectedIndex = 0
         dropDown.didSelect{[weak self] (selectedText , index ,id) in
             self?.selectedSpeciality = selectedText
+            
+            let selectedSP = self?.selectedSpeciality
+            
+            CommonUtils.saveJsonToUserDefaults(forKey: Constants.selectSP, withJson: selectedSP ?? "")
         }
         
         dropDown.inputView = UIView()
@@ -67,6 +71,13 @@ class AuthSignUpViewController: UIViewController {
     }
     
     @IBAction func submitActionButton(_ sender: Any) {
+        
+        if dropDown.text == "" {
+            
+            CommonUtils.showMsgDialog(showingPopupOn: self, withTitle: "Medcon", withMessage: "Please Select Your Speciality")
+            return
+        }
+        
         removeAllErrorOnFields()
         validator.validate(self)
     }
@@ -123,6 +134,13 @@ extension AuthSignUpViewController: ValidationDelegate {
 
 extension AuthSignUpViewController {
     private func callRegisterApi() {
+        
+        if selectedSpeciality == "" {
+            
+            CommonUtils.showMsgDialog(showingPopupOn: self, withTitle: "Medcon", withMessage: "Please Select Your Speciality")
+            return
+        }
+        
         let email = emailField.text
         let UniqueCode = uniqueCode.text
         let pass = passwordField.text

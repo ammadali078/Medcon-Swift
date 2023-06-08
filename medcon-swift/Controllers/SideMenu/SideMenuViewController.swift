@@ -50,6 +50,11 @@ class SideMenuViewController: UIViewController {
         
     }
     
+    @IBAction func drugInteractionsBtn(_ sender: Any) {
+        let vc = UIStoryboard.init(name: "Drug", bundle: Bundle.main).instantiateViewController(withIdentifier: "DrugInterActionViewScrene") as? DrugInterActionViewController
+        self.navigationController?.pushViewController(vc!, animated: true)
+    }
+    
     private func menuItemTapped(menu: SpecialityTag) {
         if let action = actionTapped {
             action.sideMenuOptionTapped(option: menu)

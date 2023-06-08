@@ -41,7 +41,6 @@ class AuthSignInViewController: UIViewController {
             setupValidations()
         }
         
-        
     }
     
     private func setupValidations() {
@@ -66,8 +65,6 @@ extension AuthSignInViewController: ValidationDelegate {
     func validationSuccessful() {
         callLoginApi()
     }
-    
-   
     
     func showToast(controller: UIViewController?, message: String, seconds: Double) {
         let alert = UIAlertController(title: nil, message: message, preferredStyle: .alert)

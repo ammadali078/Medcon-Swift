@@ -8,11 +8,13 @@
 
 import Foundation
 import UIKit
+import SDWebImage
 
 class PAMCollectionCell: NSObject,UICollectionViewDelegate,UICollectionViewDataSource{
     
     var dataList: [PatientAwareness] = []
     var filteredList : [PatientAwareness] = []
+    var onStartClick: ((PatientAwareness) -> Void)? = nil
     
     var openType = "0"
     let baseUrl = "http://medcon-beta.digitrends.pk"
@@ -23,22 +25,30 @@ class PAMCollectionCell: NSObject,UICollectionViewDelegate,UICollectionViewDataS
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PAMCollectionCell", for: indexPath) as! PAMCollectionViewCell
+        
+            let index = indexPath.row
+            let Json = filteredList[index]
+            cell.PatientAwareness = Json
+            cell.onStartClick = onStartClick
           
             cell.backViewOutlet.layer.cornerRadius = 8
             cell.backViewOutlet.layer.masksToBounds = true
             cell.articleImageView.layer.cornerRadius = 8
             cell.articleImageView.layer.masksToBounds = true
         
-            let imageUrl = filteredList[indexPath.row].imageUrl ?? ""
+        DispatchQueue.main.async {
+            
+            let imageUrl = self.filteredList[indexPath.row].imageUrl ?? ""
 
-            let url = URL(string: baseUrl + imageUrl)
-            let data = try? Data(contentsOf: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check / try-catch
-            cell.articleImageView.image = UIImage(data: data!)
-     
-       
+            let urlString = imageUrl.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
+            
+            cell.articleImageView.sd_setImage(with: URL(string: "\(self.baseUrl)\(urlString)"), completed: nil)
+                
+        }
+        
         cell.articleLabelView.text = filteredList[indexPath.item].title
         
-        cell.articleLabelView2.attributedText = filteredList[indexPath.item].html?.htmlToAttributedString
+        cell.articleLabelView2.attributedText = filteredList[indexPath.item].detailsHtml?.htmlToAttributedStringHTml
         
         return cell
         
@@ -60,11 +70,11 @@ class PAMCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var articleLabelView2: UILabel!
     
     @IBOutlet weak var backViewOutlet: UIView!
+    var PatientAwareness: PatientAwareness? = nil
+    var onStartClick: ((PatientAwareness) -> Void)? = nil
     
     @IBAction func onClickCell(_ sender: Any) {
-        
-        
-        
+        onStartClick!(PatientAwareness!)
     }
     
 }

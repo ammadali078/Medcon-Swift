@@ -14,15 +14,36 @@ class PAMViewAllController: UIViewController{
     
     @IBOutlet weak var viewAllCollectionView: UICollectionView!
     
-    
     var allArticleListDataSource: AllArticlePAMCell!
     var OpenType = "0";
+    var selectedCell: PatientAwareness? = nil
     
     override func viewDidLoad() {
         
         allArticleListDataSource = AllArticlePAMCell()
         viewAllCollectionView.dataSource = allArticleListDataSource
         self.allPAMArtice()
+        allArticleListDataSource.onStartClick = {PatientAwareness in
+            self.onStartClick(PatientAwareness: PatientAwareness)
+        }
+        
+    }
+    
+    func onStartClick(PatientAwareness: PatientAwareness)  {
+        
+        self.selectedCell = PatientAwareness
+        CommonUtils.saveJsonToUserDefaults(forKey: Constants.checkID, withJson: "0")
+        
+        let img = self.selectedCell?.imageUrl
+        let title = self.selectedCell?.title
+        let html = self.selectedCell?.html
+        
+        CommonUtils.saveJsonToUserDefaults(forKey: Constants.getImg, withJson: img ?? "")
+        CommonUtils.saveJsonToUserDefaults(forKey: Constants.getTitle, withJson: title ?? "")
+        CommonUtils.saveJsonToUserDefaults(forKey: Constants.getHtml, withJson: html ?? "")
+        
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "PAMAticleDetailViewScene") as! PAMAticleDetailViewController
+        self.navigationController?.pushViewController(vc, animated: true)
         
     }
     
@@ -48,12 +69,10 @@ class PAMViewAllController: UIViewController{
                     
                     if pAMModel?.success == true {
                         
-                        
                         let List = pAMModel?.data?[0].patientAwareness ?? []
                         
                         self.allArticleListDataSource.setItems(items: List, openType: self.OpenType)
                         self.viewAllCollectionView.reloadData()
-                        
                         
                     } else {
                         CommonUtils.showMsgDialog(showingPopupOn: self, withTitle: "", withMessage: "inValid")
@@ -63,8 +82,5 @@ class PAMViewAllController: UIViewController{
                 }
                 
             })
-        
     }
-    
-    
 }

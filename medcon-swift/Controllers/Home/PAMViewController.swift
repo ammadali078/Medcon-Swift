@@ -18,9 +18,13 @@ class PAMViewController: UIViewController{
     var OpenType = "0";
     var PAMListDataSource: PAMCollectionCell!
     var popularDataSource: PopularCollectionCell!
-    var indicator: UIActivityIndicatorView!
-    var activitiyViewController: ActivityViewController!
     var selectedData: MostPopularResult? = nil
+    var selectedCell: PatientAwareness? = nil
+    var segImage: [UIImage] = [
+        UIImage(named: "1stSeg.png")!,
+        UIImage(named: "2ndSeg.png")!,
+        UIImage(named: "3rdSeg.png")!
+    ]
     
     
     override func viewDidLoad() {
@@ -31,12 +35,18 @@ class PAMViewController: UIViewController{
         popularDataSource = PopularCollectionCell()
         popularCollectionViewOutlet.dataSource = popularDataSource
         
-        popularDataSource.onStartClick = {MostPopularResult in
-            self.onStartClick(MostPopularResult: MostPopularResult)
+                popularDataSource.onStartClick = {MostPopularResult in
+                    self.onStartClick(MostPopularResult: MostPopularResult)
+                }
+        
+        PAMListDataSource.onStartClick = {PatientAwareness in
+            self.onStartClick(PatientAwareness: PatientAwareness)
         }
         
         self.GetArticle()
         self.getPopularArt()
+        
+        
         
     }
     
@@ -46,23 +56,39 @@ class PAMViewController: UIViewController{
         navigationController?.pushViewController(mainViewController, animated: true)
     }
     
-    func onStartClick(MostPopularResult: MostPopularResult)  {
+        func onStartClick(MostPopularResult: MostPopularResult)  {
+    
+            self.selectedData = MostPopularResult
+            let selectedID = selectedData?.id
+    
+            CommonUtils.saveJsonToUserDefaults(forKey: Constants.PopularID, withJson:  String(selectedID ?? 0))
+    
+            let btn = CommonUtils.getJsonFromUserDefaults(forKey: Constants.btn)
+            
+            CommonUtils.saveJsonToUserDefaults(forKey: Constants.checkID, withJson: "1")
+    
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "PAMAticleDetailViewScene") as! PAMAticleDetailViewController
+            self.navigationController?.pushViewController(vc, animated: true)
+    
+        }
+    
+    func onStartClick(PatientAwareness: PatientAwareness)  {
         
-        self.selectedData = MostPopularResult
-//        let selectedID = selectedData?.id
-//
-//        CommonUtils.saveJsonToUserDefaults(forKey: Constants.selId, withJson:  String(selectedID ?? 0))
-//
-//        let btn = CommonUtils.getJsonFromUserDefaults(forKey: Constants.btn)
-//
-//        if btn == "2" {
-//            let vc = self.storyboard?.instantiateViewController(withIdentifier: "BrandDetailscene") as! BrandDetailViewController
-//            self.navigationController?.pushViewController(vc, animated: true)
-//
-//        }else {
-//            let vc = self.storyboard?.instantiateViewController(withIdentifier: "AvailableFormsViewScene") as! AvailableFormsViewController
-//            self.navigationController?.pushViewController(vc, animated: true)
-//        }
+        self.selectedCell = PatientAwareness
+        
+        CommonUtils.saveJsonToUserDefaults(forKey: Constants.checkID, withJson: "0")
+        
+        let img = self.selectedCell?.imageUrl
+        let title = self.selectedCell?.title
+        let html = self.selectedCell?.html
+        
+        CommonUtils.saveJsonToUserDefaults(forKey: Constants.getImg, withJson: img ?? "")
+        CommonUtils.saveJsonToUserDefaults(forKey: Constants.getTitle, withJson: title ?? "")
+        CommonUtils.saveJsonToUserDefaults(forKey: Constants.getHtml, withJson: html ?? "")
+        
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "PAMAticleDetailViewScene") as! PAMAticleDetailViewController
+        self.navigationController?.pushViewController(vc, animated: true)
+        
         
     }
     
@@ -76,34 +102,33 @@ class PAMViewController: UIViewController{
             .responseString(completionHandler: {(response) in
                 // On Response
                 
-                //On Dialog Close
-                if (response.error != nil) {
-                    CommonUtils.showMsgDialog(showingPopupOn: self, withTitle: "", withMessage: (response.error?.localizedDescription)!)
-                    return
-                }
                 
-                let pAMModel = Mapper<PAMModel>().map(JSONString: response.value!) //JSON to model
-                
-                if pAMModel != nil {
-                    
-                    if pAMModel?.success == true {
-                        
-                        
-                        let List = pAMModel?.data?[0].patientAwareness ?? []
-                        
-                        self.PAMListDataSource.setItems(items: List, openType: self.OpenType)
-                        self.pAMCollectionViewOutlet.reloadData()
-                        
-                        
-                    } else {
-                        CommonUtils.showMsgDialog(showingPopupOn: self, withTitle: "", withMessage: "inValid")
+                    //On Dialog Close
+                    if (response.error != nil) {
+                        CommonUtils.showMsgDialog(showingPopupOn: self, withTitle: "", withMessage: (response.error?.localizedDescription)!)
+                        return
                     }
-                } else {
-                    CommonUtils.showMsgDialog(showingPopupOn: self, withTitle: "", withMessage: "Failed to connect to server, Please check your internet connection")
-                }
-                
-            })
-        
+                    
+                    let pAMModel = Mapper<PAMModel>().map(JSONString: response.value!) //JSON to model
+                    
+                    if pAMModel != nil {
+                        
+                        if pAMModel?.success == true {
+                            
+                            
+                            let List = pAMModel?.data?[0].patientAwareness ?? []
+                            
+                            self.PAMListDataSource.setItems(items: List, openType: self.OpenType)
+                            self.pAMCollectionViewOutlet.reloadData()
+                            
+                            
+                        } else {
+                            CommonUtils.showMsgDialog(showingPopupOn: self, withTitle: "", withMessage: "inValid")
+                        }
+                    } else {
+                        CommonUtils.showMsgDialog(showingPopupOn: self, withTitle: "", withMessage: "Failed to connect to server, Please check your internet connection")
+                    }
+                })
     }
     
     func getPopularArt(){
@@ -116,29 +141,30 @@ class PAMViewController: UIViewController{
             .responseString(completionHandler: {(response) in
                 // On Response
                 
-                //On Dialog Close
-                if (response.error != nil) {
-                    CommonUtils.showMsgDialog(showingPopupOn: self, withTitle: "", withMessage: (response.error?.localizedDescription)!)
-                    return
-                }
-                
-                let PopularModel = Mapper<MostPopularModel>().map(JSONString: response.value!) //JSON to model
-                
-                if PopularModel != nil {
                     
-                    if PopularModel?.success == true {
-                        
-                        let List = PopularModel?.data
-                        
-                        self.popularDataSource.setItems(items: List, openType: self.OpenType)
-                        self.popularCollectionViewOutlet.reloadData()
-                        
-                    } else {
-                        CommonUtils.showMsgDialog(showingPopupOn: self, withTitle: "", withMessage: "inValid")
+                    //On Dialog Close
+                    if (response.error != nil) {
+                        CommonUtils.showMsgDialog(showingPopupOn: self, withTitle: "", withMessage: (response.error?.localizedDescription)!)
+                        return
                     }
-                } else {
-                    CommonUtils.showMsgDialog(showingPopupOn: self, withTitle: "", withMessage: "Failed to connect to server, Please check your internet connection")
-                }
+                    
+                    let PopularModel = Mapper<MostPopularModel>().map(JSONString: response.value!) //JSON to model
+                    
+                    if PopularModel != nil {
+                        
+                        if PopularModel?.success == true {
+                            
+                            let List = PopularModel?.data
+                            
+                            self.popularDataSource.setItems(items: List, openType: self.OpenType)
+                            self.popularCollectionViewOutlet.reloadData()
+                            
+                        } else {
+                            CommonUtils.showMsgDialog(showingPopupOn: self, withTitle: "", withMessage: "inValid")
+                        }
+                    } else {
+                        CommonUtils.showMsgDialog(showingPopupOn: self, withTitle: "", withMessage: "Failed to connect to server, Please check your internet connection")
+                    }
                 
             })
         

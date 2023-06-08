@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import SDWebImage
 
 class PopularCollectionCell: NSObject,UICollectionViewDelegate,UICollectionViewDataSource{
     
@@ -25,25 +26,27 @@ class PopularCollectionCell: NSObject,UICollectionViewDelegate,UICollectionViewD
         let index = indexPath.row
         let Json = filteredList[index]
         cell.MostPopularResult = Json
+        cell.onStartClick = onStartClick
         
         cell.backViewOutlet.layer.cornerRadius = 8
         cell.backViewOutlet.layer.masksToBounds = true
         cell.popularImageView.layer.cornerRadius = 8
         cell.popularImageView.layer.masksToBounds = true
         
-        
-        let baseUrl = "http://medcon-beta.digitrends.pk"
-        
-        let imageUrl = filteredList[indexPath.row].imageURL ?? ""
-        
-        var urlString = imageUrl.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
+        DispatchQueue.main.async {
+            
+            let baseUrl = "http://medcon-beta.digitrends.pk"
 
+            let imageUrl = self.filteredList[indexPath.row].imageURL ?? ""
 
-        let url = URL(string: baseUrl + urlString)
-
-        let data = try? Data(contentsOf: url!)
+            let urlString = imageUrl.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
+            
+            cell.popularImageView.sd_setImage(with: URL(string: "\(baseUrl)\(urlString)"), completed: nil)
+        }
         
-        cell.popularImageView.image = UIImage(data: data!)
+       
+        
+        
         cell.popularLabelView.text = filteredList[indexPath.item].title
         
         return cell
@@ -68,9 +71,6 @@ class PopularCollectionViewCell: UICollectionViewCell {
     @IBAction func onClickBtn(_ sender: Any) {
         onStartClick!(MostPopularResult!)
     }
-    
-    
-    
     
 }
 

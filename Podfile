@@ -22,6 +22,7 @@ pod 'ObjectMapper', '~> 4.2.0'
 # Networking
 pod 'Alamofire'
 pod 'AlamofireImage'
+pod 'SDWebImage'
 
 # Validation
 pod 'SwiftValidator', :git => 'https://github.com/jpotts18/SwiftValidator.git', :tag => '4.2.0'

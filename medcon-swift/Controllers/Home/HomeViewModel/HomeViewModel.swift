@@ -22,7 +22,16 @@ protocol HomeWebServiceDelegate {
     func failureAlbum()
 }
 
+
+
+
+
 class HomeViewModel {
+    
+    
+    
+    let getSp = CommonUtils.getJsonFromUserDefaults(forKey: Constants.selectSP)
+    
     var delegate: HomeWebServiceDelegate?
     var selectedSpeciality: SpecialityTag = .Gastroenterology
     var journalResponseData: JournalResponse?

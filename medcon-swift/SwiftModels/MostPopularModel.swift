@@ -30,6 +30,7 @@ struct MostPopularModel : Mappable {
 
 struct MostPopularResult : Mappable {
     var imageURL : String?
+    var id : Int?
     var title : String?
     var popularCount : Int?
 
@@ -40,6 +41,7 @@ struct MostPopularResult : Mappable {
     mutating func mapping(map: Map) {
 
         imageURL <- map["ImageURL"]
+        id <- map["Id"]
         title <- map["Title"]
         popularCount <- map["popularCount"]
     }
