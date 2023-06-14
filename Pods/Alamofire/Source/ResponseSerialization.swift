@@ -244,10 +244,12 @@ extension DataRequest {
 
                 delegate.retryResult(for: self, dueTo: serializerError) { retryResult in
                     var didComplete: (() -> Void)?
+                    //ammad
 
                     defer {
                         if let didComplete = didComplete {
                             self.responseSerializerDidComplete { queue.async { didComplete() } }
+                            
                         }
                     }
 

@@ -87,7 +87,8 @@ class AvailableFormsViewController: UIViewController, UITableViewDataSource,UITa
                         
                         //On Dialog Close
                         if (response.error != nil) {
-                            CommonUtils.showMsgDialog(showingPopupOn: self, withTitle: "", withMessage: (response.error?.localizedDescription)!)
+//                            CommonUtils.showMsgDialog(showingPopupOn: self, withTitle: "", withMessage: (response.error?.localizedDescription)!)
+                            CommonUtils.showMsgDialog(showingPopupOn: self, withTitle: "Medcon", withMessage: "Please connect to internet and try again")
                             return
                         }
                         

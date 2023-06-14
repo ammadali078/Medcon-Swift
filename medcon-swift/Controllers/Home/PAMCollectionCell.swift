@@ -17,7 +17,8 @@ class PAMCollectionCell: NSObject,UICollectionViewDelegate,UICollectionViewDataS
     var onStartClick: ((PatientAwareness) -> Void)? = nil
     
     var openType = "0"
-    let baseUrl = "http://medcon-beta.digitrends.pk"
+//    let baseUrl = "http://medcon-beta.digitrends.pk"
+    let baseUrl = "http://medconwebapi-v3.digitrends.pk"
    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return filteredList.count > 3 ? 3 : filteredList.count

@@ -35,7 +35,8 @@ class PAMAticleDetailViewController: UIViewController{
         
         DispatchQueue.main.async {
             
-            let baseUrl = "http://medcon-beta.digitrends.pk"
+//            let baseUrl = "http://medcon-beta.digitrends.pk"
+            let baseUrl = "http://medconwebapi-v3.digitrends.pk"
             
             let img = CommonUtils.getJsonFromUserDefaults(forKey: Constants.getImg)
             
@@ -65,7 +66,8 @@ class PAMAticleDetailViewController: UIViewController{
                 
                 //On Dialog Close
                 if (response.error != nil) {
-                    CommonUtils.showMsgDialog(showingPopupOn: self, withTitle: "", withMessage: (response.error?.localizedDescription)!)
+//                    CommonUtils.showMsgDialog(showingPopupOn: self, withTitle: "", withMessage: (response.error?.localizedDescription)!)
+                    CommonUtils.showMsgDialog(showingPopupOn: self, withTitle: "Medcon", withMessage: "Please connect to internet and try again")
                     return
                 }
                 
@@ -74,7 +76,6 @@ class PAMAticleDetailViewController: UIViewController{
                 if popularDetailModel != nil {
                     
                     if popularDetailModel?.success == true {
-                        
                         
                         let title = popularDetailModel?.data?.title
                         let html = popularDetailModel?.data?.html
@@ -85,7 +86,8 @@ class PAMAticleDetailViewController: UIViewController{
                         
                         DispatchQueue.main.async {
                             
-                            let baseUrl = "http://medcon-beta.digitrends.pk"
+//                            let baseUrl = "http://medcon-beta.digitrends.pk"
+                            let baseUrl = "http://medconwebapi-v3.digitrends.pk"
                             
                             let img = popularDetailModel?.data?.imageUrl
                             

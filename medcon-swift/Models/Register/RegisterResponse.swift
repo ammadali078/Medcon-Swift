@@ -80,7 +80,8 @@ struct User: Codable {
     let speciality: Int?
     let pmdcNumber, contactNumber: String?
     let city: String?
-    let clinicAddress, status: String?
+    let clinicAddress : String?
+    let status : Bool?
     let deviceType: Int?
     let authToken, verifiedUser: String?
     let specialityName: String?

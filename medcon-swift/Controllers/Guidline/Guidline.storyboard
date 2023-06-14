@@ -444,20 +444,20 @@
             <objects>
                 <viewController storyboardIdentifier="GuidlineDetailViewScene" id="weP-xT-HoJ" customClass="GuidlineDetailViewController" customModule="medcon_swift" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TqK-77-kh7">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="860"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="560"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg-home" translatesAutoresizingMaskIntoConstraints="NO" id="PUJ-lO-HP0">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="860"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="560"/>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hnR-gZ-ccZ">
-                                <rect key="frame" x="0.0" y="59" width="375" height="767"/>
+                                <rect key="frame" x="0.0" y="59" width="375" height="501"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qe5-uz-Mja">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="773"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="507"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TPA-Ht-TcY">
-                                                <rect key="frame" x="16" y="8" width="343" height="757"/>
+                                                <rect key="frame" x="16" y="8" width="343" height="288.33333333333331"/>
                                                 <subviews>
                                                     <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xgx-3M-PWe">
                                                         <rect key="frame" x="16" y="36" width="311" height="150"/>
@@ -465,43 +465,59 @@
                                                             <constraint firstAttribute="height" constant="150" id="bFC-Dq-mqE"/>
                                                         </constraints>
                                                     </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CONSTIPATION: BEYOND THE OLD PARADIGMS" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vXy-dP-d8Z">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yak-Rv-0e3">
+                                                        <rect key="frame" x="8" y="15" width="327" height="54"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XsA-bG-vsz">
+                                                                <rect key="frame" x="9" y="0.0" width="310" height="54"/>
+                                                                <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="14"/>
+                                                                <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <color key="backgroundColor" red="0.10588235294117647" green="0.72549019607843135" blue="0.32549019607843138" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <constraints>
+                                                            <constraint firstItem="XsA-bG-vsz" firstAttribute="leading" secondItem="yak-Rv-0e3" secondAttribute="leading" constant="9" id="Fav-12-acQ"/>
+                                                            <constraint firstItem="XsA-bG-vsz" firstAttribute="top" secondItem="yak-Rv-0e3" secondAttribute="top" id="Jhy-VQ-lFa"/>
+                                                            <constraint firstAttribute="height" constant="54" id="dJf-ET-57e"/>
+                                                            <constraint firstAttribute="bottom" secondItem="XsA-bG-vsz" secondAttribute="bottom" id="ryM-hy-e29"/>
+                                                            <constraint firstAttribute="trailing" secondItem="XsA-bG-vsz" secondAttribute="trailing" constant="8" id="xFl-5l-kUQ"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CONSTIPATION: BEYOND THE OLD PARADIGMS" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vXy-dP-d8Z">
                                                         <rect key="frame" x="16" y="43" width="311" height="16.666666666666671"/>
                                                         <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="14"/>
                                                         <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gmd-DD-3Jf">
-                                                        <rect key="frame" x="16" y="132.66666666666666" width="311" height="126.66666666666666"/>
-                                                        <string key="text">Constipation is a common problem in children. Although most children respond to conventional treatment, symptoms persist in a minority. For children with refractory constipation, anorectal and colonic manometry testing can identify a rectal evacuation disorder or colonic motility disorder and guide subsequent management. Novel medications used in adults with constipation are beginning to be used in children, with promising results. Biofeedback therapy and anal sphincter botulinum toxin injection can be considered for children with a rectal evacuation disorder. Surgical management of constipation includes the use of antegrade continence enemas, sacral nerve stimulation, and colonic resection.
-
-PAK1219522</string>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gmd-DD-3Jf">
+                                                        <rect key="frame" x="16" y="117.66666666666666" width="311" height="0.0"/>
                                                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="9"/>
                                                         <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XGE-5c-96k">
-                                                        <rect key="frame" x="16" y="198.33333333333331" width="311" height="1"/>
+                                                        <rect key="frame" x="16" y="71.666666666666657" width="311" height="1"/>
                                                         <color key="backgroundColor" white="0.66666666669999997" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="1" id="Gfn-tS-PM2"/>
                                                         </constraints>
                                                     </view>
                                                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="64g-N5-OAk">
-                                                        <rect key="frame" x="16" y="275.33333333333331" width="311" height="10.666666666666686"/>
+                                                        <rect key="frame" x="16" y="148.66666666666666" width="311" height="10.666666666666657"/>
                                                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="9"/>
                                                         <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B9f-9J-UAh">
-                                                        <rect key="frame" x="16" y="294" width="311" height="1"/>
+                                                        <rect key="frame" x="16" y="167.33333333333334" width="311" height="1"/>
                                                         <color key="backgroundColor" white="0.66666666669999997" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="1" id="lsq-gc-bXp"/>
                                                         </constraints>
                                                     </view>
                                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ag1-qO-gsD">
-                                                        <rect key="frame" x="16" y="311" width="311" height="47"/>
+                                                        <rect key="frame" x="16" y="184.33333333333334" width="311" height="47"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="47" id="uW9-WY-3dO"/>
                                                         </constraints>
@@ -539,7 +555,7 @@ PAK1219522</string>
                                                             <constraint firstAttribute="height" constant="24" id="xZL-04-Iyf"/>
                                                         </constraints>
                                                     </view>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Abstract" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hyd-dT-BPO">
+                                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Abstract" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hyd-dT-BPO">
                                                         <rect key="frame" x="16" y="84.333333333333343" width="311" height="23"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
                                                         <nil key="textColor"/>
@@ -549,6 +565,7 @@ PAK1219522</string>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstItem="hyd-dT-BPO" firstAttribute="top" secondItem="vXy-dP-d8Z" secondAttribute="bottom" constant="24.5" id="4he-JN-neR"/>
+                                                    <constraint firstItem="gmd-DD-3Jf" firstAttribute="top" secondItem="yak-Rv-0e3" secondAttribute="bottom" constant="48.666666666666629" id="4xW-5r-qwO"/>
                                                     <constraint firstItem="B9f-9J-UAh" firstAttribute="leading" secondItem="64g-N5-OAk" secondAttribute="leading" id="7um-dS-lmo"/>
                                                     <constraint firstAttribute="trailing" secondItem="hyd-dT-BPO" secondAttribute="trailing" constant="16" id="A1D-aW-Br7"/>
                                                     <constraint firstItem="vXy-dP-d8Z" firstAttribute="top" secondItem="xgx-3M-PWe" secondAttribute="bottom" constant="-143" id="ANR-er-PN9"/>
@@ -559,17 +576,19 @@ PAK1219522</string>
                                                     <constraint firstItem="Ag1-qO-gsD" firstAttribute="trailing" secondItem="64g-N5-OAk" secondAttribute="trailing" id="Um0-5w-xGt"/>
                                                     <constraint firstItem="gmd-DD-3Jf" firstAttribute="trailing" secondItem="vXy-dP-d8Z" secondAttribute="trailing" id="Vyr-Tg-Fhq"/>
                                                     <constraint firstItem="B9f-9J-UAh" firstAttribute="top" secondItem="64g-N5-OAk" secondAttribute="bottom" constant="8" id="WJV-DN-PGA"/>
-                                                    <constraint firstItem="XGE-5c-96k" firstAttribute="top" secondItem="gmd-DD-3Jf" secondAttribute="bottom" constant="-61" id="XTB-Jx-M7O"/>
+                                                    <constraint firstItem="XGE-5c-96k" firstAttribute="top" secondItem="gmd-DD-3Jf" secondAttribute="bottom" constant="-45.999999999999972" id="XTB-Jx-M7O"/>
                                                     <constraint firstItem="XGE-5c-96k" firstAttribute="leading" secondItem="gmd-DD-3Jf" secondAttribute="leading" id="XVL-t8-Zg3"/>
                                                     <constraint firstItem="xgx-3M-PWe" firstAttribute="top" secondItem="TPA-Ht-TcY" secondAttribute="top" constant="36" id="bd7-fi-Gp3"/>
                                                     <constraint firstItem="64g-N5-OAk" firstAttribute="leading" secondItem="gmd-DD-3Jf" secondAttribute="leading" id="eSz-Cq-IHV"/>
+                                                    <constraint firstItem="yak-Rv-0e3" firstAttribute="leading" secondItem="TPA-Ht-TcY" secondAttribute="leading" constant="8" id="erd-EM-1fm"/>
                                                     <constraint firstItem="gmd-DD-3Jf" firstAttribute="leading" secondItem="vXy-dP-d8Z" secondAttribute="leading" id="gRI-5B-Mhe"/>
                                                     <constraint firstItem="XGE-5c-96k" firstAttribute="trailing" secondItem="gmd-DD-3Jf" secondAttribute="trailing" id="gjw-w8-2a4"/>
-                                                    <constraint firstItem="gmd-DD-3Jf" firstAttribute="top" secondItem="vXy-dP-d8Z" secondAttribute="bottom" constant="73" id="h4Y-dh-7yo"/>
-                                                    <constraint firstAttribute="bottom" secondItem="Ag1-qO-gsD" secondAttribute="bottom" constant="399" id="hvo-aR-7QJ"/>
+                                                    <constraint firstItem="gmd-DD-3Jf" firstAttribute="top" secondItem="vXy-dP-d8Z" secondAttribute="bottom" constant="57.999999999999957" id="h4Y-dh-7yo"/>
+                                                    <constraint firstAttribute="bottom" secondItem="Ag1-qO-gsD" secondAttribute="bottom" constant="57" id="hvo-aR-7QJ"/>
                                                     <constraint firstItem="Ag1-qO-gsD" firstAttribute="top" secondItem="64g-N5-OAk" secondAttribute="bottom" constant="25" id="k6K-ff-EGv"/>
-                                                    <constraint firstItem="64g-N5-OAk" firstAttribute="top" secondItem="gmd-DD-3Jf" secondAttribute="bottom" constant="16" id="kva-8G-Hy9"/>
+                                                    <constraint firstItem="64g-N5-OAk" firstAttribute="top" secondItem="gmd-DD-3Jf" secondAttribute="bottom" constant="31.000000000000028" id="kva-8G-Hy9"/>
                                                     <constraint firstAttribute="trailing" secondItem="n6d-13-OEJ" secondAttribute="trailing" constant="8" id="lup-f3-PSH"/>
+                                                    <constraint firstAttribute="trailing" secondItem="yak-Rv-0e3" secondAttribute="trailing" constant="8" id="rjU-cs-xYE"/>
                                                     <constraint firstItem="xgx-3M-PWe" firstAttribute="leading" secondItem="TPA-Ht-TcY" secondAttribute="leading" constant="16" id="sgP-PS-bdQ"/>
                                                     <constraint firstItem="Ag1-qO-gsD" firstAttribute="leading" secondItem="64g-N5-OAk" secondAttribute="leading" id="tfn-Of-3sz"/>
                                                     <constraint firstItem="B9f-9J-UAh" firstAttribute="trailing" secondItem="64g-N5-OAk" secondAttribute="trailing" id="thh-lv-DM1"/>
@@ -618,10 +637,12 @@ PAK1219522</string>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="6PD-5K-O0q"/>
-                    <size key="freeformSize" width="375" height="860"/>
+                    <size key="freeformSize" width="375" height="560"/>
                     <connections>
                         <outlet property="detailLabel" destination="gmd-DD-3Jf" id="Gjv-m2-EVI"/>
                         <outlet property="titleLabel" destination="vXy-dP-d8Z" id="Jgv-qn-4Gs"/>
+                        <outlet property="titleLabel2" destination="XsA-bG-vsz" id="TRb-1m-ZQ2"/>
+                        <outlet property="titleView" destination="yak-Rv-0e3" id="3eI-AQ-wVq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sqF-Jf-mzp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -630,7 +651,7 @@ PAK1219522</string>
         </scene>
     </scenes>
     <resources>
-        <image name="GuidlineBanner" width="350" height="118"/>
+        <image name="GuidlineBanner" width="357" height="118"/>
         <image name="GuidlineBox" width="182" height="151"/>
         <image name="bg-home" width="375" height="1185"/>
         <image name="medcon-tabbar-icon" width="120" height="39"/>

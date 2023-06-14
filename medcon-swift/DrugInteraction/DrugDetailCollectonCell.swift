@@ -36,17 +36,17 @@ class DrugDetailCollectonCell: NSObject,UICollectionViewDelegate,UICollectionVie
         var names = ""
         var namesDes = ""
         
-        for valueOfNamess in (filteredList[indexPath.item].interactionPair?[0].interactionConcept ?? [] as [InteractionConcept]) {
+        for valueOfNamess in (filteredList[indexPath.item].minConcept ?? [] as [MinConcept]) {
             if names == "" {
-                names = names + (valueOfNamess.minConceptItem?.name ?? "")
+                names = names + (valueOfNamess.name ?? "")
             }else {
-                names = names + "/" + (valueOfNamess.minConceptItem?.name ?? "")
+                names = names + "/" + (valueOfNamess.name ?? "")
             }
             
             if namesDes == "" {
-                namesDes = namesDes + (valueOfNamess.minConceptItem?.name ?? "")
+                namesDes = namesDes + (valueOfNamess.name ?? "")
             }else {
-                namesDes = namesDes + " + " + (valueOfNamess.minConceptItem?.name ?? "")
+                namesDes = namesDes + " + " + (valueOfNamess.name ?? "")
             }
             
         }

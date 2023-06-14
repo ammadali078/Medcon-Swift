@@ -35,7 +35,8 @@ class PopularCollectionCell: NSObject,UICollectionViewDelegate,UICollectionViewD
         
         DispatchQueue.main.async {
             
-            let baseUrl = "http://medcon-beta.digitrends.pk"
+//            let baseUrl = "http://medcon-beta.digitrends.pk"
+            let baseUrl = "http://medconwebapi-v3.digitrends.pk"
 
             let imageUrl = self.filteredList[indexPath.row].imageURL ?? ""
 

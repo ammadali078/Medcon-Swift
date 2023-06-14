@@ -39,7 +39,7 @@ class AuthSignUpViewController: UIViewController {
     
     private func setupValidations() {
         validator.registerField(emailField, errorLabel: emailField.errorLabel, rules: [RequiredRule(), EmailRule()])
-        validator.registerField(uniqueCode, errorLabel: uniqueCode.errorLabel, rules: [RequiredRule(), RegexRule(regex: "^\\d*$", message: "Enter a valid Unique Code")])
+        validator.registerField(uniqueCode, errorLabel: uniqueCode.errorLabel, rules: [RequiredRule(),])
         validator.registerField(passwordField, errorLabel: passwordField.errorLabel, rules: [RequiredRule(), PasswordRule(), MinLengthRule(length: 8)])
        
         validator.registerField(confirmPasswordField, errorLabel: confirmPasswordField.errorLabel, rules: [RequiredRule(), PasswordRule(), MinLengthRule(length: 8), ConfirmationRule(confirmField: passwordField, message: "Confirm password doesn't match")])
@@ -160,6 +160,7 @@ extension AuthSignUpViewController {
                                   "RegistrationCode": UniqueCode ?? "",
                                   "DeviceType": 1,
                                   "device_id": (UIDevice.current.identifierForVendor != nil) ? UIDevice.current.identifierForVendor!.uuidString : "",
+                                  "Status": 1,
                                   "device_os": "IOS"]
         hud.show(in: self.view)
         self.apiManager.call(type: EndpointItem.register, params: params) { [weak self] (registerResponse: RegisterResponse?, asdsad: AlertMessage?) in

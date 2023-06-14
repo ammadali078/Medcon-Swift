@@ -26,7 +26,7 @@ protocol EndPointType {
     
 }
 
-class APIManager {
+class APIManager  {
     
     // MARK: - Vars & Lets
     
@@ -59,24 +59,24 @@ class APIManager {
                                     parameters: params,
                                     encoding: type.encoding,
                                     headers: type.headers).validate().responseJSON { data in
-                                        if let JSONString = String(data: data.data!, encoding: String.Encoding.utf8) {
-                                           print(JSONString)
-                                        }
-                                        switch data.result {
-                                        case .success(_):
-                                            handler((), nil)
-                                            break
-                                        case .failure(_):
-                                            handler(nil, self.parseApiError(data: data.data))
-                                            break
-                                        }
-                                    }
+            if let JSONString = String(data: data.data!, encoding: String.Encoding.utf8) {
+                print(JSONString)
+            }
+            switch data.result {
+            case .success(_):
+                handler((), nil)
+                break
+            case .failure(_):
+                handler(nil, self.parseApiError(data: data.data))
+                break
+            }
+        }
     }
     
     private func parseApiError(data: Data?) -> AlertMessage {
         let decoder = JSONDecoder()
         if let jsonData = data, let error = try? decoder.decode(ErrorObject.self, from: jsonData) {
-            return AlertMessage(title: error.error, body: error.message)
+            return AlertMessage(title: "Alert", body: "Something went wrong, please try again.")
         }
         return AlertMessage(title: "Alert", body: "Something went wrong, please try again.")
     }
@@ -90,29 +90,30 @@ extension APIManager {
                                     parameters: params,
                                     encoding: type.encoding,
                                     headers: type.headers).validate().responseJSON { data in
-                                        switch data.result {
-                                        case .success(_):
-                                            let decoder = JSONDecoder()
-                                            if let jsonData = data.data {
-                                                if let JSONString = String(data: jsonData, encoding: String.Encoding.utf8) {
-                                                    print("*** RESPONSE ***")
-                                                    print(JSONString)
-                                                }
-                                                let result = try! decoder.decode(T.self, from:  jsonData)
-                                                handler(result, nil)
-                                            }
-                                            break
-                                        case .failure(_):
-                                            handler(nil, self.parseApiError(data: data.data))
-                                            break
-                                        }
-                                    }
+            switch data.result {
+            case .success(_):
+                let decoder = JSONDecoder()
+                if let jsonData = data.data {
+                    if let JSONString = String(data: jsonData, encoding: String.Encoding.utf8) {
+                        print("*** RESPONSE ***")
+                        print(JSONString)
+                    }
+                    
+                    let result = try! decoder.decode(T.self, from:  jsonData)
+                    handler(result, nil)
+                }
+                break
+            case .failure(_):
+                handler(nil, self.parseApiError(data: data.data))
+                break
+            }
+        }
     }
     
     func downloadFile(type: EndPointType, reference: URLSessionDownloadDelegate, params: Parameters? = nil, handler: @escaping (String?)->()) {
         
         let url = type.url
-                
+        
         let urlSession = URLSession(configuration: .default, delegate: reference, delegateQueue: OperationQueue())
         do {
             let req = try URLRequest.init(url: url, method: type.httpMethod, headers: type.headers)

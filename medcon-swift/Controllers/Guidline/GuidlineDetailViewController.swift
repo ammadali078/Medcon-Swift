@@ -12,7 +12,8 @@ import ObjectMapper
 
 class GuidlineDetailViewController: UIViewController{
     
-    
+    @IBOutlet weak var titleLabel2: UILabel!
+    @IBOutlet weak var titleView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var detailLabel: UILabel!
     
@@ -20,8 +21,10 @@ class GuidlineDetailViewController: UIViewController{
         
         self.getArtDetail()
         
+        self.titleView.layer.cornerRadius = 8
+        self.titleView.layer.masksToBounds = true
+        
     }
-    
     
     func getArtDetail() {
         
@@ -37,7 +40,8 @@ class GuidlineDetailViewController: UIViewController{
                 
                 //On Dialog Close
                 if (response.error != nil) {
-                    CommonUtils.showMsgDialog(showingPopupOn: self, withTitle: "", withMessage: (response.error?.localizedDescription)!)
+//                    CommonUtils.showMsgDialog(showingPopupOn: self, withTitle: "", withMessage: (response.error?.localizedDescription)!)
+                    CommonUtils.showMsgDialog(showingPopupOn: self, withTitle: "Medcon", withMessage: "Please connect to internet and try again")
                     return
                 }
                 
@@ -49,34 +53,61 @@ class GuidlineDetailViewController: UIViewController{
                     
                     if checkBox == "1" {
                         
-                        self.titleLabel.text = guidlineDetailModel?.data?[0].guidelines?[0].title
-                        self.detailLabel.attributedText = guidlineDetailModel?.data?[0].guidelines?[0].html?.htmlToAttributedStringHTmlDetail
-                        
+                        DispatchQueue.main.async {
+                            
+                            self.titleLabel.text = guidlineDetailModel?.data?[0].guidelines?[0].title
+                            self.titleLabel2.text = guidlineDetailModel?.data?[0].guidelines?[0].title
+                            self.detailLabel.attributedText = guidlineDetailModel?.data?[0].guidelines?[0].html?.htmlToAttributedStringHTmlDetail
+                        }
                         
                     }else if checkBox == "2" {
                         
-                        self.titleLabel.text = guidlineDetailModel?.data?[0].guidelines?[1].title
-                        self.detailLabel.attributedText = guidlineDetailModel?.data?[0].guidelines?[1].html?.htmlToAttributedStringHTmlDetail
+                        DispatchQueue.main.async {
+                            
+                            self.titleLabel.text = guidlineDetailModel?.data?[0].guidelines?[1].title
+                            self.titleLabel2.text = guidlineDetailModel?.data?[0].guidelines?[1].title
+                            self.detailLabel.attributedText = guidlineDetailModel?.data?[0].guidelines?[1].html?.htmlToAttributedStringHTmlDetail
+                            
+                        }
                         
                     }else if checkBox == "3" {
                         
-                        self.titleLabel.text = guidlineDetailModel?.data?[0].guidelines?[2].title
-                        self.detailLabel.attributedText = guidlineDetailModel?.data?[0].guidelines?[2].html?.htmlToAttributedStringHTmlDetail
+                        DispatchQueue.main.async {
+                            
+                            self.titleLabel.text = guidlineDetailModel?.data?[0].guidelines?[2].title
+                            self.titleLabel2.text = guidlineDetailModel?.data?[0].guidelines?[2].title
+                            self.detailLabel.attributedText = guidlineDetailModel?.data?[0].guidelines?[2].html?.htmlToAttributedStringHTmlDetail
+                        }
                         
                     }else if checkBox == "4" {
                         
-                        self.titleLabel.text = guidlineDetailModel?.data?[0].guidelines?[3].title
-                        self.detailLabel.attributedText = guidlineDetailModel?.data?[0].guidelines?[3].html?.htmlToAttributedStringHTmlDetail
+                        DispatchQueue.main.async {
+                            
+                            self.titleLabel.text = guidlineDetailModel?.data?[0].guidelines?[3].title
+                            self.titleLabel2.text = guidlineDetailModel?.data?[0].guidelines?[3].title
+                            self.detailLabel.attributedText = guidlineDetailModel?.data?[0].guidelines?[3].html?.htmlToAttributedStringHTmlDetail
+                            
+                        }
                         
                     }else if checkBox == "5" {
                         
-                        self.titleLabel.text = guidlineDetailModel?.data?[0].guidelines?[4].title
-                        self.detailLabel.attributedText = guidlineDetailModel?.data?[0].guidelines?[4].html?.htmlToAttributedStringHTmlDetail
+                        DispatchQueue.main.async {
+                            
+                            self.titleLabel.text = guidlineDetailModel?.data?[0].guidelines?[4].title
+                            self.titleLabel2.text = guidlineDetailModel?.data?[0].guidelines?[4].title
+                            self.detailLabel.attributedText = guidlineDetailModel?.data?[0].guidelines?[4].html?.htmlToAttributedStringHTmlDetail
+                            
+                        }
                         
                     }else if checkBox == "6" {
                         
-                        self.titleLabel.text = guidlineDetailModel?.data?[0].guidelines?[5].title
-                        self.detailLabel.attributedText = guidlineDetailModel?.data?[0].guidelines?[5].html?.htmlToAttributedStringHTmlDetail
+                        DispatchQueue.main.async {
+                            
+                            self.titleLabel.text = guidlineDetailModel?.data?[0].guidelines?[5].title
+                            self.titleLabel2.text = guidlineDetailModel?.data?[0].guidelines?[5].title
+                            self.detailLabel.attributedText = guidlineDetailModel?.data?[0].guidelines?[5].html?.htmlToAttributedStringHTmlDetail
+                            
+                        }
                         
                     }
                     
