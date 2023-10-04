@@ -2345,7 +2345,7 @@ PAK1219522</string>
                                                     <constraint firstAttribute="width" constant="351" id="rL9-XS-5KE"/>
                                                 </constraints>
                                             </imageView>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="      Search" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XKd-d0-ezC">
+                                            <textField hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="      Search" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XKd-d0-ezC">
                                                 <rect key="frame" x="11" y="181" width="352" height="34"/>
                                                 <color key="backgroundColor" red="0.90154840528350522" green="0.90154840528350522" blue="0.90154840528350522" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
@@ -2356,7 +2356,7 @@ PAK1219522</string>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uq0-Tc-bCn">
-                                                <rect key="frame" x="2" y="243" width="180" height="132"/>
+                                                <rect key="frame" x="2" y="218" width="180" height="132"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="btnImg" translatesAutoresizingMaskIntoConstraints="NO" id="uHC-Pp-EIg">
                                                         <rect key="frame" x="8" y="4" width="172" height="128"/>
@@ -2404,7 +2404,7 @@ PAK1219522</string>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rTE-iy-y0y">
-                                                <rect key="frame" x="188" y="243" width="180" height="132"/>
+                                                <rect key="frame" x="188" y="218" width="180" height="132"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="btnImg" translatesAutoresizingMaskIntoConstraints="NO" id="07s-lP-srP">
                                                         <rect key="frame" x="8" y="4" width="172" height="128"/>
@@ -2450,7 +2450,7 @@ PAK1219522</string>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jgp-HG-SxE">
-                                                <rect key="frame" x="2" y="378" width="180" height="132"/>
+                                                <rect key="frame" x="2" y="353" width="180" height="132"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mwr-vw-nQi">
                                                         <rect key="frame" x="9" y="8" width="162" height="123"/>
@@ -2498,7 +2498,7 @@ PAK1219522</string>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G3w-C8-hn9">
-                                                <rect key="frame" x="188" y="378" width="180" height="132"/>
+                                                <rect key="frame" x="188" y="353" width="180" height="132"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mlq-SA-DTQ">
                                                         <rect key="frame" x="7" y="8" width="162" height="123"/>
@@ -2544,7 +2544,7 @@ PAK1219522</string>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9S2-Le-vmx">
-                                                <rect key="frame" x="2" y="512" width="180" height="132"/>
+                                                <rect key="frame" x="2" y="487" width="180" height="132"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SLC-qT-ymD">
                                                         <rect key="frame" x="9" y="8" width="162" height="123"/>
@@ -2592,7 +2592,7 @@ PAK1219522</string>
                                                 </constraints>
                                             </view>
                                             <view hidden="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vba-jT-QPz">
-                                                <rect key="frame" x="188" y="512" width="180" height="132"/>
+                                                <rect key="frame" x="188" y="487" width="180" height="132"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="csq-IP-amh">
                                                         <rect key="frame" x="9" y="8" width="162" height="123"/>
@@ -2634,19 +2634,61 @@ PAK1219522</string>
                                                     <constraint firstItem="arT-oA-oRy" firstAttribute="leading" secondItem="vba-jT-QPz" secondAttribute="leading" constant="36" id="zPI-NF-fi4"/>
                                                 </constraints>
                                             </view>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="search" translatesAutoresizingMaskIntoConstraints="NO" id="0xq-6g-r7o">
+                                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="search" translatesAutoresizingMaskIntoConstraints="NO" id="0xq-6g-r7o">
                                                 <rect key="frame" x="334" y="188" width="20" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="20" id="Vlm-Vn-BdW"/>
                                                     <constraint firstAttribute="height" constant="21" id="Yep-fx-whr"/>
                                                 </constraints>
                                             </imageView>
+                                            <collectionView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="eHF-HE-qLa">
+                                                <rect key="frame" x="12" y="223" width="351" height="281"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="351" id="XGG-CJ-Lzr"/>
+                                                    <constraint firstAttribute="height" constant="281" id="yQg-pX-PX5"/>
+                                                </constraints>
+                                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="nfR-2n-yJc">
+                                                    <size key="itemSize" width="346" height="39"/>
+                                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                </collectionViewFlowLayout>
+                                                <cells>
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BrandCollectionViewCell" id="e92-ea-w1g" customClass="BrandCollectionView" customModule="medcon_swift" customModuleProvider="target">
+                                                        <rect key="frame" x="2.5" y="0.0" width="346" height="39"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="le3-Zy-EW3">
+                                                            <rect key="frame" x="0.0" y="0.0" width="346" height="39"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pa9-8Q-gyu">
+                                                                    <rect key="frame" x="0.0" y="10" width="346" height="21"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="21" id="Uki-4W-PzP"/>
+                                                                        <constraint firstAttribute="width" constant="346" id="mRg-SH-hxe"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstItem="Pa9-8Q-gyu" firstAttribute="leading" secondItem="le3-Zy-EW3" secondAttribute="leading" id="1ND-To-fc0"/>
+                                                                <constraint firstItem="Pa9-8Q-gyu" firstAttribute="top" secondItem="le3-Zy-EW3" secondAttribute="top" constant="10" id="U7t-rm-txj"/>
+                                                                <constraint firstAttribute="trailing" secondItem="Pa9-8Q-gyu" secondAttribute="trailing" id="tuH-se-9bg"/>
+                                                            </constraints>
+                                                        </collectionViewCellContentView>
+                                                        <size key="customSize" width="346" height="39"/>
+                                                    </collectionViewCell>
+                                                </cells>
+                                            </collectionView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="0xq-6g-r7o" firstAttribute="top" secondItem="f1f-sX-vJw" secondAttribute="bottom" constant="38" id="06I-hc-fet"/>
                                             <constraint firstItem="f1f-sX-vJw" firstAttribute="leading" secondItem="8Zn-tN-ai0" secondAttribute="leading" constant="12" id="08O-Gd-JcJ"/>
-                                            <constraint firstItem="Uq0-Tc-bCn" firstAttribute="top" secondItem="XKd-d0-ezC" secondAttribute="bottom" constant="28" id="1Ti-eK-fdU"/>
+                                            <constraint firstItem="Uq0-Tc-bCn" firstAttribute="top" secondItem="XKd-d0-ezC" secondAttribute="bottom" constant="3" id="1Ti-eK-fdU"/>
                                             <constraint firstAttribute="height" constant="767" id="2B4-5o-JrK"/>
                                             <constraint firstItem="vba-jT-QPz" firstAttribute="width" secondItem="9S2-Le-vmx" secondAttribute="width" id="8oe-O6-6uo"/>
                                             <constraint firstItem="f1f-sX-vJw" firstAttribute="top" secondItem="sDi-rL-56l" secondAttribute="bottom" constant="-55" id="9ua-Xn-1Oz"/>
@@ -2667,6 +2709,7 @@ PAK1219522</string>
                                             <constraint firstItem="rTE-iy-y0y" firstAttribute="height" secondItem="Uq0-Tc-bCn" secondAttribute="height" id="eWD-vf-vG1"/>
                                             <constraint firstItem="rTE-iy-y0y" firstAttribute="width" secondItem="Uq0-Tc-bCn" secondAttribute="width" id="eYh-7i-DDO"/>
                                             <constraint firstItem="sDi-rL-56l" firstAttribute="leading" secondItem="8Zn-tN-ai0" secondAttribute="leading" id="hK9-De-4m8"/>
+                                            <constraint firstItem="eHF-HE-qLa" firstAttribute="leading" secondItem="8Zn-tN-ai0" secondAttribute="leading" constant="12" id="hip-fa-sXE"/>
                                             <constraint firstItem="vba-jT-QPz" firstAttribute="centerY" secondItem="9S2-Le-vmx" secondAttribute="centerY" id="igo-vL-hCH"/>
                                             <constraint firstItem="9S2-Le-vmx" firstAttribute="top" secondItem="jgp-HG-SxE" secondAttribute="bottom" constant="2" id="il9-id-ixz"/>
                                             <constraint firstAttribute="trailing" secondItem="G3w-C8-hn9" secondAttribute="trailing" constant="7" id="mjH-vA-loQ"/>
@@ -2676,8 +2719,10 @@ PAK1219522</string>
                                             <constraint firstAttribute="trailing" secondItem="vba-jT-QPz" secondAttribute="trailing" constant="7" id="saG-AY-M8q"/>
                                             <constraint firstItem="G3w-C8-hn9" firstAttribute="height" secondItem="jgp-HG-SxE" secondAttribute="height" id="sut-b8-He4"/>
                                             <constraint firstItem="G3w-C8-hn9" firstAttribute="centerY" secondItem="jgp-HG-SxE" secondAttribute="centerY" id="uAE-Pa-5zl"/>
-                                            <constraint firstItem="rTE-iy-y0y" firstAttribute="top" secondItem="0xq-6g-r7o" secondAttribute="bottom" constant="34" id="wSW-oc-ew4"/>
+                                            <constraint firstItem="rTE-iy-y0y" firstAttribute="top" secondItem="0xq-6g-r7o" secondAttribute="bottom" constant="9" id="wSW-oc-ew4"/>
+                                            <constraint firstAttribute="trailing" secondItem="eHF-HE-qLa" secondAttribute="trailing" constant="12" id="xZU-xn-M9l"/>
                                             <constraint firstItem="rTE-iy-y0y" firstAttribute="centerY" secondItem="Uq0-Tc-bCn" secondAttribute="centerY" id="xtv-FQ-5Ji"/>
+                                            <constraint firstItem="eHF-HE-qLa" firstAttribute="top" secondItem="XKd-d0-ezC" secondAttribute="bottom" constant="8" symbolic="YES" id="zaV-1e-v6z"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -2703,12 +2748,13 @@ PAK1219522</string>
                     </view>
                     <size key="freeformSize" width="375" height="767"/>
                     <connections>
+                        <outlet property="brandNameCollectionView" destination="eHF-HE-qLa" id="DqJ-sI-6k2"/>
                         <outlet property="searchBar" destination="XKd-d0-ezC" id="LKa-tg-c1p"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x8d-D2-4Pd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2758" y="-689"/>
+            <point key="canvasLocation" x="2757.1875" y="-689.26056338028172"/>
         </scene>
         <!--DrugInterActionViewScrene-->
         <scene sceneID="ihd-ln-zGV">
@@ -3257,8 +3303,8 @@ PAK1219522</string>
                                             <constraint firstAttribute="height" constant="47" id="ugY-Zd-c6Z"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello World" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tlv-dE-mAE">
-                                        <rect key="frame" x="28" y="10" width="65" height="13.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tlv-dE-mAE">
+                                        <rect key="frame" x="28" y="10" width="32.5" height="13.5"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -3649,10 +3695,10 @@ PAK1219522</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IWf-EH-pST">
-                                <rect key="frame" x="0.0" y="0.0" width="2093.5" height="76"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="76"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PAKISTAN DRUG MANUAL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eP2-bh-On4">
-                                        <rect key="frame" x="28" y="32" width="2036.5" height="20"/>
+                                        <rect key="frame" x="28" y="32" width="263" height="20"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -3669,29 +3715,29 @@ PAK1219522</string>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3mO-fT-hPd">
-                                <rect key="frame" x="0.0" y="76" width="2093.5" height="492"/>
+                                <rect key="frame" x="0.0" y="76" width="320" height="492"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About Us" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ici-Ib-oz7">
-                                        <rect key="frame" x="8" y="128" width="2077.5" height="23"/>
+                                        <rect key="frame" x="8" y="128" width="304" height="23"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V9z-8B-5xA">
-                                        <rect key="frame" x="8" y="154" width="2077.5" height="14.5"/>
+                                        <rect key="frame" x="8" y="154" width="304" height="115"/>
                                         <string key="text">Pakistan Drug Manual is serving medical professionals for the past 25 years and now the manual is mobile-optimized. Pakistan Drug Manual includes key information on the selection, prescribing, dispensing and administration of medicines. This drug manual is a detailed guide divided in by generic, brands, and therapeutic index of each medicine available in Pakistan. </string>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KEY FEATURES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OXz-MA-AZh">
-                                        <rect key="frame" x="8" y="173.5" width="2077.5" height="23"/>
+                                        <rect key="frame" x="8" y="274" width="304" height="23"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DYu-Cs-wjH">
-                                        <rect key="frame" x="8" y="201.5" width="2077.5" height="158"/>
+                                        <rect key="frame" x="8" y="302" width="304" height="172"/>
                                         <string key="text">•	Generic vs brand comparison of drugs 
 •	Clinical pharmacology of medicines 
 •	Indications and contraindications  
@@ -3703,14 +3749,14 @@ PAK1219522</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tLi-tc-TMP">
-                                        <rect key="frame" x="8" y="364.5" width="2077.5" height="14.5"/>
+                                        <rect key="frame" x="8" y="479" width="304" height="43"/>
                                         <string key="text">Our aim is providing precise, updated drug information to healthcare professionals with related publications and researches for rapid referencing. </string>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pak-Drug-Manual" translatesAutoresizingMaskIntoConstraints="NO" id="rXu-iT-qFA">
-                                        <rect key="frame" x="16" y="8" width="2061.5" height="110"/>
+                                        <rect key="frame" x="16" y="8" width="288" height="110"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -3762,7 +3808,7 @@ PAK1219522</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ijr-al-MYQ">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="medcon-tabbar-icon" translatesAutoresizingMaskIntoConstraints="NO" id="57K-e7-zQg">
                                         <rect key="frame" x="13" y="8" width="87" height="44"/>
@@ -3783,7 +3829,7 @@ PAK1219522</string>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qSw-5m-87g">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="259"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="259"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DOL" translatesAutoresizingMaskIntoConstraints="NO" id="P2j-AZ-EUL">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="259"/>
@@ -3793,7 +3839,7 @@ PAK1219522</string>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Digital Opinion Leaders Talks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8sW-I0-XgU">
-                                        <rect key="frame" x="8" y="110" width="304" height="19.5"/>
+                                        <rect key="frame" x="8" y="110" width="359" height="19.5"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -3810,21 +3856,21 @@ PAK1219522</string>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZgY-qp-P7y">
-                                <rect key="frame" x="0.0" y="263" width="320" height="305"/>
+                                <rect key="frame" x="0.0" y="263" width="375" height="305"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="dolsCell" rowHeight="247" id="JAW-Fp-Hdg" customClass="DolsTableViewCell" customModule="medcon_swift" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="320" height="247"/>
+                                        <rect key="frame" x="0.0" y="50" width="375" height="247"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JAW-Fp-Hdg" id="1eG-sa-KRH">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="247"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="247"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DOL" translatesAutoresizingMaskIntoConstraints="NO" id="Th2-dH-Vmd">
-                                                    <rect key="frame" x="9" y="11" width="301" height="225"/>
+                                                    <rect key="frame" x="9" y="11" width="356" height="225"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CLINICAL ANATOMY OF THYROID GLAND | Dr.Saima Askari" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tOm-Qe-jAh">
-                                                    <rect key="frame" x="16" y="182" width="288" height="54"/>
+                                                    <rect key="frame" x="16" y="182" width="343" height="54"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="54" id="UWV-ff-WGi"/>
                                                         <constraint firstAttribute="width" constant="343" id="hjL-9D-QU9"/>
@@ -4687,7 +4733,7 @@ PAK1219522</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="LfH-qM-wav"/>
+        <segue reference="3ds-HY-vgQ"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Article-banner" width="825" height="409"/>

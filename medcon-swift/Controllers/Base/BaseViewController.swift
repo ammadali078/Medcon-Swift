@@ -139,6 +139,10 @@ class BaseViewController: UIViewController, SideMenuDelegate {
             
             CommonUtils.saveJsonToUserDefaults(forKey: Constants.ammad, withJson: token)
             
+            CommonUtils.saveJsonToUserDefaults(forKey: Constants.checkEmail, withJson: "")
+            
+            CommonUtils.saveJsonToUserDefaults(forKey: Constants.checkPass, withJson: "")
+            
             guard let delegate = self.view.window?.windowScene?.delegate as? SceneDelegate else { return }
             delegate.logOutUser()
         }

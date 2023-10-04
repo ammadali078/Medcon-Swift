@@ -15,6 +15,8 @@ import FittedSheets
 import AVKit
 import Alamofire
 import ObjectMapper
+import FirebaseDatabase
+import FirebaseAuth
 
 class HomeViewController: BaseViewController, UICollectionViewDelegate,UICollectionViewDataSource{
     
@@ -23,6 +25,11 @@ class HomeViewController: BaseViewController, UICollectionViewDelegate,UICollect
     let vm = HomeViewModel()
     
     var ApiResult : [DataVideos] = []
+    
+    var expenseData : [GetAllBrandData] = []
+    
+    var BrandData : [AllBrandData] = []
+    
     
     let baseUrl = "http://medconwebapi-v3.digitrends.pk"
     
@@ -52,8 +59,38 @@ class HomeViewController: BaseViewController, UICollectionViewDelegate,UICollect
     @IBOutlet weak var textLabel2: UILabel!
     @IBOutlet weak var comingSoonBanner: UIImageView!
     
+    var ref: DatabaseReference!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //        let postRef = Database.database().reference().child("version/ios").childByAutoId()
+        
+        ref = Database.database().reference()
+        
+        
+        ref.child("version/ios/-NccAkdfQBlTQfxUCZrL").observeSingleEvent(of: .value, with: { (snapshot) in
+            // Get user value
+            let value = snapshot.value as? NSDictionary
+            let score = value?["version"] as? String ?? ""
+            let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
+            
+            if score == appVersion {
+                
+                print("ok")
+            }else {
+                CommonUtils.showMsgDialogWithupdate(showingPopupOn: self, withTitle: "Medcon", withMessage: "There is an Update available! Please update to use this App", onOkClicked: {() in
+                    if let url = URL(string: "itms-apps://itunes.apple.com/app/medcon-2019/id1387008793") {
+                        UIApplication.shared.open(url)
+                    }
+                })
+                
+            }
+            
+            // ...
+        }) { (error) in
+            print(error.localizedDescription)
+        }
         
         self.textLabel1.isHidden = true
         self.textLabel2.isHidden = true
@@ -61,6 +98,33 @@ class HomeViewController: BaseViewController, UICollectionViewDelegate,UICollect
         eMslMainView.layer.masksToBounds = true
         
         self.getPlann()
+        self.postFcm()
+        
+        let speciality = CommonUtils.getJsonFromUserDefaults(forKey: Constants.catId)
+        
+        if speciality == "3" {
+            self.vm.selectedSpeciality = .Gastroenterology
+        }else if speciality == "7" {
+            self.vm.selectedSpeciality = .WomenMenHealth
+        }else if speciality == "6" {
+            self.vm.selectedSpeciality = .Respiratory
+        }else if speciality == "5" {
+            self.vm.selectedSpeciality = .Pediatrics
+        }else if speciality == "9" {
+            self.vm.selectedSpeciality = .Pain
+        }else if speciality == "2" {
+            self.vm.selectedSpeciality = .CNS
+        }else if speciality == "4" {
+            self.vm.selectedSpeciality = .General
+        }
+        
+        //        DispatchQueue.global(qos: .userInitiated).async {
+        //            print("This is run on a background queue")
+        //
+        //            DispatchQueue.main.async {
+        //                self.getBrand()
+        //            }
+        //        }
         
     }
     
@@ -89,6 +153,47 @@ class HomeViewController: BaseViewController, UICollectionViewDelegate,UICollect
         videosCarouselView.backgroundColor = .clear
     }
     
+    
+    
+    func postFcm(){
+        
+        let fcmToken = CommonUtils.getJsonFromUserDefaults(forKey: Constants.fcm)
+        let UserId = CommonUtils.getJsonFromUserDefaults(forKey: Constants.EmpId)
+        
+        let ammad = Int(UserId) ?? 0
+        
+        let params: Parameters = [
+            "fcm": fcmToken,
+            "UserId": 1,
+            "TopicId": "medcon"
+        ]
+        
+        AF.request(Constants.addFcm, method: .post, parameters: params, encoding: JSONEncoding.default, headers: nil)
+            .responseString(completionHandler: {(response) in
+                // On Response
+                
+                //On Dialog Close
+                if (response.error != nil) {
+                    //                    CommonUtils.showMsgDialog(showingPopupOn: self, withTitle: "", withMessage: (response.error?.localizedDescription)!)
+                    CommonUtils.showMsgDialog(showingPopupOn: self, withTitle: "Medcon", withMessage: "Please connect to internet and try again")
+                    return
+                }
+                
+                let fcmModel = Mapper<FcmModel>().map(JSONString: response.value!) //JSON to model
+                
+                if fcmModel != nil {
+                    
+                    if fcmModel?.success == true {
+                        
+                    } else {
+                        CommonUtils.showMsgDialog(showingPopupOn: self, withTitle: "", withMessage: "inValid")
+                    }
+                } else {
+                    CommonUtils.showMsgDialog(showingPopupOn: self, withTitle: "", withMessage: "Failed to connect to server, Please check your internet connection")
+                }
+            })
+    }
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         let VideoUrl = ApiResult[indexPath.row].videoUrl ?? ""
@@ -115,7 +220,6 @@ class HomeViewController: BaseViewController, UICollectionViewDelegate,UICollect
         
         let imageUrl = ApiResult[indexPath.row].imageUrl ?? ""
         let VideoUrl = ApiResult[indexPath.row].videoUrl ?? ""
-        
         let title = ApiResult[indexPath.row].title
         
         if title == "" {
@@ -141,7 +245,6 @@ class HomeViewController: BaseViewController, UICollectionViewDelegate,UICollect
                 
                 //On Dialog Close
                 if (response.error != nil) {
-//                    CommonUtils.showMsgDialog(showingPopupOn: self, withTitle: "", withMessage: (response.error?.localizedDescription)!)
                     CommonUtils.showMsgDialog(showingPopupOn: self, withTitle: "Medcon", withMessage: "Please connect to internet and try again")
                     return
                 }
@@ -162,28 +265,77 @@ class HomeViewController: BaseViewController, UICollectionViewDelegate,UICollect
                             
                             self.textLabel1.isHidden = false
                             self.textLabel2.isHidden = false
-                            
                             self.textLabel1.text = "VIDEO LIBRARY"
                             self.textLabel2.text = "COMING SOON"
-                            
                             self.ApiResult = TypeID
-                            
                             self.EmslCollectionView.reloadData()
                             
                         }else {
                             
                             self.textLabel1.isHidden = true
                             self.textLabel2.isHidden = true
-                            
                             self.ApiResult = TypeID
-                            
                             self.EmslCollectionView.reloadData()
+                            
                         }
-                        
-                        
                         
                     } else {
                         CommonUtils.showMsgDialog(showingPopupOn: self, withTitle: "", withMessage: (dollsModel?.message!)!)
+                    }
+                } else {
+                    CommonUtils.showMsgDialog(showingPopupOn: self, withTitle: "", withMessage: "Failed to connect to server, Please check your internet connection")
+                }
+                
+            })
+    }
+    
+    func getBrand(){
+        
+        var  parms = Dictionary<String, Any>()
+        
+        parms["token"] = "71745275081679";
+        parms["page"] = 1;
+        
+        AF.request(Constants.allBrandApi, method: .get, parameters: parms, encoding: URLEncoding(destination: .queryString), headers: nil)
+            .responseString(completionHandler: {(response) in
+                // On Response
+                
+                //On Dialog Close
+                if (response.error != nil) {
+                    CommonUtils.showMsgDialog(showingPopupOn: self, withTitle: "Medcon", withMessage: "Please connect to internet and try again")
+                    return
+                }
+                
+                let allBrandModel = Mapper<AllBrandModel>().map(JSONString: response.value!) //JSON to model
+                
+                if allBrandModel != nil {
+                    
+                    if allBrandModel?.status == "success" {
+                        
+                        var data = CommonUtils.getJsonFromUserDefaults(forKey: Constants.saveBrandData)
+                        if (data == "") {data = "[]"}
+                        
+                        var saveAllBrands:[GetAllBrandData] = Mapper<GetAllBrandData>().mapArray(JSONString: data)!
+                        
+                        var saveAllBrand = GetAllBrandData(map: Map(mappingType: .fromJSON, JSON: [:]))
+                        
+                        for getValue in (allBrandModel?.data ?? [] as [AllBrandData]) {
+                            
+                            saveAllBrand?.id = getValue.id
+                            saveAllBrand?.brand = getValue.brand
+                        }
+                        
+                        saveAllBrands.append(saveAllBrand!)
+                        
+                        let expensesJsonString = Mapper().toJSONString(saveAllBrands)!
+                        
+                        CommonUtils.saveJsonToUserDefaults(forKey: Constants.saveBrandData, withJson: expensesJsonString)
+                        
+                        
+                    } else {
+                        
+                        CommonUtils.showMsgDialog(showingPopupOn: self, withTitle: "Pakistan", withMessage: "Pakistan zindabad")
+                        
                     }
                 } else {
                     CommonUtils.showMsgDialog(showingPopupOn: self, withTitle: "", withMessage: "Failed to connect to server, Please check your internet connection")
@@ -248,14 +400,18 @@ class HomeViewController: BaseViewController, UICollectionViewDelegate,UICollect
     
     @IBAction func onDrugsClick(_ sender: Any) {
         
+        
+        fatalError("Crash was triggered")
+        
         let secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "DrugManualScreen") as! DrugManualViewController
         self.navigationController?.pushViewController(secondViewController, animated: true)
         
     }
+    
     @IBAction func onPAMClick(_ sender: Any) {
         
-       let vc = self.storyboard?.instantiateViewController(withIdentifier: "PAMScene") as! PAMViewController
-       self.navigationController?.pushViewController(vc, animated: true)
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "PAMScene") as! PAMViewController
+        self.navigationController?.pushViewController(vc, animated: true)
         
     }
     
@@ -290,17 +446,25 @@ class HomeViewController: BaseViewController, UICollectionViewDelegate,UICollect
     
     @IBAction func tappedMslArticle(_ sender: Any) {
         
-        if mslOneTitle.text == "Articles Coming Soon" {
-            
+        if comingSoonBanner.image == UIImage(named: "Article-banner") {
             return
-        }else {
+            
+        }else{
+            
             guard let journal = vm.journalResponseData else { return }
             if let data = journal.data.first(where: {$0.categoryID == vm.selectedSpeciality.GetID}) {
                 let filteredData = data.newsJournal.filter({ $0.type == "MSL" })
                 let j = filteredData[(sender as AnyObject).tag]
                 gotoArticleDetailPage(journal: j)
             }
+            
         }
+        
+        //        if mslOneTitle.text == "Articles Coming Soon" {
+        //            return
+        //        }else {
+        //
+        //        }
         
     }
     

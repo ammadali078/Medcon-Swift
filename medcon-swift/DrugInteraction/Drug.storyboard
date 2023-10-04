@@ -48,18 +48,18 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="320" height="125"/>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DRUG INTERACTION TOOL" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SFk-oi-ESg">
-                                                        <rect key="frame" x="30" y="35" width="261" height="64.5"/>
-                                                        <fontDescription key="fontDescription" name="BrandonGrotesque-Black" family="Brandon Grotesque" pointSize="15"/>
+                                                        <rect key="frame" x="30" y="18" width="261" height="91"/>
+                                                        <fontDescription key="fontDescription" name="BrandonGrotesque-Black" family="Brandon Grotesque" pointSize="17"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
-                                                    <constraint firstItem="SFk-oi-ESg" firstAttribute="top" secondItem="8Ye-Ep-v1b" secondAttribute="top" constant="35" id="3vI-dd-OJn"/>
+                                                    <constraint firstItem="SFk-oi-ESg" firstAttribute="top" secondItem="8Ye-Ep-v1b" secondAttribute="top" constant="18" id="3vI-dd-OJn"/>
                                                     <constraint firstItem="xRo-Z2-ddE" firstAttribute="width" secondItem="8Ye-Ep-v1b" secondAttribute="width" id="EQs-Yr-HFV"/>
                                                     <constraint firstItem="SFk-oi-ESg" firstAttribute="width" secondItem="8Ye-Ep-v1b" secondAttribute="width" multiplier="0.815625" id="MqT-4J-4iX"/>
-                                                    <constraint firstItem="SFk-oi-ESg" firstAttribute="height" secondItem="8Ye-Ep-v1b" secondAttribute="height" multiplier="0.516" id="NTW-38-clm"/>
+                                                    <constraint firstItem="SFk-oi-ESg" firstAttribute="height" secondItem="8Ye-Ep-v1b" secondAttribute="height" multiplier="0.516" constant="26.5" id="NTW-38-clm"/>
                                                     <constraint firstItem="SFk-oi-ESg" firstAttribute="leading" secondItem="8Ye-Ep-v1b" secondAttribute="leading" constant="30" id="Q43-cR-J2j"/>
                                                     <constraint firstItem="xRo-Z2-ddE" firstAttribute="top" secondItem="8Ye-Ep-v1b" secondAttribute="top" id="QSB-9h-6R8"/>
                                                     <constraint firstAttribute="bottom" secondItem="xRo-Z2-ddE" secondAttribute="bottom" id="Szh-yF-OCf"/>
@@ -79,7 +79,7 @@
                                                                 <rect key="frame" x="15" y="13" width="291" height="15.5"/>
                                                                 <string key="text">Enter a drug, OTC or herbal supplement:
 </string>
-                                                                <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="13"/>
+                                                                <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="15"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
@@ -162,46 +162,46 @@
                                                                     <constraint firstAttribute="width" constant="283" id="CeD-gZ-0hC"/>
                                                                     <constraint firstAttribute="height" constant="26" id="NWP-GX-8L6"/>
                                                                 </constraints>
-                                                                <fontDescription key="fontDescription" name="BrandonGrotesque-Black" family="Brandon Grotesque" pointSize="18"/>
+                                                                <fontDescription key="fontDescription" name="BrandonGrotesque-Black" family="Brandon Grotesque" pointSize="20"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tick" translatesAutoresizingMaskIntoConstraints="NO" id="rI0-HH-YHl">
-                                                                <rect key="frame" x="19" y="93" width="18" height="18"/>
+                                                                <rect key="frame" x="19" y="103" width="18" height="18"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="18" id="Wa7-jd-oKx"/>
                                                                     <constraint firstAttribute="width" constant="18" id="rXu-m6-cz0"/>
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BLM-Cc-6dT">
-                                                                <rect key="frame" x="53" y="83" width="239" height="60"/>
+                                                                <rect key="frame" x="53" y="93" width="239" height="77"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="239" id="uIo-zD-tx0"/>
-                                                                    <constraint firstAttribute="height" constant="60" id="yEn-b5-q1L"/>
+                                                                    <constraint firstAttribute="height" constant="77" id="yEn-b5-q1L"/>
                                                                 </constraints>
                                                                 <string key="text">Use the search field above to look up
 prescription or OTC drugs, and herbal
 supplements</string>
-                                                                <fontDescription key="fontDescription" name="BrandonGrotesque-Medium" family="Brandon Grotesque" pointSize="13"/>
+                                                                <fontDescription key="fontDescription" name="BrandonGrotesque-Medium" family="Brandon Grotesque" pointSize="15"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tick" translatesAutoresizingMaskIntoConstraints="NO" id="ndf-g1-M9j">
-                                                                <rect key="frame" x="19" y="168" width="18" height="18"/>
+                                                                <rect key="frame" x="19" y="188" width="18" height="18"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="18" id="kdw-2J-Rpd"/>
                                                                     <constraint firstAttribute="width" constant="18" id="neg-WN-llt"/>
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PwL-lc-M3k">
-                                                                <rect key="frame" x="53" y="158" width="239" height="60"/>
+                                                                <rect key="frame" x="53" y="178" width="239" height="61"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="height" constant="60" id="V8g-Xo-6qe"/>
+                                                                    <constraint firstAttribute="height" constant="61" id="V8g-Xo-6qe"/>
                                                                     <constraint firstAttribute="width" constant="239" id="o92-BR-HbR"/>
                                                                 </constraints>
                                                                 <string key="text">Add a full drug regimen and view
 interactions</string>
-                                                                <fontDescription key="fontDescription" name="BrandonGrotesque-Medium" family="Brandon Grotesque" pointSize="13"/>
+                                                                <fontDescription key="fontDescription" name="BrandonGrotesque-Medium" family="Brandon Grotesque" pointSize="15"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
@@ -211,19 +211,19 @@ interactions</string>
                                                             <constraint firstAttribute="trailing" secondItem="PwL-lc-M3k" secondAttribute="trailing" constant="28" id="8AL-Un-P6L"/>
                                                             <constraint firstItem="id4-1S-MZV" firstAttribute="height" secondItem="oCL-Ff-Fur" secondAttribute="height" id="BO1-CW-ovb"/>
                                                             <constraint firstItem="PwL-lc-M3k" firstAttribute="leading" secondItem="ndf-g1-M9j" secondAttribute="trailing" constant="16" id="Dey-Nr-z3R"/>
-                                                            <constraint firstItem="BLM-Cc-6dT" firstAttribute="top" secondItem="4lL-hc-ez0" secondAttribute="bottom" constant="25" id="DsX-Oa-zhG"/>
+                                                            <constraint firstItem="BLM-Cc-6dT" firstAttribute="top" secondItem="4lL-hc-ez0" secondAttribute="bottom" constant="35" id="DsX-Oa-zhG"/>
                                                             <constraint firstItem="id4-1S-MZV" firstAttribute="leading" secondItem="oCL-Ff-Fur" secondAttribute="leading" id="Egr-Ox-8Jn"/>
                                                             <constraint firstItem="id4-1S-MZV" firstAttribute="top" secondItem="oCL-Ff-Fur" secondAttribute="top" id="HR5-jo-cu5"/>
                                                             <constraint firstItem="id4-1S-MZV" firstAttribute="width" secondItem="oCL-Ff-Fur" secondAttribute="width" id="HTu-Jq-dlZ"/>
                                                             <constraint firstItem="4lL-hc-ez0" firstAttribute="top" secondItem="oCL-Ff-Fur" secondAttribute="top" constant="32" id="Hdg-6u-Cqk"/>
                                                             <constraint firstItem="id4-1S-MZV" firstAttribute="width" secondItem="oCL-Ff-Fur" secondAttribute="width" id="JqC-SG-T3u"/>
                                                             <constraint firstItem="BLM-Cc-6dT" firstAttribute="leading" secondItem="rI0-HH-YHl" secondAttribute="trailing" constant="16" id="P3S-jm-Ifa"/>
-                                                            <constraint firstItem="PwL-lc-M3k" firstAttribute="top" secondItem="BLM-Cc-6dT" secondAttribute="bottom" constant="15" id="TN9-RW-01t"/>
+                                                            <constraint firstItem="PwL-lc-M3k" firstAttribute="top" secondItem="BLM-Cc-6dT" secondAttribute="bottom" constant="8" id="TN9-RW-01t"/>
                                                             <constraint firstItem="ndf-g1-M9j" firstAttribute="leading" secondItem="oCL-Ff-Fur" secondAttribute="leading" constant="19" id="TWy-sy-RHf"/>
                                                             <constraint firstAttribute="bottom" secondItem="id4-1S-MZV" secondAttribute="bottom" id="YDG-N1-5fO"/>
-                                                            <constraint firstItem="rI0-HH-YHl" firstAttribute="top" secondItem="4lL-hc-ez0" secondAttribute="bottom" constant="35" id="ZBy-de-W5u"/>
+                                                            <constraint firstItem="rI0-HH-YHl" firstAttribute="top" secondItem="4lL-hc-ez0" secondAttribute="bottom" constant="45" id="ZBy-de-W5u"/>
                                                             <constraint firstItem="4lL-hc-ez0" firstAttribute="leading" secondItem="oCL-Ff-Fur" secondAttribute="leading" constant="19" id="alS-BL-KeP"/>
-                                                            <constraint firstItem="ndf-g1-M9j" firstAttribute="top" secondItem="rI0-HH-YHl" secondAttribute="bottom" constant="57" id="awa-Xq-xIr"/>
+                                                            <constraint firstItem="ndf-g1-M9j" firstAttribute="top" secondItem="rI0-HH-YHl" secondAttribute="bottom" constant="67" id="awa-Xq-xIr"/>
                                                             <constraint firstAttribute="trailing" secondItem="id4-1S-MZV" secondAttribute="trailing" id="d7E-m3-63P"/>
                                                             <constraint firstItem="rI0-HH-YHl" firstAttribute="leading" secondItem="oCL-Ff-Fur" secondAttribute="leading" constant="19" id="hFc-Dl-6Zs"/>
                                                             <constraint firstAttribute="trailing" secondItem="BLM-Cc-6dT" secondAttribute="trailing" constant="28" id="lwn-Wx-zMf"/>

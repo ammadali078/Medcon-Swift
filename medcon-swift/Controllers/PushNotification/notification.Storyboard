@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Bold.ttf">
+            <string>Roboto-Bold</string>
+        </array>
+        <array key="Roboto-Medium.ttf">
+            <string>Roboto-Medium</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Notification View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="NotificationViewScene" id="Y6W-OH-hqX" customClass="NotificationViewController" customModule="medcon_swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Nsc-3k-bw4">
+                                <rect key="frame" x="0.0" y="63" width="393" height="789"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="393" id="AH2-hL-Pbl"/>
+                                    <constraint firstAttribute="height" constant="789" id="wuL-cV-juQ"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="lOZ-SQ-bA2">
+                                    <size key="itemSize" width="366" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="NotifyCollectionCell" id="5Gz-Kw-baP" customClass="NotifyCollectionViewCell" customModule="medcon_swift" customModuleProvider="target">
+                                        <rect key="frame" x="13.666666666666666" y="0.0" width="366" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="4UI-XP-HMz">
+                                            <rect key="frame" x="0.0" y="0.0" width="366" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notification Alll text" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DhC-rv-o0h">
+                                                    <rect key="frame" x="8" y="10" width="350" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="350" id="2EA-co-sxz"/>
+                                                        <constraint firstAttribute="height" constant="21" id="uhs-ok-iHV"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UeT-Kz-lvX">
+                                                    <rect key="frame" x="8" y="36" width="350" height="80"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="350" id="EGZ-fh-GPZ"/>
+                                                        <constraint firstAttribute="height" constant="80" id="laN-DH-CPJ"/>
+                                                    </constraints>
+                                                    <string key="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard asdasdasdasdasdasd</string>
+                                                    <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DZG-s4-gaO">
+                                                    <rect key="frame" x="8" y="121" width="350" height="1"/>
+                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="350" id="nIg-4H-n8G"/>
+                                                        <constraint firstAttribute="height" constant="1" id="sJm-XG-VrV"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="UeT-Kz-lvX" firstAttribute="leading" secondItem="4UI-XP-HMz" secondAttribute="leading" constant="8" id="1tx-gl-VJh"/>
+                                                <constraint firstItem="DhC-rv-o0h" firstAttribute="top" secondItem="4UI-XP-HMz" secondAttribute="top" constant="10" id="2SS-Ph-3Fa"/>
+                                                <constraint firstItem="UeT-Kz-lvX" firstAttribute="top" secondItem="DhC-rv-o0h" secondAttribute="bottom" constant="5" id="CSV-vH-BSZ"/>
+                                                <constraint firstItem="DZG-s4-gaO" firstAttribute="leading" secondItem="4UI-XP-HMz" secondAttribute="leading" constant="8" id="Qil-N2-wuV"/>
+                                                <constraint firstItem="DhC-rv-o0h" firstAttribute="leading" secondItem="4UI-XP-HMz" secondAttribute="leading" constant="8" id="YOb-f8-lB5"/>
+                                                <constraint firstAttribute="bottom" secondItem="DZG-s4-gaO" secondAttribute="bottom" constant="6" id="c3W-Hg-3Nk"/>
+                                                <constraint firstAttribute="trailing" secondItem="DhC-rv-o0h" secondAttribute="trailing" constant="8" id="di6-Nu-DeK"/>
+                                                <constraint firstItem="DZG-s4-gaO" firstAttribute="top" secondItem="UeT-Kz-lvX" secondAttribute="bottom" constant="5" id="h6S-DH-rg6"/>
+                                                <constraint firstAttribute="trailing" secondItem="DZG-s4-gaO" secondAttribute="trailing" constant="8" id="pdf-J8-nBw"/>
+                                                <constraint firstAttribute="trailing" secondItem="UeT-Kz-lvX" secondAttribute="trailing" constant="8" id="rpK-Y7-mtj"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="366" height="128"/>
+                                        <connections>
+                                            <outlet property="notifyDescLabel" destination="UeT-Kz-lvX" id="2qK-IS-ZvB"/>
+                                            <outlet property="notifyTitleLabel" destination="DhC-rv-o0h" id="NWd-0r-CrQ"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Nsc-3k-bw4" secondAttribute="bottom" id="6mA-rm-tv5"/>
+                            <constraint firstItem="Nsc-3k-bw4" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="4" id="OhT-5c-2td"/>
+                            <constraint firstItem="Nsc-3k-bw4" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="ovT-Xw-H0T"/>
+                            <constraint firstItem="Nsc-3k-bw4" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="r8t-cx-yYO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="notifyCollectionViewOutlet" destination="Nsc-3k-bw4" id="MYs-j6-5yW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="41.984732824427482" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

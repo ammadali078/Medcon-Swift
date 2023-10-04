@@ -10,6 +10,7 @@ import Alamofire
 import JGProgressHUD
 
 class AticleDetailViewController: BaseViewController {
+    
     @IBOutlet weak var specialityTitle: UILabel!
     @IBOutlet weak var specialityBannerTitle: UILabel!
     @IBOutlet weak var specialityIcon: UIImageView!
@@ -39,7 +40,6 @@ class AticleDetailViewController: BaseViewController {
         articleImage.layer.masksToBounds = true
         articleView.backgroundColor = selectedSpeciality.titleBackgroundColor.withAlphaComponent(0.3)
         articleLabel.textColor = selectedSpeciality.titleBackgroundColor
-        
     }
     
     private func setupUI() {

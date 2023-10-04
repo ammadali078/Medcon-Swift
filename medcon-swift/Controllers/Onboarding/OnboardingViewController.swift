@@ -7,6 +7,9 @@
 
 import UIKit
 
+import FirebaseDatabase
+import FirebaseAuth
+
 class OnboardingViewController: UIViewController {
     
     
@@ -14,12 +17,43 @@ class OnboardingViewController: UIViewController {
     @IBOutlet weak var stackViewIndicator: UIStackView!
     private var indicatorView: PageIndicatorView!
     private var stackViewPages: UIStackView!
+    var ref: DatabaseReference!
     
     var pages: [OboardingCarouselModel] = [OboardingCarouselModel]()
     private var currentPageIndex: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        ref = Database.database().reference()
+       
+
+        ref.child("version/ios/-NccAkdfQBlTQfxUCZrL").observeSingleEvent(of: .value, with: { (snapshot) in
+                // Get user value
+                let value = snapshot.value as? NSDictionary
+                let score = value?["version"] as? String ?? ""
+                let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
+            
+                if score == appVersion {
+                   
+                    print("ali")
+                }else {
+                    
+                    CommonUtils.showMsgDialogWithupdate(showingPopupOn: self, withTitle: "Medcon", withMessage: "There is an Update available! Please update to use this App", onOkClicked: {() in
+                        if let url = URL(string: "itms-apps://itunes.apple.com/app/medcon-2019/id1387008793") {
+                            UIApplication.shared.open(url)
+//                            self.token = "0"
+//                            CommonUtils.saveJsonToUserDefaults(forKey: Constants.ammad, withJson: self.token)
+                        }
+                    })
+                    
+                    
+                }
+            
+                // ...
+            }) { (error) in
+                    print(error.localizedDescription)
+        }
         
         setupUI()
     }

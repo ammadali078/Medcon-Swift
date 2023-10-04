@@ -29,10 +29,13 @@ extension EndpointItem: EndPointType {
     
     var baseURL: String {
         switch APIManager.networkEnviroment {
+//            case .dev: return "http://medcon-webapi-beta.digitrends.pk"
             case .dev: return "http://medconwebapi-v3.digitrends.pk"
             case .production: return "http://medconwebapi-v3.digitrends.pk"
+//            case .production: return "http://medcon-webapi-beta.digitrends.pk"
         }
     }
+    
     
     var version: String {
         return ""

@@ -7,13 +7,28 @@
 
 import Foundation
 import UIKit
+import ObjectMapper
 
 class DrugManualViewController: UIViewController {
     @IBOutlet weak var searchBar: UITextField!
     
+    @IBOutlet weak var brandNameCollectionView: UICollectionView!
+    
+    var bannerListDataSource: BrandCollectionViewCell!
+    var getBrandName:[GetAllBrandData] = []
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        bannerListDataSource = BrandCollectionViewCell()
+        brandNameCollectionView.dataSource = bannerListDataSource
+        
+        var data = CommonUtils.getJsonFromUserDefaults(forKey: Constants.saveBrandData)
+        
+        if (data == "") {data = "[]"}
+        self.getBrandName = Mapper<GetAllBrandData>().mapArray(JSONString: data)!
+        
         
         let btn1 = "0"
         CommonUtils.saveJsonToUserDefaults(forKey: Constants.btn, withJson: btn1)
@@ -31,8 +46,6 @@ class DrugManualViewController: UIViewController {
         // create custom left bar button item
         let rightBarButtonItem = UIBarButtonItem(customView: hamButton)
         navigationItem.rightBarButtonItem = rightBarButtonItem
-        
-        
         
         searchBar.attributedPlaceholder = NSAttributedString(
             string: "  Search",
@@ -63,11 +76,13 @@ class DrugManualViewController: UIViewController {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "DetailViewscreen") as! DetailViewController
         self.navigationController?.pushViewController(vc, animated: true)
     }
+    
     @IBAction func btnIndex(_ sender: Any) {
         CommonUtils.saveJsonToUserDefaults(forKey: Constants.btn, withJson: "2")
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "DetailViewscreen") as! DetailViewController
         self.navigationController?.pushViewController(vc, animated: true)
     }
+    
     @IBAction func btnBrands(_ sender: Any) {
         
         self.showToast(controller: self, message: "Coming Soon", seconds: 2)

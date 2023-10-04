@@ -81,7 +81,7 @@ class DetailViewController: UIViewController,UISearchBarDelegate{
         
         var  parms = Dictionary<String, Any>()
         
-        parms["token"] = "85677466274605";
+        parms["token"] = "71745275081679";
         parms["page"] = 1;
         
         AF.request(Constants.BrandApi, method: .get, parameters: parms, encoding: URLEncoding(destination: .queryString), headers: nil)
@@ -119,7 +119,7 @@ class DetailViewController: UIViewController,UISearchBarDelegate{
         
         var  parms = Dictionary<String, String>()
         
-        parms["token"] = "85677466274605";
+        parms["token"] = "71745275081679";
         
         AF.request(Constants.FecturerApi, method: .get, parameters: parms, encoding: URLEncoding(destination: .queryString), headers: nil)
             .responseString(completionHandler: {(response) in
@@ -158,7 +158,7 @@ class DetailViewController: UIViewController,UISearchBarDelegate{
         
         var  parms = Dictionary<String, String>()
         
-        parms["token"] = "85677466274605";
+        parms["token"] = "71745275081679";
         
         AF.request(Constants.AvailableApi, method: .get, parameters: parms, encoding: URLEncoding(destination: .queryString), headers: nil)
             .responseString(completionHandler: {(response) in
@@ -198,7 +198,7 @@ class DetailViewController: UIViewController,UISearchBarDelegate{
         
         var  parms = Dictionary<String, String>()
         
-        parms["token"] = "85677466274605";
+        parms["token"] = "71745275081679";
         
         AF.request(Constants.DrugInterApi, method: .get, parameters: parms, encoding: URLEncoding(destination: .queryString), headers: nil)
             .responseString(completionHandler: {(response) in
@@ -246,7 +246,7 @@ class DetailViewController: UIViewController,UISearchBarDelegate{
             
             var  parms = Dictionary<String, Any>()
             
-            parms["token"] = "85677466274605";
+            parms["token"] = "71745275081679";
             parms["page"] = index;
             
             AF.request(Constants.BrandApi, method: .get, parameters: parms, encoding: URLEncoding(destination: .queryString), headers: nil)
@@ -292,7 +292,7 @@ class DetailViewController: UIViewController,UISearchBarDelegate{
             
             var  parms = Dictionary<String, Any>()
             
-            parms["token"] = "85677466274605";
+            parms["token"] = "71745275081679";
             parms["page"] = index;
             
             AF.request(Constants.FecturerApi, method: .get, parameters: parms, encoding: URLEncoding(destination: .queryString), headers: nil)
@@ -337,7 +337,7 @@ class DetailViewController: UIViewController,UISearchBarDelegate{
             
             var  parms = Dictionary<String, Any>()
             
-            parms["token"] = "85677466274605";
+            parms["token"] = "71745275081679";
             parms["page"] = index;
             
             AF.request(Constants.AvailableApi, method: .get, parameters: parms, encoding: URLEncoding(destination: .queryString), headers: nil)
@@ -384,7 +384,7 @@ class DetailViewController: UIViewController,UISearchBarDelegate{
             
             var  parms = Dictionary<String, Any>()
             
-            parms["token"] = "85677466274605";
+            parms["token"] = "71745275081679";
             parms["page"] = index;
             
             AF.request(Constants.DrugInterApi, method: .get, parameters: parms, encoding: URLEncoding(destination: .queryString), headers: nil)

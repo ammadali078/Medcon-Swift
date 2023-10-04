@@ -45,7 +45,7 @@ class DrugInterActionViewController: UIViewController,UISearchBarDelegate{
         DrugInteractionDataSource = MEDListCollectionCell()
         DrugCollectionView.dataSource = DrugInteractionDataSource
         self.noResultView.isHidden = true
-        noResultLabel.text = "No sreach Result"
+        noResultLabel.text = "No search Result"
         
         DrugInteractionDataSource.onStartClick = {Candidate in
             self.onStartClick(Candidate: Candidate)
@@ -107,8 +107,6 @@ class DrugInterActionViewController: UIViewController,UISearchBarDelegate{
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
-        
-        
         if searchBar.text == "" {
             
             self.noResultView.isHidden = true
@@ -135,8 +133,6 @@ class DrugInterActionViewController: UIViewController,UISearchBarDelegate{
 //                self.noResultLabel.text = "Wrong"
 //            }
            
-           
-            
             if getMed == "" && getMed == "," {
                 self.DrugCollectionView.isHidden = true
                 return
@@ -179,7 +175,6 @@ class DrugInterActionViewController: UIViewController,UISearchBarDelegate{
         }
         
     }
-    
     
     func GetMedName() {
         

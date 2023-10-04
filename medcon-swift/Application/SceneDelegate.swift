@@ -7,11 +7,14 @@
 
 import UIKit
 import JGProgressHUD
+import FirebaseDatabase
+import FirebaseAuth
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
     let hud = JGProgressHUD()
+    var ref: DatabaseReference!
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
@@ -27,6 +30,44 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         self.window = window
         window.makeKeyAndVisible()
+        
+        ref = Database.database().reference()
+        
+        
+        ref.child("version/ios/-NccAkdfQBlTQfxUCZrL").observeSingleEvent(of: .value, with: { (snapshot) in
+            // Get user value
+            let value = snapshot.value as? NSDictionary
+            let score = value?["version"] as? String ?? ""
+            let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
+            
+            if score == appVersion {
+                
+                print("ali")
+            }else {
+                
+//                CommonUtils.showMsgDialogWithupdate(showingPopupOn: self, withTitle: "Medcon", withMessage: "There is an Update available! Please update to use this App", onOkClicked: {() in
+//
+//                })
+                
+                var alertController = UIAlertController(title: "Medcon", message: "There is an Update available! Please update to use this App", preferredStyle: .actionSheet)
+                var okAction = UIAlertAction(title
+                                             : "Update", style: UIAlertAction.Style.default) {
+                    UIAlertAction in
+                    if let url = URL(string: "itms-apps://itunes.apple.com/app/medcon-2019/id1387008793") {
+                        UIApplication.shared.open(url)
+                      
+                    }
+                }
+                alertController.addAction(okAction)
+                self.window?.rootViewController?.present(alertController, animated: true, completion: nil)
+                
+                
+            }
+            
+            // ...
+        }) { (error) in
+            print(error.localizedDescription)
+        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -39,6 +80,45 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func sceneDidBecomeActive(_ scene: UIScene) {
         // Called when the scene has moved from an inactive state to an active state.
         // Use this method to restart any tasks that were paused (or not yet started) when the scene was inactive.
+        
+        ref = Database.database().reference()
+        
+        
+        ref.child("version/ios/-NccAkdfQBlTQfxUCZrL").observeSingleEvent(of: .value, with: { (snapshot) in
+            // Get user value
+            let value = snapshot.value as? NSDictionary
+            let score = value?["version"] as? String ?? ""
+            let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
+            
+            if score == appVersion {
+                
+                print("ali")
+            }else {
+                
+//                CommonUtils.showMsgDialogWithupdate(showingPopupOn: self, withTitle: "Medcon", withMessage: "There is an Update available! Please update to use this App", onOkClicked: {() in
+//
+//                })
+                
+                var alertController = UIAlertController(title: "Medcon", message: "There is an Update available! Please update to use this App", preferredStyle: .actionSheet)
+                var okAction = UIAlertAction(title
+                                             : "Update", style: UIAlertAction.Style.default) {
+                    UIAlertAction in
+                    if let url = URL(string: "itms-apps://itunes.apple.com/app/medcon-2019/id1387008793") {
+                        UIApplication.shared.open(url)
+                      
+                    }
+                }
+                alertController.addAction(okAction)
+                self.window?.rootViewController?.present(alertController, animated: true, completion: nil)
+                
+                
+            }
+            
+            // ...
+        }) { (error) in
+            print(error.localizedDescription)
+        }
+        
     }
 
     func sceneWillResignActive(_ scene: UIScene) {

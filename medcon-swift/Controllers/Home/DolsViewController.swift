@@ -130,8 +130,6 @@ class DolsViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
                         
                         if (dollsModel?.success)! {
                             
-                            
-                            
                             let List = dollsModel?.data?[0].videos ?? []
                             
                             let filter = List.filter {($0.typeId == 5)}

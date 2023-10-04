@@ -51,6 +51,16 @@ class CommonUtils {
         controller.present(alert, animated: true, completion: nil)
     }
     
+    static func showMsgDialogWithupdate(showingPopupOn controller: UIViewController, withTitle title:String, withMessage msg: String,onOkClicked: @escaping () -> Void)  {
+        let alert = UIAlertController(title: title, message: msg, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "Update", style: UIAlertAction.Style.default, handler: {_ in
+            alert.dismiss(animated: false, completion: nil)
+            onOkClicked()
+        }))
+        
+        controller.present(alert, animated: true, completion: nil)
+    }
+    
     static func showMsgBoxWithButtons(title: String, message: String, controller: UIViewController, onYesClicked: @escaping () -> Void){
         
         let alert = UIAlertController(title: title, message: message , preferredStyle: UIAlertController.Style.alert)

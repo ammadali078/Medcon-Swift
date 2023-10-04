@@ -27,6 +27,7 @@ class AuthSignUpViewController: UIViewController {
     private let apiManager = APIManager.shared()
     let hud = JGProgressHUD()
     var selectedSpeciality = "Miscellaneous"
+    var token: String = "0"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -174,10 +175,12 @@ extension AuthSignUpViewController {
             else {
                 AppUserManager.shared.user = registerResponse?.data
                 
+                let speciality = registerResponse?.data.user?.speciality
+                
+                CommonUtils.saveJsonToUserDefaults(forKey: Constants.catId, withJson: String(speciality ?? 0))
+                
                 guard let delegate = self?.view.window?.windowScene?.delegate as? SceneDelegate else { return }
-                
                 delegate.setupMainFlow()
-                
             }
             
         }

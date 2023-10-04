@@ -87,10 +87,22 @@
 		ED62632328CA20BE002B1F3E /* DetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED62632228CA20BE002B1F3E /* DetailTableViewCell.swift */; };
 		EDF917E728CA6A8C0046110A /* AvailableFormsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF917E628CA6A8C0046110A /* AvailableFormsCollectionViewCell.swift */; };
 		FA0EC3662A03F8D800654599 /* PAMAticleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0EC3652A03F8D800654599 /* PAMAticleDetailViewController.swift */; };
+		FA2238972A9AB92500BEA800 /* OTPModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2238962A9AB92500BEA800 /* OTPModel.swift */; };
+		FA2238992A9ABE9900BEA800 /* CreatePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2238982A9ABE9900BEA800 /* CreatePasswordViewController.swift */; };
 		FA22D51F2A30942000CE0A30 /* PopularDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA22D51E2A30942000CE0A30 /* PopularDetailModel.swift */; };
+		FA245CAD2A8BC23500DE7A52 /* FcmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA245CAC2A8BC23500DE7A52 /* FcmModel.swift */; };
+		FA245CB02A8BCB0700DE7A52 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA245CAF2A8BCB0700DE7A52 /* NotificationViewController.swift */; };
+		FA245CB42A8BCB5900DE7A52 /* notification.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA245CB32A8BCB5900DE7A52 /* notification.storyboard */; };
+		FA245CB62A8CF76100DE7A52 /* NotifyCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA245CB52A8CF76100DE7A52 /* NotifyCollectionCell.swift */; };
+		FA245CB82A8CF93300DE7A52 /* NotificationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA245CB72A8CF93300DE7A52 /* NotificationModel.swift */; };
 		FA25404F2A26257400867162 /* DrugDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA25404E2A26257400867162 /* DrugDetailViewController.swift */; };
 		FA2540512A26268600867162 /* DrugDetailCollectonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2540502A26268600867162 /* DrugDetailCollectonCell.swift */; };
 		FA2540532A26283300867162 /* DrugDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2540522A26283200867162 /* DrugDetailModel.swift */; };
+		FA2968C02A97CCC50065A8FD /* BrandCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2968BF2A97CCC50065A8FD /* BrandCollectionViewCell.swift */; };
+		FA3DD5B82A966E100008417A /* AllBrandModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3DD5B72A966E100008417A /* AllBrandModel.swift */; };
+		FA3DD5BA2A966EE40008417A /* GetAllBrand.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3DD5B92A966EE40008417A /* GetAllBrand.swift */; };
+		FA44FEBE2A9A2AA800899395 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA44FEBD2A9A2AA800899395 /* ForgotPasswordViewController.swift */; };
+		FA44FEC02A9A328300899395 /* OTPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA44FEBF2A9A328300899395 /* OTPViewController.swift */; };
 		FA543D2D2A1D05D300D3A247 /* Drug.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA543D2C2A1D05D300D3A247 /* Drug.storyboard */; };
 		FA543D2F2A1D065A00D3A247 /* DrugInterActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA543D2E2A1D065A00D3A247 /* DrugInterActionViewController.swift */; };
 		FA67FA7E29154F1000E4FFD3 /* AvailableFormListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA67FA7D29154F1000E4FFD3 /* AvailableFormListCell.swift */; };
@@ -110,6 +122,7 @@
 		FAA819F028D0EECB005D17AD /* CommonUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA819EF28D0EECB005D17AD /* CommonUtils.swift */; };
 		FAA819F728D10163005D17AD /* GenBranModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA819F628D10163005D17AD /* GenBranModel.swift */; };
 		FAE2DA6C2A212022008300C2 /* DrungInteractionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE2DA6B2A212022008300C2 /* DrungInteractionModel.swift */; };
+		FAEA4A3F2A9E4CAC005CF24E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FAEA4A3E2A9E4CAC005CF24E /* GoogleService-Info.plist */; };
 		FAEBE6332A24CAAE00F44589 /* MEDListCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEBE6322A24CAAE00F44589 /* MEDListCollectionCell.swift */; };
 		FAF36B042911755400CF0AA9 /* EmslCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF36B032911755400CF0AA9 /* EmslCollectionViewCell.swift */; };
 		FAF492E528D36990000053DB /* AvailableFormsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF492E428D3698F000053DB /* AvailableFormsViewController.swift */; };
@@ -207,10 +220,23 @@
 		ED62632228CA20BE002B1F3E /* DetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewCell.swift; sourceTree = "<group>"; };
 		EDF917E628CA6A8C0046110A /* AvailableFormsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableFormsCollectionViewCell.swift; sourceTree = "<group>"; };
 		FA0EC3652A03F8D800654599 /* PAMAticleDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PAMAticleDetailViewController.swift; sourceTree = "<group>"; };
+		FA2238962A9AB92500BEA800 /* OTPModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPModel.swift; sourceTree = "<group>"; };
+		FA2238982A9ABE9900BEA800 /* CreatePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasswordViewController.swift; sourceTree = "<group>"; };
 		FA22D51E2A30942000CE0A30 /* PopularDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularDetailModel.swift; sourceTree = "<group>"; };
+		FA245CAC2A8BC23500DE7A52 /* FcmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FcmModel.swift; sourceTree = "<group>"; };
+		FA245CAF2A8BCB0700DE7A52 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
+		FA245CB32A8BCB5900DE7A52 /* notification.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = notification.storyboard; sourceTree = "<group>"; };
+		FA245CB52A8CF76100DE7A52 /* NotifyCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotifyCollectionCell.swift; sourceTree = "<group>"; };
+		FA245CB72A8CF93300DE7A52 /* NotificationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationModel.swift; sourceTree = "<group>"; };
 		FA25404E2A26257400867162 /* DrugDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugDetailViewController.swift; sourceTree = "<group>"; };
 		FA2540502A26268600867162 /* DrugDetailCollectonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugDetailCollectonCell.swift; sourceTree = "<group>"; };
 		FA2540522A26283200867162 /* DrugDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugDetailModel.swift; sourceTree = "<group>"; };
+		FA2968BF2A97CCC50065A8FD /* BrandCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandCollectionViewCell.swift; sourceTree = "<group>"; };
+		FA3DD5B72A966E100008417A /* AllBrandModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllBrandModel.swift; sourceTree = "<group>"; };
+		FA3DD5B92A966EE40008417A /* GetAllBrand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllBrand.swift; sourceTree = "<group>"; };
+		FA44FEBD2A9A2AA800899395 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		FA44FEBF2A9A328300899395 /* OTPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPViewController.swift; sourceTree = "<group>"; };
+		FA4DDE692A811151003B0019 /* medcon-swift.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "medcon-swift.entitlements"; sourceTree = "<group>"; };
 		FA543D2C2A1D05D300D3A247 /* Drug.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Drug.storyboard; sourceTree = "<group>"; };
 		FA543D2E2A1D065A00D3A247 /* DrugInterActionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugInterActionViewController.swift; sourceTree = "<group>"; };
 		FA67FA7D29154F1000E4FFD3 /* AvailableFormListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableFormListCell.swift; sourceTree = "<group>"; };
@@ -230,6 +256,7 @@
 		FAA819EF28D0EECB005D17AD /* CommonUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonUtils.swift; sourceTree = "<group>"; };
 		FAA819F628D10163005D17AD /* GenBranModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenBranModel.swift; sourceTree = "<group>"; };
 		FAE2DA6B2A212022008300C2 /* DrungInteractionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrungInteractionModel.swift; sourceTree = "<group>"; };
+		FAEA4A3E2A9E4CAC005CF24E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FAEBE6322A24CAAE00F44589 /* MEDListCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MEDListCollectionCell.swift; sourceTree = "<group>"; };
 		FAF36B032911755400CF0AA9 /* EmslCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmslCollectionViewCell.swift; sourceTree = "<group>"; };
 		FAF492E428D3698F000053DB /* AvailableFormsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableFormsViewController.swift; sourceTree = "<group>"; };
@@ -274,6 +301,7 @@
 		B18203D127B4460A0016B8E1 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
+				FA44FEBC2A9A2A8600899395 /* Forgot */,
 				B18203D527B586F70016B8E1 /* Registration */,
 				B18203D227B446140016B8E1 /* Login */,
 				B18203D327B446390016B8E1 /* Auth.storyboard */,
@@ -403,6 +431,7 @@
 		B1951442268085B6006A3EC2 /* medcon-swift */ = {
 			isa = PBXGroup;
 			children = (
+				FA4DDE692A811151003B0019 /* medcon-swift.entitlements */,
 				FA543D2B2A1D05A500D3A247 /* DrugInteraction */,
 				FAA819F228D10092005D17AD /* SwiftModels */,
 				B1C299AC27D4CF8900BA07F2 /* iCarousel */,
@@ -418,6 +447,7 @@
 				B195144C268085B8006A3EC2 /* Assets.xcassets */,
 				B1951449268085B6006A3EC2 /* Main.storyboard */,
 				B195144E268085B8006A3EC2 /* LaunchScreen.storyboard */,
+				FAEA4A3E2A9E4CAC005CF24E /* GoogleService-Info.plist */,
 				B1951451268085B8006A3EC2 /* Info.plist */,
 			);
 			path = "medcon-swift";
@@ -426,6 +456,7 @@
 		B195145826808612006A3EC2 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				FA245CAE2A8BCAED00DE7A52 /* PushNotification */,
 				FA69A6B82A310C240015CCBD /* Guidline */,
 				B1C2996827C5F05400BA07F2 /* Article */,
 				B1C2996527C2AAB700BA07F2 /* SideMenu */,
@@ -516,6 +547,7 @@
 				B1C2995727BD79AF00BA07F2 /* HomeViewModel */,
 				B1C2994127B81ABB00BA07F2 /* Home.storyboard */,
 				B1C2994327B81B4300BA07F2 /* HomeViewController.swift */,
+				FA2968BF2A97CCC50065A8FD /* BrandCollectionViewCell.swift */,
 				B1C2994827B81CCC00BA07F2 /* HomeNavigationViewController.swift */,
 				FAFBBE7328DCB8EA00E61CE6 /* AboutDrugManualViewController.swift */,
 				ED62631C28CA11D9002B1F3E /* DrugManualViewController.swift */,
@@ -633,6 +665,28 @@
 			path = ActionSheet;
 			sourceTree = "<group>";
 		};
+		FA245CAE2A8BCAED00DE7A52 /* PushNotification */ = {
+			isa = PBXGroup;
+			children = (
+				FA245CAF2A8BCB0700DE7A52 /* NotificationViewController.swift */,
+				FA245CB52A8CF76100DE7A52 /* NotifyCollectionCell.swift */,
+				FA245CB32A8BCB5900DE7A52 /* notification.storyboard */,
+				FA245CB72A8CF93300DE7A52 /* NotificationModel.swift */,
+			);
+			path = PushNotification;
+			sourceTree = "<group>";
+		};
+		FA44FEBC2A9A2A8600899395 /* Forgot */ = {
+			isa = PBXGroup;
+			children = (
+				FA44FEBD2A9A2AA800899395 /* ForgotPasswordViewController.swift */,
+				FA44FEBF2A9A328300899395 /* OTPViewController.swift */,
+				FA2238962A9AB92500BEA800 /* OTPModel.swift */,
+				FA2238982A9ABE9900BEA800 /* CreatePasswordViewController.swift */,
+			);
+			path = Forgot;
+			sourceTree = "<group>";
+		};
 		FA543D2B2A1D05A500D3A247 /* DrugInteraction */ = {
 			isa = PBXGroup;
 			children = (
@@ -668,6 +722,9 @@
 				FAE2DA6B2A212022008300C2 /* DrungInteractionModel.swift */,
 				FA2540522A26283200867162 /* DrugDetailModel.swift */,
 				FA6C73562A32162B00FAACB2 /* GuidlineDetailModel.swift */,
+				FA245CAC2A8BC23500DE7A52 /* FcmModel.swift */,
+				FA3DD5B72A966E100008417A /* AllBrandModel.swift */,
+				FA3DD5B92A966EE40008417A /* GetAllBrand.swift */,
 			);
 			path = SwiftModels;
 			sourceTree = "<group>";
@@ -684,6 +741,7 @@
 				B195143D268085B6006A3EC2 /* Frameworks */,
 				B195143E268085B6006A3EC2 /* Resources */,
 				E38209672CC3B60F0C606C1D /* [CP] Embed Pods Frameworks */,
+				FAEA4A3D2A9D00AF005CF24E /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -771,6 +829,8 @@
 				B195144B268085B6006A3EC2 /* Main.storyboard in Resources */,
 				B1C299A227CEB6C400BA07F2 /* brandon-grotesque-medium-italic-58a8a3c40866a.otf in Resources */,
 				B1C2998427CEB61300BA07F2 /* RobotoCondensed-Bold.ttf in Resources */,
+				FAEA4A3F2A9E4CAC005CF24E /* GoogleService-Info.plist in Resources */,
+				FA245CB42A8BCB5900DE7A52 /* notification.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -816,6 +876,28 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		FAEA4A3D2A9D00AF005CF24E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}",
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${PRODUCT_NAME}\n",
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Info.plist\n",
+				"$(BUILT_PRODUCTS_DIR)/$(UNLOCALIZED_RESOURCES_FOLDER_PATH)/GoogleService-Info.plist\n",
+				"$(BUILT_PRODUCTS_DIR)/$(EXECUTABLE_PATH)\n",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -827,6 +909,7 @@
 				B1951448268085B6006A3EC2 /* ViewController.swift in Sources */,
 				B18203DE27B589B30016B8E1 /* AppDefaultTheme.swift in Sources */,
 				B1C2993E27B7E56300BA07F2 /* AuthSignUpViewController.swift in Sources */,
+				FA44FEC02A9A328300899395 /* OTPViewController.swift in Sources */,
 				B1C2995927BD79C300BA07F2 /* HomeViewModel.swift in Sources */,
 				EDF917E728CA6A8C0046110A /* AvailableFormsCollectionViewCell.swift in Sources */,
 				ED62631D28CA11D9002B1F3E /* DrugManualViewController.swift in Sources */,
@@ -835,10 +918,12 @@
 				FA6F177329E946FB00AA1098 /* PAMModel.swift in Sources */,
 				FA7DA3AD29EE8981005EB605 /* MostPopularModel.swift in Sources */,
 				B195148F26812B9F006A3EC2 /* OboardingCarouselModel.swift in Sources */,
+				FA2238972A9AB92500BEA800 /* OTPModel.swift in Sources */,
 				ED32E67629018B3C005D4D0B /* DolsViewController.swift in Sources */,
 				FA22D51F2A30942000CE0A30 /* PopularDetailModel.swift in Sources */,
 				B1C2994727B81B7D00BA07F2 /* BaseViewController.swift in Sources */,
 				FA2540532A26283300867162 /* DrugDetailModel.swift in Sources */,
+				FA245CB62A8CF76100DE7A52 /* NotifyCollectionCell.swift in Sources */,
 				B18203E727B6D0A30016B8E1 /* RegisterResponse.swift in Sources */,
 				B1C2995627B82FF400BA07F2 /* AlbumResponse.swift in Sources */,
 				B1DABD702827950C0033550F /* GenericBottomSheetViewController.swift in Sources */,
@@ -846,6 +931,7 @@
 				B1C2994427B81B4300BA07F2 /* HomeViewController.swift in Sources */,
 				B195149A26812CC2006A3EC2 /* Extensions.swift in Sources */,
 				FAA819F028D0EECB005D17AD /* CommonUtils.swift in Sources */,
+				FA245CAD2A8BC23500DE7A52 /* FcmModel.swift in Sources */,
 				B1951444268085B6006A3EC2 /* AppDelegate.swift in Sources */,
 				B1951446268085B6006A3EC2 /* SceneDelegate.swift in Sources */,
 				FAF492E728D39622000053DB /* AvailableModel.swift in Sources */,
@@ -869,17 +955,23 @@
 				FA6F176F29E9387900AA1098 /* PAMViewController.swift in Sources */,
 				FA95DA6F29F94F29004CAE7D /* PAMViewAllController.swift in Sources */,
 				FA6F177129E93B8200AA1098 /* PAMCollectionCell.swift in Sources */,
+				FA3DD5BA2A966EE40008417A /* GetAllBrand.swift in Sources */,
 				B1C2996A27C5F08B00BA07F2 /* ViewAllArticlesViewController.swift in Sources */,
 				FAF492E528D36990000053DB /* AvailableFormsViewController.swift in Sources */,
 				FA7DA3B129EE9E47005EB605 /* ActivityViewController.swift in Sources */,
+				FA3DD5B82A966E100008417A /* AllBrandModel.swift in Sources */,
+				FA245CB02A8BCB0700DE7A52 /* NotificationViewController.swift in Sources */,
 				B10089B527ECF0E400CB5B82 /* SendEmailResponse.swift in Sources */,
 				B1C2996727C2AACD00BA07F2 /* SideMenuViewController.swift in Sources */,
+				FA245CB82A8CF93300DE7A52 /* NotificationModel.swift in Sources */,
 				FA6C73572A32162B00FAACB2 /* GuidlineDetailModel.swift in Sources */,
 				FAF492EB28D4CF7B000053DB /* BrandDetailCell.swift in Sources */,
 				FAE2DA6C2A212022008300C2 /* DrungInteractionModel.swift in Sources */,
 				B195148426812967006A3EC2 /* OnboardingViewController.swift in Sources */,
 				B18203E927B6D27E0016B8E1 /* AppUserManager.swift in Sources */,
+				FA44FEBE2A9A2AA800899395 /* ForgotPasswordViewController.swift in Sources */,
 				FAA819EE28D0EEAB005D17AD /* Constant.swift in Sources */,
+				FA2968C02A97CCC50065A8FD /* BrandCollectionViewCell.swift in Sources */,
 				B1C299B027D4CF9F00BA07F2 /* iCarousel.m in Sources */,
 				FA0EC3662A03F8D800654599 /* PAMAticleDetailViewController.swift in Sources */,
 				B18203D727B587B10016B8E1 /* AuthSignInViewController.swift in Sources */,
@@ -889,6 +981,7 @@
 				B18203E127B58DAA0016B8E1 /* APIManager.swift in Sources */,
 				B1C2995327B82F5C00BA07F2 /* GalleryResponse.swift in Sources */,
 				B1C2996F27CA115900BA07F2 /* AticleDetailViewController.swift in Sources */,
+				FA2238992A9ABE9900BEA800 /* CreatePasswordViewController.swift in Sources */,
 				B18203E427B58EF70016B8E1 /* EndpointItem.swift in Sources */,
 				B1C2994927B81CCC00BA07F2 /* HomeNavigationViewController.swift in Sources */,
 				B18203DB27B5885D0016B8E1 /* MEDTextField.swift in Sources */,
@@ -1041,18 +1134,24 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "medcon-swift/medcon-swift.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 69T4BQLRH3;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 69T4BQLRH3;
 				INFOPLIST_FILE = "medcon-swift/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 8.0;
+				MARKETING_VERSION = 11.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.MedconConference.live;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "medcon-dev-prof";
 				SWIFT_OBJC_BRIDGING_HEADER = "medcon-swift/iCarousel/medcon-swift-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -1067,18 +1166,23 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "medcon-swift/medcon-swift.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 69T4BQLRH3;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 69T4BQLRH3;
 				INFOPLIST_FILE = "medcon-swift/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 8.0;
+				MARKETING_VERSION = 11.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.MedconConference.live;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "medcon-dist-prof";
 				SWIFT_OBJC_BRIDGING_HEADER = "medcon-swift/iCarousel/medcon-swift-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
